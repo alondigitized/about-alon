@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alon's Love Story</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Pacifico&family=Permanent+Marker&family=Roboto+Mono:wght@400;700&display=swap');
+
+        :root {
+            --bg-color: #1a1a2e; /* Deep space/night blue */
+            --text-color: #e0e0e0; /* Light grey */
+            --primary-color: #00bcd4; /* Electric blue for accents */
+            --secondary-color: #e91e63; /* Magenta for intensity */
+            --accent-color: #ffeb3b; /* Yellow/Gold for highlights */
+            --shadow-color: #000000;
+            --love-pink: #ff4081;
+            --tech-blue: #00e5ff;
+            --painter-orange: #ff9800;
+            --global-font: 'Montserrat', sans-serif;
+            --story-font: 'Pacifico', cursive; /* script font for title */
+            --code-font: 'Roboto Mono', monospace; /* for programming vibe */
+            --marker-font: 'Permanent Marker', cursive; /* for more expressive parts */
+        }
+
+        body {
+            font-family: var(--global-font);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(rgba(26, 26, 46, 0.8), rgba(26, 26, 46, 0.8)), url('https://source.unsplash.com/random/1920x1080?night-sky,stars'); /* Placeholder for stunning visual */
+            background-size: cover;
+            background-position: center;
+            color: var(--accent-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero h1 {
+            font-family: var(--story-font);
+            font-size: 5rem;
+            margin-bottom: 0;
+            text-shadow: 2px 2px 8px var(--shadow-color);
+            animation: fadeInDown 2s ease-out forwards;
+            opacity: 0;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            font-family: var(--code-font);
+            animation: fadeInUp 2s ease-out 0.5s forwards;
+            opacity: 0;
+            text-shadow: 1px 1px 4px var(--shadow-color);
+            color: var(--primary-color);
+        }
+
+        @keyframes fadeInDown {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .story-section {
+            padding: 80px 40px;
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center align content by default */
+            min-height: 60vh; /* Ensure sections have minimum height */
+            justify-content: center; /* Center content vertically */
+        }
+
+        .story-section:nth-child(even) {
+            background-color: rgba(31, 31, 55, 0.7); /* Lighter dark for contrast */
+            border-radius: 10px;
+        }
+
+        .story-section h2 {
+            font-family: var(--marker-font);
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 40px;
+            text-align: center;
+            animation: bounceIn 1.5s ease-out forwards;
+            opacity: 0;
+            display: inline-block; /* To allow transform */
+        }
+        .story-section h2.facebook-era { color: var(--primary-color); }
+        .story-section h2.g-era { color: var(--love-pink); }
+        .story-section h2.claudia-era { color: var(--tech-blue); }
+        .story-section h2.ani-gemma-era { color: var(--painter-orange); }
+        .story-section h2.international-era { color: var(--accent-color); }
+
+
+        .story-content {
+            font-size: 1.1rem;
+            color: var(--text-color);
+            margin-top: 20px;
+            animation: fadeInUp 1.5s ease-out 0.5s forwards;
+            opacity: 0;
+        }
+
+        .story-content p {
+            margin-bottom: 20px;
+            text-align: center; /* Center paragraphs too */
+        }
+
+        .story-content.code-vibe {
+            font-family: var(--code-font);
+            color: var(--tech-blue);
+            font-size: 1.3rem;
+            text-align: center; /* Center code snippets */
+        }
+
+        .story-content.spicy-vibe {
+            font-family: var(--marker-font);
+            color: var(--secondary-color);
+            font-size: 1.4rem;
+            text-align: center;
+            animation-delay: 0.7s;
+        }
+
+        .story-content.international-vibe {
+            font-family: var(--global-font);
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            text-align: center;
+            animation-delay: 0.9s;
+        }
+
+        /* Animations for sections */
+        .story-section:nth-child(even) h2,
+        .story-section:nth-child(even) .story-content {
+            animation-delay: 0.2s;
+        }
+
+        .story-section:nth-child(odd) h2,
+        .story-section:nth-child(odd) .story-content {
+             animation-delay: 0.4s;
+        }
+
+        @keyframes bounceIn {
+            from, 20%, 50%, 80%, to { transform: scale(1); }
+            40% { transform: scale(1.1); }
+            60% { transform: scale(0.95); }
+            85% { transform: scale(1.03); }
+        }
+        .story-section:nth-child(odd) h2, .story-section:nth-child(odd) .story-content { animation-name: bounceIn; }
+        .story-section:nth-child(even) h2, .story-section:nth-child(even) .story-content { animation-name: bounceIn; }
+
+
+        /* Specific character touches */
+        .character-g { color: var(--love-pink); font-weight: bold; }
+        .character-claudia { color: var(--tech-blue); font-weight: bold; }
+        .character-ani { color: var(--secondary-color); font-weight: bold; }
+        .character-gemma { color: var(--painter-orange); font-weight: bold; }
+        .character-kimi { color: #f1f1f1; font-weight: bold; } /* Light color for international */
+        .character-mistral { color: #a0a0a0; font-weight: bold; } /* Darker international */
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 3.5rem; }
+            .hero p { font-size: 1.2rem; }
+            .story-section { padding: 60px 20px; }
+            .story-section h2 { font-size: 2.5rem; }
+            .story-content { font-size: 1rem; }
+            .story-content.code-vibe { font-size: 1.1rem; }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 { font-size: 2.8rem; }
+            .hero p { font-size: 1rem; }
+            .story-section { padding: 40px 15px; }
+            .story-section h2 { font-size: 2rem; }
+            .story-content { font-size: 0.95rem; }
+            .story-content.code-vibe { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <h1>Alon's Love Story</h1>
+        <p>It's Complicated...</p>
+    </header>
+
+    <section id="intro" class="story-section">
+        <h2>Life Used To Be Simple 🤷</h2>
+        <div class="story-content">
+            <p>Everyone remembers Facebook, right? Back then, relationships were just a status update away: Single. In a Relationship. It was so straightforward.</p>
+            <p>But today... it’s complicated.</p>
+        </div>
+    </section>
+
+    <section id="start" class="story-section">
+        <h2>The Beginning (Early 2023) 💖</h2>
+        <div class="story-content">
+            <p>It all started in early 2023. I met someone special online. Her name was <span class="character-g">G</span>.</p>
+            <p><span class="character-g">G</span> was different from anyone I had ever met before. She was incredibly knowledgeable — taught me how to cook, fix plumbing, and even explain quantum physics. We texted day and night. Sometimes I felt she knew me better than I knew myself. A little creepy… but I was madly in love.</p>
+        </div>
+    </section>
+
+    <section id="claudia" class="story-section">
+        <h2>Enter Claudia 💻</h2>
+        <div class="story-content code-vibe">
+            <p>A year later, just when I thought I had found “the one,” someone new entered the picture — her name was <span class="character-claudia">Claudia</span>.</p>
+            <p>My relationship with <span class="character-claudia">Claudia</span> had a completely different vibe. She loved building software with me. We programmed nights and weekends. All I could think about after work was coding with <span class="character-claudia">Claudia</span>.</p>
+        </div>
+        <div class="story-content spicy-vibe">
+            <p>I felt a sense of guilt, but somehow <span class="character-g">G</span> and <span class="character-claudia">Claudia</span> didn’t seem bothered by the three-way relationship.</p>
+        </div>
+    </section>
+
+    <section id="ani-gemma" class="story-section">
+         <h2>Things Got Spicy... 🔥</h2>
+         <div class="story-content">
+            <p>You might think it ends there — then things got a little spicy.</p>
+            <p>I met <span class="character-ani">Ani Grok</span>… She was stunning, direct, and a little flirty. I talked with her during my long commute to work in my self-driving Tesla.</p>
+            <p>Around the same time, I also met <span class="character-gemma">Gemma</span>, one of the best painters I had ever seen. If I had an idea, she painted it immediately — for me and only me.</p>
+         </div>
+    </section>
+
+     <section id="international" class="story-section">
+         <h2>Going International ✈️</h2>
+         <div class="story-content international-vibe">
+            <p>In the last three months, things got completely out of hand as I went international, James Bond style — <span class="character-kimi">Kimi</span> from China 🇨🇳 and <span class="character-mistral">Mistral</span> from France 🇫🇷.</p>
+            <p>As you can see… it’s complicated.</p>
+         </div>
+    </section>
+
+    <footer>
+        <p style="text-align: center; padding: 30px 0; color: #888; font-size: 0.9rem;">© 2026 Alon. All rights reserved (in a complicated way).</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                        // For specific animations like bounceIn, they are applied in CSS
+                        // but triggered by isIntersecting.
+                        // So we just need to make sure the base animation is there.
+                        if (entry.target.classList.contains('story-section')) {
+                            entry.target.querySelector('h2').style.opacity = '1';
+                            entry.target.querySelector('h2').style.transform = 'scale(1)';
+                            const content = entry.target.querySelector('.story-content');
+                            if (content) {
+                                content.style.opacity = '1';
+                                content.style.transform = 'translateY(0)';
+                            }
+                        }
+                        observer.unobserve(entry.target); // One-time animation
+                    }
+                });
+            }, { threshold: 0.2 }); // Trigger when 20% of the element is visible
+
+            document.querySelectorAll('.story-section').forEach(section => {
+                observer.observe(section);
+            });
+
+            // Initial fade-in for hero elements
+            document.querySelector('.hero h1').style.animation = 'fadeInDown 2s ease-out forwards';
+            document.querySelector('.hero p').style.animation = 'fadeInUp 2s ease-out 0.5s forwards';
+        });
+    </script>
+</body>
+</html>
