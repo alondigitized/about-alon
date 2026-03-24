@@ -1,0 +1,254 @@
+/* AI Brief — shared styles
+   Dark, monospace, mobile-first, minimal. */
+
+:root {
+  --bg: #0c0c0c;
+  --surface: #151515;
+  --border: #262626;
+  --text: #d4d4d4;
+  --text-muted: #737373;
+  --accent: #3b82f6;
+  --accent-dim: #1e3a5f;
+  --enterprise: #8b5cf6;
+  --founder: #10b981;
+  --heat: #ef4444;
+  --link: #60a5fa;
+  --mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'JetBrains Mono', Menlo, Consolas, monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 15px; -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: var(--mono);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 16px 64px;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ── Header ── */
+.brief-header {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 16px;
+  margin-bottom: 32px;
+}
+.brief-header h1 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: -0.02em;
+}
+.brief-meta {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  margin-top: 6px;
+}
+
+/* ── Section headers ── */
+.section-label {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 3px 8px;
+  border-radius: 3px;
+  margin-bottom: 16px;
+}
+.section-label.enterprise {
+  background: var(--enterprise);
+  color: #fff;
+}
+.section-label.founder {
+  background: var(--founder);
+  color: #fff;
+}
+
+.section-title {
+  font-size: 1.1rem;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+/* ── Items ── */
+.item {
+  border-left: 3px solid var(--border);
+  padding: 12px 0 12px 16px;
+  margin-bottom: 20px;
+}
+.item.enterprise { border-left-color: var(--enterprise); }
+.item.founder { border-left-color: var(--founder); }
+
+.item-headline {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.item-analysis {
+  font-size: 0.85rem;
+  color: var(--text);
+  line-height: 1.55;
+  margin-bottom: 8px;
+}
+
+.item-source {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+.item-source a { color: var(--text-muted); }
+.item-source a:hover { color: var(--link); }
+
+.item-tags {
+  margin-top: 6px;
+}
+.tag {
+  display: inline-block;
+  font-size: 0.65rem;
+  padding: 1px 6px;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  color: var(--text-muted);
+  margin-right: 4px;
+}
+.tag.hot {
+  border-color: var(--heat);
+  color: var(--heat);
+}
+
+/* ── Weekend rollup banner ── */
+.rollup-banner {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 10px 14px;
+  border-radius: 4px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+/* ── Archive / listing page ── */
+.archive-list {
+  list-style: none;
+}
+.archive-list li {
+  border-bottom: 1px solid var(--border);
+  padding: 12px 0;
+}
+.archive-list li:last-child { border-bottom: none; }
+.archive-date {
+  font-weight: 600;
+  color: #fff;
+  font-size: 0.9rem;
+}
+.archive-day {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  margin-left: 8px;
+}
+.archive-summary {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  margin-top: 4px;
+}
+
+/* ── Gate overlay ── */
+#gate-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+.gate-box {
+  text-align: center;
+  max-width: 320px;
+  padding: 24px;
+}
+.gate-box h2 {
+  font-family: var(--mono);
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 8px;
+}
+.gate-sub {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  margin-bottom: 20px;
+}
+#gate-input {
+  width: 100%;
+  padding: 10px 12px;
+  font-family: var(--mono);
+  font-size: 0.9rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text);
+  outline: none;
+  margin-bottom: 12px;
+}
+#gate-input:focus {
+  border-color: var(--accent);
+}
+#gate-submit {
+  width: 100%;
+  padding: 10px;
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: var(--accent);
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+}
+#gate-submit:hover {
+  background: #2563eb;
+}
+.gate-error {
+  color: var(--heat);
+  font-size: 0.78rem;
+  margin-top: 10px;
+  min-height: 1.2em;
+}
+.gate-note {
+  color: var(--text-muted);
+  font-size: 0.65rem;
+  margin-top: 16px;
+  opacity: 0.6;
+}
+
+/* ── Footer ── */
+.brief-footer {
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+  margin-top: 40px;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+.brief-footer a { color: var(--text-muted); }
+
+/* ── Responsive ── */
+@media (max-width: 480px) {
+  html { font-size: 14px; }
+  body { padding: 16px 12px 48px; }
+  .brief-header h1 { font-size: 1.2rem; }
+}

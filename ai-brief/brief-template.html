@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Brief — {{DATE}}</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<div id="brief-content">
+
+  <header class="brief-header">
+    <h1>Daily AI Brief</h1>
+    <div class="brief-meta">{{DAY_NAME}}, {{DATE_LONG}} &middot; {{ITEM_COUNT}} items{{ROLLUP_META}}</div>
+  </header>
+
+  {{ROLLUP_BANNER}}
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- ENTERPRISE AI BRIEF                        -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section>
+    <span class="section-label enterprise">Enterprise AI Brief</span>
+    <h2 class="section-title">What executives need to know{{ROLLUP_TITLE_SUFFIX}}</h2>
+
+    {{ENTERPRISE_ITEMS}}
+
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- FOUNDER / OPERATOR AI BRIEF                -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section>
+    <span class="section-label founder">Founder / Operator AI Brief</span>
+    <h2 class="section-title">What builders should act on</h2>
+
+    {{FOUNDER_ITEMS}}
+
+  </section>
+
+  <footer class="brief-footer">
+    <p>AI Brief is generated daily at 5:00 AM PT, weekdays. Monday editions roll up the weekend.</p>
+    <p>Sources: X, Reddit, Hacker News, TechCrunch, ArXiv, industry publications. <a href="../index.html">Archive</a></p>
+    <p style="margin-top: 8px; opacity: 0.5;">Content is AI-curated. Verify critical claims before acting. This is not investment advice.</p>
+  </footer>
+
+</div>
+
+<script src="../gate.js"></script>
+</body>
+</html>
+
+<!--
+TEMPLATE VARIABLES:
+  {{DATE}}              — YYYY-MM-DD
+  {{DAY_NAME}}          — e.g. "Monday"
+  {{DATE_LONG}}         — e.g. "March 24 2026"
+  {{ITEM_COUNT}}        — total items, e.g. "11"
+  {{ROLLUP_META}}       — " · Weekend rollup" or ""
+  {{ROLLUP_BANNER}}     — weekend rollup div or ""
+  {{ROLLUP_TITLE_SUFFIX}} — " this weekend" or ""
+  {{ENTERPRISE_ITEMS}}  — HTML for enterprise section items
+  {{FOUNDER_ITEMS}}     — HTML for founder section items
+
+ITEM HTML TEMPLATE:
+  <div class="item enterprise|founder">
+    <div class="item-headline">Headline</div>
+    <div class="item-analysis">Analysis paragraph</div>
+    <div class="item-source">
+      <a href="URL" target="_blank" rel="noopener">Source Name</a> &middot; Date
+    </div>
+    <div class="item-tags">
+      <span class="tag hot">hot</span>  (optional, for high-heat items)
+      <span class="tag">category</span>
+    </div>
+  </div>
+-->

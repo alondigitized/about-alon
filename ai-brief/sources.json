@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "description": "Source list for Daily AI Brief. Curated accounts, subreddits, and categories.",
+    "updated": "2026-03-23",
+    "version": 1
+  },
+  "ranking": {
+    "weights": {
+      "strategic_importance": 0.4,
+      "actionability": 0.35,
+      "heat": 0.25
+    },
+    "target_items": {
+      "enterprise": 5,
+      "founder": 6
+    },
+    "notes": "Aim for 10-12 total items. Enterprise skews strategic; founder skews actionable."
+  },
+  "x_accounts": {
+    "enterprise_strategists": [
+      { "handle": "@satlosar", "name": "Satya Nadella", "org": "Microsoft" },
+      { "handle": "@sundaborty", "name": "Sundar Pichai", "org": "Google/Alphabet" },
+      { "handle": "@sama", "name": "Sam Altman", "org": "OpenAI" },
+      { "handle": "@AndrewYNg", "name": "Andrew Ng", "org": "Landing AI / DeepLearning.AI" },
+      { "handle": "@elaboratehouse", "name": "Benedict Evans", "org": "Independent analyst" },
+      { "handle": "@babordi", "name": "Bret Taylor", "org": "Sierra AI" },
+      { "handle": "@jabordi", "name": "Jared Kaplan", "org": "Anthropic" },
+      { "handle": "@emabordi", "name": "Emad Mostaque", "org": "Independent" },
+      { "handle": "@GaryMarcus", "name": "Gary Marcus", "org": "NYU / critic" },
+      { "handle": "@ylecun", "name": "Yann LeCun", "org": "Meta AI" }
+    ],
+    "ai_labs_research": [
+      { "handle": "@OpenAI", "name": "OpenAI", "org": "OpenAI" },
+      { "handle": "@AnthropicAI", "name": "Anthropic", "org": "Anthropic" },
+      { "handle": "@GoogleDeepMind", "name": "Google DeepMind", "org": "Google" },
+      { "handle": "@MetaAI", "name": "Meta AI", "org": "Meta" },
+      { "handle": "@xabordi", "name": "xAI", "org": "xAI" },
+      { "handle": "@MistralAI", "name": "Mistral AI", "org": "Mistral" },
+      { "handle": "@CohereAI", "name": "Cohere", "org": "Cohere" },
+      { "handle": "@perabordi", "name": "Perplexity AI", "org": "Perplexity" },
+      { "handle": "@StabilityAI", "name": "Stability AI", "org": "Stability" },
+      { "handle": "@huggingface", "name": "Hugging Face", "org": "Hugging Face" }
+    ],
+    "builders_founders": [
+      { "handle": "@karpathy", "name": "Andrej Karpathy", "org": "Eureka Labs" },
+      { "handle": "@swyx", "name": "Shawn Wang (swyx)", "org": "Latent Space / smol.ai" },
+      { "handle": "@emollick", "name": "Ethan Mollick", "org": "Wharton" },
+      { "handle": "@DrJimFan", "name": "Jim Fan", "org": "NVIDIA" },
+      { "handle": "@simonw", "name": "Simon Willison", "org": "Datasette / LLM tools" },
+      { "handle": "@goodside", "name": "Riley Goodside", "org": "Scale AI" },
+      { "handle": "@bindureddy", "name": "Bindu Reddy", "org": "Abacus.AI" },
+      { "handle": "@amasad", "name": "Amjad Masad", "org": "Replit" },
+      { "handle": "@dhabordi", "name": "Dario Amodei", "org": "Anthropic" },
+      { "handle": "@toabordi", "name": "Thomas Wolf", "org": "Hugging Face" }
+    ]
+  },
+  "subreddits": {
+    "agent_coding_tools": [
+      { "sub": "r/ClaudeAI", "focus": "Claude usage, tips, product updates" },
+      { "sub": "r/ChatGPT", "focus": "ChatGPT usage and capabilities" },
+      { "sub": "r/OpenAI", "focus": "OpenAI announcements and discussion" },
+      { "sub": "r/LocalLLaMA", "focus": "Open-source models, local inference" },
+      { "sub": "r/CodingWithAI", "focus": "AI-assisted development" },
+      { "sub": "r/cursor", "focus": "Cursor IDE and AI coding tools" }
+    ],
+    "broader_ai_startup": [
+      { "sub": "r/MachineLearning", "focus": "ML research and papers" },
+      { "sub": "r/artificial", "focus": "General AI news and discussion" },
+      { "sub": "r/singularity", "focus": "AGI progress, timelines, societal impact" },
+      { "sub": "r/startups", "focus": "Startup strategy, fundraising, ops" },
+      { "sub": "r/SaaS", "focus": "SaaS business models and growth" },
+      { "sub": "r/Entrepreneur", "focus": "Entrepreneurship and business building" }
+    ]
+  },
+  "other_sources": [
+    { "name": "Hacker News", "url": "https://news.ycombinator.com", "type": "aggregator" },
+    { "name": "TechCrunch AI", "url": "https://techcrunch.com/category/artificial-intelligence/", "type": "publication" },
+    { "name": "The Information", "url": "https://www.theinformation.com", "type": "publication" },
+    { "name": "Semafor Tech", "url": "https://www.semafor.com/tech", "type": "publication" },
+    { "name": "ArXiv cs.AI", "url": "https://arxiv.org/list/cs.AI/recent", "type": "research" },
+    { "name": "Product Hunt AI", "url": "https://www.producthunt.com/topics/artificial-intelligence", "type": "launches" }
+  ],
+  "sections": {
+    "enterprise": {
+      "label": "Enterprise AI Brief",
+      "tone": "Sharp executive advisor. Strategic, direct, no hype. Focus on what matters for decision-makers.",
+      "source_priority": ["x_accounts.enterprise_strategists", "x_accounts.ai_labs_research", "other_sources"],
+      "typical_items": 5
+    },
+    "founder": {
+      "label": "Founder / Operator AI Brief",
+      "tone": "Operator and founder edge. Practical, builder-focused, tools and tactics. What to ship, what to watch.",
+      "source_priority": ["x_accounts.builders_founders", "subreddits", "other_sources"],
+      "typical_items": 6
+    }
+  }
+}
