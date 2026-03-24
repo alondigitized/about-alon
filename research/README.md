@@ -32,11 +32,12 @@ Everything is static HTML/CSS/JS. No build step. Pages deploy from `main` via Gi
 
 ## Access gating
 
-The archive page uses **lightweight client-side passcode gating** (same approach as AI Brief).
+Both the archive page and individual retail brief pages use **lightweight client-side passcode gating** (same approach as AI Brief).
 
 - SHA-256 hashed passcode compared in browser
 - `sessionStorage` token for same-tab session persistence
-- **Not real security** — content is in the HTML source
+- **Not real security** — content is in the HTML source; anyone who views source or disables JS can read it
+- Gate script (`gate.js`) is loaded in `<head>` so it hides the page before content renders
 
 **Default passcode:** `retailpulse`
 
@@ -46,7 +47,14 @@ echo -n "YOUR_NEW_PASSCODE" | shasum -a 256
 # Replace EXPECTED_HASH in research/gate.js
 ```
 
-Note: Individual retail brief HTML files (the existing `retail_research_*.html`) do NOT have the gate — they are standalone pages with their own inline styles. The gate only covers the archive/index page. To gate individual briefs, add `<script src="gate.js"></script>` and wrap content in `<div id="brief-content">`.
+**How the gate works on different page types:**
+- **Archive page** (`index.html`): Content is wrapped in `<div id="brief-content">` — gate hides/shows that div.
+- **Individual briefs** (`retail_research_*.html`): No wrapper needed — gate hides all `<body>` children and overlays the passcode prompt. Inline styles on the overlay ensure it renders correctly regardless of the page's own stylesheet.
+
+**New retail briefs must include the gate.** Add this line inside `<head>`:
+```html
+<script src="gate.js"></script>
+```
 
 ## How new retail briefs land
 
@@ -128,6 +136,6 @@ This convention is used by:
 
 1. **No server-side generation.** Briefs must be generated externally and committed.
 2. **Archive index requires manual/scripted update.** New briefs don't auto-appear in the listing.
-3. **Individual brief pages are not passcode-gated.** Only the archive page has the gate. Direct URLs work without a passcode.
+3. **Client-side gating is not real security.** Both archive and individual brief pages are gated, but the passcode check runs in the browser. Content is in the HTML source and accessible to anyone who views source or disables JavaScript.
 4. **Mixed styling.** Archive page is dark monospace; individual briefs have their own light inline styles. This is intentional — preserving existing brief formatting.
 5. **No live push notifications.** Telegram notification is handled by the OpenClaw cron job, not the website.
