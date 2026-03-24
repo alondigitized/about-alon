@@ -18,7 +18,7 @@ research/
 
 ### Content model
 
-Each daily brief is a standalone HTML page at `research/retail_research_YYYY-MM-DD.html`. Briefs are self-contained with inline styles (light theme, sans-serif). The archive landing page uses the dark monospace theme for navigation consistency with AI Brief.
+Each daily brief is an HTML page at `research/retail_research_YYYY-MM-DD.html` using the shared `style.css` (dark monospace theme). All pages share a consistent shell: site-nav, brief-header, and `<div id="brief-content">` wrapper. Report content lives inside a `<div class="detail-content">` wrapper that provides styling for headings, callout boxes, and source citations.
 
 Focus areas:
 - Footwear industry (Nike, Adidas, New Balance, On, Hoka, etc.)
@@ -48,14 +48,10 @@ echo -n "YOUR_NEW_PASSCODE" | shasum -a 256
 # Replace EXPECTED_HASH in research/gate.js
 ```
 
-**How the gate works on different page types:**
-- **Archive page** (`index.html`): Content is wrapped in `<div id="brief-content">` — gate hides/shows that div.
-- **Individual briefs** (`retail_research_*.html`): No wrapper needed — gate hides all `<body>` children and overlays the passcode prompt. Inline styles on the overlay ensure it renders correctly regardless of the page's own stylesheet.
+**How the gate works:**
+All pages (archive and individual briefs) wrap content in `<div id="brief-content">`. The gate hides/shows that div and overlays the passcode prompt.
 
-**New retail briefs must include the gate.** Add this line inside `<head>`:
-```html
-<script src="gate.js"></script>
-```
+**New retail briefs must include the gate.** Add `<script src="gate.js"></script>` before `</body>`.
 
 ## Archive index regeneration
 
@@ -77,7 +73,7 @@ To control the archive summary for a brief, add this to its `<head>`:
 
 The cron job ("Retail Intelligence Pulse" at 4:00 AM PT daily) should follow these steps:
 
-1. **Content generation:** Generate the brief HTML. Include `<meta name="brief-summary" content="...">` in the `<head>` for a clean archive summary. Include `<script src="gate.js"></script>` in the `<head>` for passcode gating. Write to `research/retail_research_YYYY-MM-DD.html`.
+1. **Content generation:** Generate the brief HTML using the shared shell (site-nav, brief-header, `#brief-content` wrapper, `detail-content` div). Link to `style.css` — do NOT use inline styles. Include `<meta name="brief-summary" content="...">` in `<head>`. Include `<script src="gate.js"></script>` before `</body>`. Write to `research/retail_research_YYYY-MM-DD.html`.
 2. **Index regeneration:**
    ```bash
    ./research/rebuild-index.sh
@@ -151,5 +147,5 @@ This convention is used by:
 1. **No server-side generation.** Briefs must be generated externally and committed.
 2. **Summary auto-extraction is approximate.** Without a `<meta name="brief-summary">` tag, summaries are extracted from `<li><strong>` patterns. For best results, include the meta tag in every new brief.
 3. **Client-side gating is not real security.** Both archive and individual brief pages are gated, but the passcode check runs in the browser. Content is in the HTML source and accessible to anyone who views source or disables JavaScript.
-4. **Mixed styling.** Archive page is dark monospace; individual briefs have their own light inline styles. This is intentional — preserving existing brief formatting.
+4. **Legacy brief variation.** Older briefs (pre-March 2026) used different class names and structures. All now share the dark shell, but inner content structure varies.
 5. **No live push notifications.** Telegram notification is handled by the OpenClaw cron job, not the website.

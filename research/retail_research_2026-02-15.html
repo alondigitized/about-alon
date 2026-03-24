@@ -1,145 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Retail Industry Research - Alon</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Source+Code+Pro:wght@400;700&family=Montserrat:wght@400;700&display=swap');
-
-        :root {
-            --bg-color: #1a1a2e; /* Dark blue background */
-            --text-color-primary: #e0e0e0; /* Light grey */
-            --text-color-secondary: #cccccc; /* Muted grey */
-            --accent-color: #00bcd4; /* Electric blue */
-            --opportunity-color: #ffeb3b; /* Yellow for opportunities */
-            --insight-color: #ff6b6b; /* Reddish for insights */
-            --code-font: 'Source Code Pro', monospace;
-            --title-font: 'Montserrat', sans-serif;
-            --section-header-font: 'Orbitron', sans-serif;
-        }
-
-        body {
-            font-family: var(--global-font);
-            background-color: var(--bg-color);
-            color: var(--text-color-primary);
-            line-height: 1.7;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-            overflow-x: hidden;
-            background-image: linear-gradient(rgba(26, 26, 46, 0.8), rgba(26, 26, 46, 0.8)), url('https://source.unsplash.com/random/1920x1080?abstract-tech,blue-orange'); /* Techy abstract background */
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-
-        .container {
-            max-width: 850px;
-            padding: 50px 40px;
-            background: rgba(26, 42, 60, 0.9); /* Slightly transparent dark blue */
-            border: 2px solid var(--accent-color);
-            box-shadow: 0 0 20px rgba(0, 188, 212, 0.7), 0 0 30px rgba(255, 235, 59, 0.5);
-            border-radius: 12px;
-            position: relative;
-            z-index: 1;
-            animation: subtleGlow 4s infinite alternate;
-            margin-top: 50px; 
-            margin-bottom: 50px;
-        }
-
-        @keyframes subtleGlow {
-            from { box-shadow: 0 0 20px rgba(0, 188, 212, 0.7), 0 0 30px rgba(255, 235, 59, 0.5); }
-            to { box-shadow: 0 0 25px rgba(0, 188, 212, 0.9), 0 0 40px rgba(255, 235, 59, 0.7); }
-        }
-        
-        h1 {
-            font-family: var(--title-font);
-            font-size: 3rem;
-            color: var(--opportunity-color);
-            margin-bottom: 20px;
-            text-shadow: 0 0 10px var(--opportunity-color), 0 0 20px var(--accent-color);
-            letter-spacing: 1px;
-            text-align: center;
-        }
-        
-        p.timestamp {
-            font-family: var(--code-font);
-            font-size: 0.9rem;
-            color: var(--primary-color);
-            margin-bottom: 40px;
-            text-align: center;
-        }
-
-        h2 {
-            font-family: var(--section-header-font);
-            font-size: 1.8rem;
-            color: var(--accent-color);
-            margin-bottom: 30px;
-            position: relative;
-            padding-bottom: 10px;
-            border-bottom: 2px dashed var(--accent-color);
-            display: inline-block;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        h2:hover {
-            color: var(--opportunity-color);
-            border-bottom-color: var(--opportunity-color);
-        }
-
-        .story-content {
-            font-size: 1.1rem;
-            color: var(--text-color-secondary);
-            margin-bottom: 30px;
-            text-align: left;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeUp 1.5s forwards;
-            animation-delay: 0.5s;
-        }
-
-        .story-content p {
-            margin-bottom: 20px;
-        }
-
-        .story-content.insight {
-            color: var(--insight-color);
-            animation-delay: 0.7s;
-        }
-
-        .story-content.opportunity {
-            color: var(--opportunity-color);
-            font-weight: bold;
-            animation-delay: 0.9s;
-        }
-
-        footer {
-            margin-top: 50px;
-            font-size: 0.8rem;
-            color: var(--primary-color);
-            text-align: center;
-        }
-
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-       
-        /* Responsive Adjustments */
-        @media (max-width: 768px) {
-            h1 { font-size: 2.5rem; }
-            h2 { font-size: 1.6rem; }
-            .story-content { font-size: 1.05rem; }
-        }
-    </style>
-<script src="gate.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retail Intelligence Pulse &mdash; 2026-02-15</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<nav style="font-size:14px;margin-bottom:16px;"><a href="index.html" style="color:#2563eb;text-decoration:none;">&larr; Retail Intelligence Archive</a></nav>
+
+<nav class="site-nav">
+  <a href="../index.html">Home</a>
+  <a href="../ai-brief/index.html">AI Brief</a>
+  <a href="index.html" class="active">Retail Pulse</a>
+</nav>
+
+<div id="brief-content">
+
+  <header class="brief-header">
+    <h1>Retail Intelligence Pulse</h1>
+    <div class="brief-meta">Sunday, February 15 2026 &middot; Footwear, digital commerce, marketplaces</div>
+  </header>
+
+  <div class="detail-content">
     <div class="container">
         <h1>Retail Industry Deep Dive 📈</h1>
         <p class="timestamp">Research Date: <span id="timestamp"></span></p>
@@ -192,5 +74,10 @@
             });
         });
     </script>
+  </div>
+
+</div>
+
+<script src="gate.js"></script>
 </body>
 </html>
