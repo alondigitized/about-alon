@@ -32,7 +32,6 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 BRIEFS_DIR="$SCRIPT_DIR/briefs"
-INDEX_FILE="$SCRIPT_DIR/index.html"
 
 # Parse arguments
 DATE="${1:-$(date +%Y-%m-%d)}"
@@ -151,36 +150,9 @@ HTMLEOF
   echo "Created: $BRIEF_FILE"
 fi
 
-# ── Update archive index ──
-if [ -f "$BRIEF_FILE" ]; then
-  # Check if date already in index
-  if grep -q "$DATE" "$INDEX_FILE" 2>/dev/null; then
-    echo "Index already contains $DATE, skipping."
-  else
-    # Build the new list item
-    if [ "$IS_MONDAY" = true ]; then
-      DAY_LABEL="$DAY_NAME (weekend rollup)"
-    else
-      DAY_LABEL="$DAY_NAME"
-    fi
-
-    NEW_ENTRY="    <li>\\
-      <a href=\"briefs/$DATE.html\" class=\"archive-date\">$DATE<\\/a>\\
-      <span class=\"archive-day\">$DAY_LABEL<\\/span>\\
-      <div class=\"archive-summary\">Brief pending<\\/div>\\
-    <\\/li>"
-
-    # Insert after the <!-- New briefs --> comment, or after <ul class="archive-list">
-    if grep -q "<!-- New briefs" "$INDEX_FILE"; then
-      sed -i.bak "s|<!-- New briefs.*-->|&\\
-$NEW_ENTRY|" "$INDEX_FILE" && rm -f "$INDEX_FILE.bak"
-    else
-      sed -i.bak "s|<ul class=\"archive-list\">|<ul class=\"archive-list\">\\
-$NEW_ENTRY|" "$INDEX_FILE" && rm -f "$INDEX_FILE.bak"
-    fi
-    echo "Updated index: $INDEX_FILE"
-  fi
-fi
+# ── Regenerate archive index ──
+# rebuild-index.sh is idempotent — scans all briefs and regenerates the full list.
+"$SCRIPT_DIR/rebuild-index.sh"
 
 # ── Commit if requested ──
 if [ "$DO_COMMIT" = true ]; then

@@ -11,6 +11,7 @@ research/
 ├── index.html                          # Archive/listing page (passcode-gated)
 ├── style.css                           # Dark monospace stylesheet
 ├── gate.js                             # Client-side passcode gate
+├── rebuild-index.sh                    # Idempotent archive index regeneration
 ├── README.md                           # This file
 └── retail_research_YYYY-MM-DD.html     # Individual daily briefs (17 and counting)
 ```
@@ -56,41 +57,49 @@ echo -n "YOUR_NEW_PASSCODE" | shasum -a 256
 <script src="gate.js"></script>
 ```
 
+## Archive index regeneration
+
+`rebuild-index.sh` deterministically regenerates the archive list in `index.html` by scanning all `retail_research_*.html` files. It is **idempotent** — run it any number of times and get the same result for the same inputs.
+
+**Summary extraction priority:**
+1. `<meta name="brief-summary" content="...">` tag in the brief (preferred)
+2. Company/topic names from `<li><strong>Name:</strong>` patterns (first 4)
+3. Fallback: "Retail intelligence pulse"
+
+To control the archive summary for a brief, add this to its `<head>`:
+```html
+<meta name="brief-summary" content="Your concise summary here">
+```
+
 ## How new retail briefs land
 
-### Current flow (OpenClaw cron)
+### Recommended flow (OpenClaw cron)
 
-The existing cron job ("Retail Intelligence Pulse" at 4:00 AM PT daily) generates a standalone HTML file and writes it to:
+The cron job ("Retail Intelligence Pulse" at 4:00 AM PT daily) should follow these steps:
 
-```
-research/retail_research_YYYY-MM-DD.html
-```
-
-After generating the brief, the cron job should:
-
-1. Write the HTML to `research/retail_research_YYYY-MM-DD.html`
-2. Update the archive index (`research/index.html`) — prepend a new `<li>` entry after the `<!-- New briefs -->` comment
-3. Commit and push:
+1. **Content generation:** Generate the brief HTML. Include `<meta name="brief-summary" content="...">` in the `<head>` for a clean archive summary. Include `<script src="gate.js"></script>` in the `<head>` for passcode gating. Write to `research/retail_research_YYYY-MM-DD.html`.
+2. **Index regeneration:**
+   ```bash
+   ./research/rebuild-index.sh
+   ```
+3. **Commit + push:**
    ```bash
    cd ~/.openclaw/workspace/about-alon
    git add research/retail_research_YYYY-MM-DD.html research/index.html
    git commit -m "Retail Intelligence Pulse: YYYY-MM-DD"
    git push
    ```
-4. GitHub Pages deploys automatically on push to `main`.
+4. **Telegram notification:** Send completion message with summary and URL.
 
-### Updating the archive index
+GitHub Pages deploys automatically on push to `main`.
 
-New entries should be prepended (newest first) as `<li>` elements inside the `<ul class="archive-list">` in `research/index.html`, immediately after the `<!-- New briefs -->` comment.
+### Files the cron job should touch
 
-Format:
-```html
-<li>
-  <a href="retail_research_YYYY-MM-DD.html" class="archive-date">YYYY-MM-DD</a>
-  <span class="archive-day">DayName</span>
-  <div class="archive-summary">One-line summary of key topics</div>
-</li>
-```
+| Step | File | Action |
+|------|------|--------|
+| Content | `research/retail_research_YYYY-MM-DD.html` | Create (new) |
+| Index | `research/index.html` | Regenerate via `rebuild-index.sh` |
+| Git | Both above | `git add` + commit + push |
 
 ## Telegram notification workflow
 
@@ -107,18 +116,23 @@ https://alondigitized.github.io/about-alon/research/retail_research_YYYY-MM-DD.h
 
 ### OpenClaw cron job config
 
-The existing cron job in `~/.openclaw/cron/jobs.json` should include instructions to:
+The existing cron job in `~/.openclaw/cron/jobs.json` should separate these steps clearly in the prompt:
 
-1. Generate the retail research HTML
-2. Write it to `research/retail_research_YYYY-MM-DD.html`
-3. Update `research/index.html` with the new entry
-4. Commit and push
-5. Send Telegram notification with the URL and a one-line summary
-
-Example prompt addition for the cron job:
 ```
-After pushing, send Alan a Telegram message:
-"Retail Intelligence Pulse — YYYY-MM-DD\n[one-line summary]\nhttps://alondigitized.github.io/about-alon/research/retail_research_YYYY-MM-DD.html"
+## Step 1: Content generation
+Generate the retail research HTML. Include <meta name="brief-summary" content="Top companies/themes">
+and <script src="gate.js"></script> in the <head>. Write to research/retail_research_YYYY-MM-DD.html.
+
+## Step 2: Regenerate archive index
+Run: ./research/rebuild-index.sh
+
+## Step 3: Commit + push
+git add research/retail_research_YYYY-MM-DD.html research/index.html
+git commit -m "Retail Intelligence Pulse: YYYY-MM-DD"
+git push
+
+## Step 4: Telegram notification
+Send: Retail Intelligence Pulse — YYYY-MM-DD\n[summary]\nhttps://alondigitized.github.io/about-alon/research/retail_research_YYYY-MM-DD.html
 ```
 
 The `deliver_to: telegram` field in the cron job config handles the delivery channel. The cron job's completion message IS the Telegram notification.
@@ -135,7 +149,7 @@ This convention is used by:
 ## Limitations
 
 1. **No server-side generation.** Briefs must be generated externally and committed.
-2. **Archive index requires manual/scripted update.** New briefs don't auto-appear in the listing.
+2. **Summary auto-extraction is approximate.** Without a `<meta name="brief-summary">` tag, summaries are extracted from `<li><strong>` patterns. For best results, include the meta tag in every new brief.
 3. **Client-side gating is not real security.** Both archive and individual brief pages are gated, but the passcode check runs in the browser. Content is in the HTML source and accessible to anyone who views source or disables JavaScript.
 4. **Mixed styling.** Archive page is dark monospace; individual briefs have their own light inline styles. This is intentional — preserving existing brief formatting.
 5. **No live push notifications.** Telegram notification is handled by the OpenClaw cron job, not the website.
