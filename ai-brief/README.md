@@ -101,7 +101,22 @@ Add a cron job to `~/.openclaw/cron/jobs.json`:
 }
 ```
 
-**Note:** The Telegram delivery of brief content is out of scope for the static site. The cron job's `deliver_to: telegram` will send a summary notification. The full brief lives on the website.
+### Telegram notification workflow
+
+After the brief is pushed and deployed, the cron job should send a Telegram notification to Alan.
+
+**Message format:**
+```
+AI Brief — YYYY-MM-DD
+
+[One-line summary: top 2-3 headlines from today's brief]
+
+https://alondigitized.github.io/about-alon/ai-brief/briefs/YYYY-MM-DD.html
+```
+
+The `deliver_to: telegram` field in the cron job config routes the completion message to Telegram. The cron job's prompt should include instructions to compose this summary as its final output. The completion message IS the Telegram notification — no separate API call needed.
+
+**Note:** The static site itself does not send notifications. Telegram delivery is handled entirely by the OpenClaw cron infrastructure.
 
 ## Source lists
 
