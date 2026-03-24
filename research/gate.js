@@ -16,7 +16,7 @@
   var SESSION_VALUE = 'verified_' + EXPECTED_HASH.substring(0, 16);
 
   function isAuthed() {
-    return sessionStorage.getItem(SESSION_KEY) === SESSION_VALUE;
+    return localStorage.getItem(SESSION_KEY) === SESSION_VALUE;
   }
 
   /* Immediately hide page if not authenticated — prevents flash of ungated content.
@@ -33,7 +33,7 @@
   }
 
   function setAuthed() {
-    sessionStorage.setItem(SESSION_KEY, SESSION_VALUE);
+    localStorage.setItem(SESSION_KEY, SESSION_VALUE);
   }
 
   function revealPage() {

@@ -44,7 +44,7 @@ The site uses **lightweight client-side passcode gating**. This is honest-tier s
 
 - A passcode prompt overlay appears before content is shown.
 - The entered passcode is SHA-256 hashed in the browser and compared to a stored hash.
-- On success, `sessionStorage` stores a token so subsequent pages in the same tab session skip the prompt.
+- On success, `localStorage` stores a token so the same browser remembers access across sessions (no need to re-enter on every visit).
 - The gate script and hash are in the page source — a determined user can bypass this trivially.
 
 **This is not real security.** It is equivalent to a shared password on a Google Doc link. It prevents casual access and makes it clear the content is not public. It does NOT protect against anyone who views page source.

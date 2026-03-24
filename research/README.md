@@ -36,7 +36,7 @@ Everything is static HTML/CSS/JS. No build step. Pages deploy from `main` via Gi
 Both the archive page and individual retail brief pages use **lightweight client-side passcode gating** (same approach as AI Brief).
 
 - SHA-256 hashed passcode compared in browser
-- `sessionStorage` token for same-tab session persistence
+- `localStorage` token persists across browser sessions (no need to re-enter on every visit)
 - **Not real security** — content is in the HTML source; anyone who views source or disables JS can read it
 - Gate script (`gate.js`) is loaded in `<head>` so it hides the page before content renders
 

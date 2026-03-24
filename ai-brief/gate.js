@@ -2,10 +2,10 @@
  * Lightweight client-side passcode gating for AI Brief.
  *
  * How it works:
- * - Checks sessionStorage for a valid token.
+ * - Checks localStorage for a valid token.
  * - If not found, shows a passcode prompt overlay.
  * - Passcode is hashed (SHA-256) and compared to the stored hash.
- * - On match, sets sessionStorage so subsequent pages in the same tab session skip the prompt.
+ * - On match, sets localStorage so the same browser remembers access across sessions.
  *
  * IMPORTANT: This is NOT real security. The passcode hash and all content
  * are in the static HTML/JS served to the browser. A determined user can
@@ -31,11 +31,11 @@
   }
 
   function isAuthed() {
-    return sessionStorage.getItem(SESSION_KEY) === SESSION_VALUE;
+    return localStorage.getItem(SESSION_KEY) === SESSION_VALUE;
   }
 
   function setAuthed() {
-    sessionStorage.setItem(SESSION_KEY, SESSION_VALUE);
+    localStorage.setItem(SESSION_KEY, SESSION_VALUE);
   }
 
   function showGate() {
