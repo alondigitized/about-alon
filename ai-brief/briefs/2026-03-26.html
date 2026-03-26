@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Brief — 2026-03-26</title>
+  <meta name="brief-summary" content="Enterprise AI is shifting from model bragging to distribution and operating leverage, while builder edge is moving to automated coding stacks and cheaper multimodal primitives.">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="../../index.html">Home</a>
+  <a href="../index.html" class="active">AI Brief</a>
+  <a href="../../research/index.html">Retail Pulse</a>
+</nav>
+
+<div id="brief-content">
+
+  <header class="brief-header">
+    <h1>Daily AI Brief</h1>
+    <div class="brief-meta">Thursday, March 26 2026 &middot; 11 items</div>
+  </header>
+
+  <section>
+    <span class="section-label enterprise">Enterprise AI Brief</span>
+    <h2 class="section-title">What executives need to know</h2>
+
+    <div class="item enterprise">
+      <div class="item-headline">OpenAI and Anthropic are now competing for distribution, not just benchmarks</div>
+      <div class="item-analysis">
+        Reuters reports both labs are courting private-equity firms with joint-venture structures to accelerate enterprise rollout, with OpenAI offering unusually rich economics and early model access. That matters because the real moat is moving from raw model quality to channel control, deployment muscle, and default placement across portfolios of companies. If you are buying AI at scale, expect harder lock-in tactics and more aggressive commercial packaging this year.
+      </div>
+      <div class="item-source">
+        <a href="https://www.reuters.com/business/openai-sweetens-private-equity-pitch-amid-enterprise-turf-war-with-anthropic-2026-03-23/" target="_blank" rel="noopener">Reuters</a> &middot; Mar 23
+      </div>
+      <div class="item-tags">
+        <span class="tag hot">hot</span>
+        <span class="tag">enterprise</span>
+        <span class="tag">distribution</span>
+      </div>
+    </div>
+
+    <div class="item enterprise">
+      <div class="item-headline">Microsoft is productizing the full stack around work agents</div>
+      <div class="item-analysis">
+        Microsoft’s new Frontier Suite bundles Wave 3 of M365 Copilot, broader model diversity including Claude, and Agent 365 into one commercial package. The message is blunt: Microsoft wants to own the orchestration, governance, and identity layer for AI at work, not merely resell models. For large companies, this raises the pressure to decide whether your AI operating model will sit inside Microsoft’s control plane or alongside it.
+      </div>
+      <div class="item-source">
+        <a href="https://blogs.microsoft.com/blog/2026/03/09/introducing-the-first-frontier-suite-built-on-intelligence-trust/" target="_blank" rel="noopener">Microsoft</a> &middot; Mar 9
+      </div>
+      <div class="item-tags">
+        <span class="tag hot">hot</span>
+        <span class="tag">copilot</span>
+        <span class="tag">agents</span>
+      </div>
+    </div>
+
+    <div class="item enterprise">
+      <div class="item-headline">Google’s Gemini 3.1 Pro raises the bar for enterprise-grade reasoning</div>
+      <div class="item-analysis">
+        Gemini 3.1 Pro is now rolling through Vertex AI, Gemini Enterprise, the Gemini API, and consumer surfaces. The strategic point is less the benchmark score and more the distribution symmetry: Google is tightening the loop between frontier reasoning, cloud infrastructure, and productivity products. Enterprises that already sit on Google Cloud now have fewer excuses to standardize elsewhere by default.
+      </div>
+      <div class="item-source">
+        <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/" target="_blank" rel="noopener">Google</a> &middot; Feb 19
+      </div>
+      <div class="item-tags">
+        <span class="tag">models</span>
+        <span class="tag">cloud</span>
+      </div>
+    </div>
+
+    <div class="item enterprise">
+      <div class="item-headline">Cost is becoming a board-level issue, and Google is attacking that directly</div>
+      <div class="item-analysis">
+        Gemini 3.1 Flash-Lite arrives as a cheap, high-throughput model tier aimed at translation, moderation, UI generation, and other repeated workloads. This is not glamorous frontier news, but it is the kind of release that actually changes budget math for scaled deployments. Enterprises that still run every workflow through premium reasoning models are about to look financially sloppy.
+      </div>
+      <div class="item-source">
+        <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-lite/" target="_blank" rel="noopener">Google</a> &middot; Mar 3
+      </div>
+      <div class="item-tags">
+        <span class="tag">cost</span>
+        <span class="tag">scale</span>
+      </div>
+    </div>
+
+    <div class="item enterprise">
+      <div class="item-headline">OpenAI is scaling for enterprise services, not just research prestige</div>
+      <div class="item-analysis">
+        Reuters says OpenAI plans to grow to roughly 8,000 employees by year-end, with hiring focused on product, engineering, sales, and technical ambassadorship. That last category is the tell: enterprise adoption now depends on high-touch enablement, not just API access. Buyers should assume the leading labs are building consulting-like muscle around their products, which will widen adoption gaps between serious vendors and everyone else.
+      </div>
+      <div class="item-source">
+        <a href="https://www.reuters.com/business/openai-nearly-double-workforce-8000-by-end-2026-ft-reports-2026-03-21/" target="_blank" rel="noopener">Reuters</a> &middot; Mar 21
+      </div>
+      <div class="item-tags">
+        <span class="tag">go-to-market</span>
+        <span class="tag">org-design</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <span class="section-label founder">Founder / Operator AI Brief</span>
+    <h2 class="section-title">What builders should act on</h2>
+
+    <div class="item founder">
+      <div class="item-headline">Cursor’s new Automations product points to the real next step in AI coding</div>
+      <div class="item-analysis">
+        Cursor is moving from assistant UX to always-on agent workflows triggered by code changes, Slack events, timers, incidents, and MCP-connected systems. That is the important shift: the winning products will not just answer prompts; they will sit in the background and continuously do maintenance, triage, and review. If you are building internal tooling, steal this pattern now.
+      </div>
+      <div class="item-source">
+        <a href="https://techcrunch.com/2026/03/05/cursor-is-rolling-out-a-new-system-for-agentic-coding/" target="_blank" rel="noopener">TechCrunch</a> &middot; Mar 5
+      </div>
+      <div class="item-tags">
+        <span class="tag hot">hot</span>
+        <span class="tag">coding</span>
+        <span class="tag">automation</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">Cursor’s Composer 2 drama is a reminder that open models are now upstream infrastructure</div>
+      <div class="item-analysis">
+        TechCrunch reports Cursor acknowledged Composer 2 started from Moonshot’s open Kimi base before heavy additional training. The lesson is bigger than the controversy: product companies can now move faster by stacking proprietary workflow, reinforcement learning, and UX on top of open foundations. Founders should stop fetishizing training from scratch unless they actually own a durable distribution advantage.
+      </div>
+      <div class="item-source">
+        <a href="https://techcrunch.com/2026/03/22/cursor-admits-its-new-coding-model-was-built-on-top-of-moonshot-ais-kimi/" target="_blank" rel="noopener">TechCrunch</a> &middot; Mar 22
+      </div>
+      <div class="item-tags">
+        <span class="tag">open-source</span>
+        <span class="tag">product-strategy</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">Claude Code’s new auto mode is the clearest signal yet that “babysit every step” is dying</div>
+      <div class="item-analysis">
+        Anthropic’s latest Claude Code update lets the system decide which actions are safe to execute automatically, with a safety layer screening risky actions and prompt injection. The practical takeaway: builders should start designing for supervised autonomy, not manual approval on every move. But keep the isolation discipline — Anthropic itself recommends sandboxed environments, which is a useful tell about current risk.
+      </div>
+      <div class="item-source">
+        <a href="https://techcrunch.com/2026/03/24/anthropic-hands-claude-code-more-control-but-keeps-it-on-a-leash/" target="_blank" rel="noopener">TechCrunch</a> &middot; Mar 24
+      </div>
+      <div class="item-tags">
+        <span class="tag">agents</span>
+        <span class="tag">workflow</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">Open-source AI keeps getting deeper, not just bigger</div>
+      <div class="item-analysis">
+        Hugging Face’s spring 2026 ecosystem snapshot shows the hub nearing 13 million users, more than 2 million public models, and growing enterprise participation, including more Fortune 500 presence. The part worth noticing is not vanity scale but reuse: more derivative artifacts, more specialization, and more downstream value. For operators, open source is increasingly the raw material layer, while the product moat lives in data, workflow, evals, and distribution.
+      </div>
+      <div class="item-source">
+        <a href="https://huggingface.co/blog/huggingface/state-of-os-hf-spring-2026" target="_blank" rel="noopener">Hugging Face</a> &middot; Mar 19
+      </div>
+      <div class="item-tags">
+        <span class="tag">open-models</span>
+        <span class="tag">ecosystem</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">Cheap multimodal creation is becoming default product surface, not a premium edge</div>
+      <div class="item-analysis">
+        Google’s Nano Banana 2 combines stronger image generation controls with flash-speed iteration and pushes into Gemini, Search, and Ads. That makes visual generation less of a standalone business and more of a built-in capability across products. Founders building on top of generative media need sharper wedges now — workflow ownership, vertical specificity, or measurable output quality — because baseline creation keeps getting commoditized.
+      </div>
+      <div class="item-source">
+        <a href="https://blog.google/innovation-and-ai/technology/ai/nano-banana-2/" target="_blank" rel="noopener">Google</a> &middot; Feb 26
+      </div>
+      <div class="item-tags">
+        <span class="tag">multimodal</span>
+        <span class="tag">product</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">A useful research signal: memory may matter more than model size for persistent agents</div>
+      <div class="item-analysis">
+        A new arXiv paper on memory-augmented routing argues that retrieving prior conversational context let an 8B model recover much of a 235B model’s performance on repetitive agent tasks while slashing effective cost. The exact numbers will move, but the product implication is solid: if your workflow has recurring context, invest in memory and retrieval before paying for bigger models everywhere. That is boring architecture, and boring architecture often wins.
+      </div>
+      <div class="item-source">
+        <a href="https://arxiv.org/abs/2603.23013" target="_blank" rel="noopener">arXiv</a> &middot; Mar 24
+      </div>
+      <div class="item-tags">
+        <span class="tag">research</span>
+        <span class="tag">agents</span>
+        <span class="tag">cost</span>
+      </div>
+    </div>
+  </section>
+
+  <footer class="brief-footer">
+    <p>AI Brief is generated daily at 5:00 AM PT, weekdays. Monday editions roll up the weekend.</p>
+    <p>Sources: X, Reddit, Hacker News, TechCrunch, ArXiv, industry publications. <a href="../index.html">Archive</a></p>
+    <p style="margin-top: 8px; opacity: 0.5;">Content is AI-curated. Verify critical claims before acting. This is not investment advice.</p>
+  </footer>
+
+</div>
+
+<script src="../gate.js"></script>
+</body>
+</html>
