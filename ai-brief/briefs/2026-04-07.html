@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Brief — 2026-04-07</title>
+  <meta name="brief-summary" content="Capital keeps concentrating at the top, but the practical edge is shifting to cheaper agent infrastructure, open models, and verification-first workflows.">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="../../index.html">Home</a>
+  <a href="../index.html" class="active">AI Brief</a>
+  <a href="../../research/index.html">Retail Pulse</a>
+</nav>
+
+<div id="brief-content">
+
+  <header class="brief-header">
+    <h1>Daily AI Brief</h1>
+    <div class="brief-meta">Tuesday, April 7 2026 &middot; 11 items</div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- ENTERPRISE AI BRIEF                        -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section>
+    <span class="section-label enterprise">Enterprise AI Brief</span>
+    <h2 class="section-title">What executives need to know</h2>
+
+    <div class="item enterprise">
+      <div class="item-headline">OpenAI’s $122B raise turns model leadership into an infrastructure war</div>
+      <div class="item-analysis">
+        OpenAI closing a $122 billion round at an $852 billion post-money valuation is not just a funding headline; it is a signal that frontier AI is now being financed like critical infrastructure. For large enterprises, the implication is simple: the top model vendors are no longer fragile startups. Procurement conversations should shift away from vendor survival risk and toward leverage, interoperability, and how much of your workflow stack you are willing to let one provider own.
+      </div>
+      <div class="item-source">
+        <a href="https://openai.com/index/accelerating-the-next-phase-ai/" target="_blank" rel="noopener">OpenAI</a> &middot; Apr 1
+      </div>
+      <div class="item-tags">
+        <span class="tag hot">hot</span>
+        <span class="tag">funding</span>
+        <span class="tag">platforms</span>
+      </div>
+    </div>
+
+    <div class="item enterprise">
+      <div class="item-headline">Google adds Flex and Priority inference tiers, making API economics a product feature</div>
+      <div class="item-analysis">
+        Google’s new Gemini API service tiers matter because they formalize a split most enterprises already feel: cheap background cognition versus premium real-time reliability. This is the right abstraction for agent-heavy systems. If your architecture treats all model calls the same, you are probably overpaying. Expect cost-aware routing and workload tiering to become table stakes in enterprise AI operating models.
+      </div>
+      <div class="item-source">
+        <a href="https://blog.google/innovation-and-ai/technology/developers-tools/introducing-flex-and-priority-inference/" target="_blank" rel="noopener">Google Blog</a> &middot; Apr 2
+      </div>
+      <div class="item-tags">
+        <span class="tag">economics</span>
+        <span class="tag">agents</span>
+        <span class="tag">infrastructure</span>
+      </div>
+    </div>
+
+    <div class="item enterprise">
+      <div class="item-headline">Anthropic keeps pushing the enterprise coding and knowledge-work wedge with Opus 4.6</div>
+      <div class="item-analysis">
+        Claude Opus 4.6 is framed around longer-running agentic work, larger codebases, stronger review/debugging, and a 1M-token context window in beta. That package is strategically important because it targets real enterprise bottlenecks: sustained task execution, document-heavy workflows, and software quality. The big takeaway is that model competition is no longer just about benchmark bragging rights; it is about who owns the most valuable business workflows.
+      </div>
+      <div class="item-source">
+        <a href="https://www.anthropic.com/news/claude-opus-4-6" target="_blank" rel="noopener">Anthropic</a> &middot; Feb 5
+      </div>
+      <div class="item-tags">
+        <span class="tag">models</span>
+        <span class="tag">knowledge-work</span>
+        <span class="tag">software</span>
+      </div>
+    </div>
+
+    <div class="item enterprise">
+      <div class="item-headline">Microsoft’s “Frontier Suite” confirms the enterprise battleground is the workflow layer, not the chatbot layer</div>
+      <div class="item-analysis">
+        Microsoft’s recent push around model diversity inside Microsoft 365 Copilot, Agent 365, and the new Frontier Suite reinforces the core enterprise pattern: the winning surface is embedded workflow software with trust, governance, and distribution already attached. If you are a large company, this strengthens the argument for choosing platforms that can orchestrate multiple models rather than betting the farm on a single foundation vendor.
+      </div>
+      <div class="item-source">
+        <a href="https://blogs.microsoft.com/blog/2026/03/09/introducing-the-first-frontier-suite-built-on-intelligence-trust/" target="_blank" rel="noopener">Microsoft</a> &middot; Mar 9
+      </div>
+      <div class="item-tags">
+        <span class="tag">enterprise-software</span>
+        <span class="tag">workflow</span>
+      </div>
+    </div>
+
+    <div class="item enterprise">
+      <div class="item-headline">Code verification is emerging as the second market after code generation</div>
+      <div class="item-analysis">
+        Qodo’s $70 million raise is a useful read-through on where enterprise spend is going next. Once AI-generated code is abundant, the scarce thing becomes confidence: review, testing, governance, and policy enforcement. That is the more durable enterprise budget line. Leaders rolling out coding agents should stop measuring success by lines generated and start measuring defect escape, review time, and governance coverage.
+      </div>
+      <div class="item-source">
+        <a href="https://techcrunch.com/2026/03/30/qodo-bets-on-code-verification-as-ai-coding-scales-raises-70m/" target="_blank" rel="noopener">TechCrunch</a> &middot; Mar 30
+      </div>
+      <div class="item-tags">
+        <span class="tag">dev-tools</span>
+        <span class="tag">governance</span>
+        <span class="tag">quality</span>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- FOUNDER / OPERATOR AI BRIEF                -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section>
+    <span class="section-label founder">Founder / Operator AI Brief</span>
+    <h2 class="section-title">What builders should act on</h2>
+
+    <div class="item founder">
+      <div class="item-headline">OpenAI’s Responses API is the real product shift: less orchestration glue, more native agent stack</div>
+      <div class="item-analysis">
+        The important part of OpenAI’s recent agent push is not the headline, it is the simplification. Responses API plus built-in web search, file search, computer use, tracing, and an Agents SDK reduces how much custom scaffolding teams need to ship something useful. If you are building now, bias toward platforms that collapse orchestration complexity. Glue code is where speed goes to die.
+      </div>
+      <div class="item-source">
+        <a href="https://openai.com/index/new-tools-for-building-agents/" target="_blank" rel="noopener">OpenAI</a> &middot; Mar 2026
+      </div>
+      <div class="item-tags">
+        <span class="tag hot">hot</span>
+        <span class="tag">agents</span>
+        <span class="tag">platform</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">Realtime voice just got more serious: remote MCP, SIP calling, and better speech quality</div>
+      <div class="item-analysis">
+        OpenAI making the Realtime API GA with remote MCP servers, image input, and SIP phone support means voice agents are moving from demo territory into production plumbing. The operator takeaway: if your business has support, scheduling, intake, or outbound workflows, you should be testing voice as an interface now. The stack is finally starting to look operational instead of theatrical.
+      </div>
+      <div class="item-source">
+        <a href="https://openai.com/index/introducing-gpt-realtime/" target="_blank" rel="noopener">OpenAI</a> &middot; Mar 2026
+      </div>
+      <div class="item-tags">
+        <span class="tag">voice</span>
+        <span class="tag">MCP</span>
+        <span class="tag">workflows</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">Gemma 4 is a practical open-model release, not just an ideological one</div>
+      <div class="item-analysis">
+        Google positioning Gemma 4 as reasoning-capable, agent-friendly, Apache 2.0, and efficient across device classes matters because it lowers the bar for teams that want control without full frontier-model spend. For founders, this is a straightforward wedge: use proprietary frontier models where it matters, but reach for capable open models when margin, privacy, or edge deployment wins the trade.
+      </div>
+      <div class="item-source">
+        <a href="https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/" target="_blank" rel="noopener">Google Blog</a> &middot; Apr 2
+      </div>
+      <div class="item-tags">
+        <span class="tag">open-source</span>
+        <span class="tag">models</span>
+        <span class="tag">cost</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">Cursor’s Automations points to the next IDE battle: triggered agents, not just inline copilots</div>
+      <div class="item-analysis">
+        Cursor’s new automation system launches agents off timers, Slack messages, repo events, and incidents. That is a more important product move than another autocomplete upgrade because it turns coding tools into lightweight operational systems. Builders should copy the pattern: the next gains come from event-driven agents that run when humans are not looking, then escalate only when needed.
+      </div>
+      <div class="item-source">
+        <a href="https://techcrunch.com/2026/03/05/cursor-is-rolling-out-a-new-system-for-agentic-coding/" target="_blank" rel="noopener">TechCrunch</a> &middot; Mar 5
+      </div>
+      <div class="item-tags">
+        <span class="tag">coding</span>
+        <span class="tag">automation</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">LangChain’s Deep Agents package shows where open-source agent tooling is heading: opinionated, runnable, and less abstract</div>
+      <div class="item-analysis">
+        Deep Agents bundles planning, file tools, shell access, sub-agents, summarization, and MCP support into a ready-to-run harness. That is the right direction. The market is tiring of “frameworks” that mostly give you abstractions. What operators want now are batteries-included agent systems they can deploy, customize, and observe without inventing architecture from scratch.
+      </div>
+      <div class="item-source">
+        <a href="https://github.com/langchain-ai/deepagents" target="_blank" rel="noopener">GitHub / LangChain</a> &middot; Apr 6
+      </div>
+      <div class="item-tags">
+        <span class="tag">open-source</span>
+        <span class="tag">agents</span>
+        <span class="tag">MCP</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">The cleanest builder signal right now: agent ecosystems are standardizing around context, delegation, and memory</div>
+      <div class="item-analysis">
+        Across GitHub projects, HN demos, and product launches, the repeated themes are not flashy model demos; they are memory layers, sub-agent coordination, plan interception, and context compression. That is a useful market tell. Model quality still matters, but the real product surface is becoming everything around the model that keeps long-running work coherent. Build there.
+      </div>
+      <div class="item-source">
+        <a href="https://news.ycombinator.com/item?id=47308836" target="_blank" rel="noopener">Hacker News</a> &middot; recent builder signal
+      </div>
+      <div class="item-tags">
+        <span class="tag">signal</span>
+        <span class="tag">builders</span>
+        <span class="tag">workflows</span>
+      </div>
+    </div>
+
+  </section>
+
+  <footer class="brief-footer">
+    <p>AI Brief is generated daily at 5:00 AM PT, weekdays. Monday editions roll up the weekend.</p>
+    <p>Sources: X, Reddit, Hacker News, TechCrunch, ArXiv, industry publications. <a href="../index.html">Archive</a></p>
+    <p style="margin-top: 8px; opacity: 0.5;">Content is AI-curated. Verify critical claims before acting. This is not investment advice.</p>
+  </footer>
+
+</div>
+
+<script src="../gate.js"></script>
+</body>
+</html>
