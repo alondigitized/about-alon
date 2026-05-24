@@ -11,7 +11,7 @@
 window.GALLERIES = [
   {
     id: "property-a",
-    eyebrow: { zh: "作品一", en: "Project One" },
+    eyebrow: { zh: "作品二", en: "Project Two" },
     title: {
       zh: "民宿一号 · 明亮开阔的现代小宅",
       en: "Rental No.1 · A Bright, Open Modern Home"
@@ -117,7 +117,7 @@ window.GALLERIES = [
   {
     id: "property-b",
     guestFavorite: { rating: "4.92" },
-    eyebrow: { zh: "作品二", en: "Project Two" },
+    eyebrow: { zh: "作品一", en: "Project One" },
     title: {
       zh: "民宿二号 · 暖意复式宅邸",
       en: "Rental No.2 · A Warm Two-Story Retreat"
