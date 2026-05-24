@@ -50,8 +50,8 @@ window.GALLERIES = [
         file: "a-04", phase: "detail",
         room: { zh: "厨房", en: "The Kitchen" },
         caption: {
-          zh: "L 形动线，是朱师傅站在灶台前来回比划磨出来的。电陶炉、抽拉龙头、嵌入式洗碗机一个不少；柜门每道缝都对得齐齐整整，抽屉一推一拉顺滑得很——处女座来了都得点头：这活儿，挑不出毛病。",
-          en: "The L-shaped layout was paced out by Master Zhu, back and forth in front of the range, until it was right. Electric cooktop, pull-down faucet, built-in dishwasher — nothing missing. Every cabinet seam runs dead straight and every drawer glides shut. Even a card-carrying perfectionist would just nod: nothing to pick at here."
+          zh: "L 形动线，是朱师傅站在灶台前来回比划磨出来的。电陶炉、抽拉龙头、嵌入式洗碗机一个不少；柜门每道缝都对得齐齐整整，抽屉一推一拉顺滑得很——四十年练出来的手感，处女座来了都得点头：这活儿，挑不出毛病。",
+          en: "The L-shaped layout was paced out by Master Zhu, back and forth in front of the range, until it was right. Electric cooktop, pull-down faucet, built-in dishwasher — nothing missing. Every cabinet seam runs dead straight and every drawer glides shut, with the sureness of forty years' practice. Even a card-carrying perfectionist would just nod: nothing to pick at here."
         }
       },
       {
