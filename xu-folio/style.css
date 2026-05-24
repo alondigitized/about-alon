@@ -463,12 +463,18 @@ blockquote.review {
   line-height: 1;
 }
 .review__text {
-  margin: 0;
   flex: 1;
   color: var(--ink);
   font-size: 1.08rem;
   line-height: 1.8;
 }
+.review__text p { margin: 0 0 0.8em; }
+.review__text p:last-child { margin-bottom: 0; }
+.review--client {
+  grid-column: 1 / -1;
+  border-left: 4px solid var(--accent);
+}
+.review--client .review__text { max-width: 78ch; }
 .review__by {
   border-top: 1px solid var(--line);
   padding-top: 12px;

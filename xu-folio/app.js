@@ -27,6 +27,8 @@
       "ui.viewAirbnb": "在 Airbnb 上查看房源",
       "ui.reviewsTitle": "住客评价",
       "ui.reviewsNote": "来自 Airbnb 的真实入住评价",
+      "ui.reviewsTitleMixed": "真实口碑",
+      "ui.reviewsNoteMixed": "来自房主与 Airbnb 住客的真实评价",
       "nav.about": "关于", "nav.services": "服务", "nav.work": "作品", "nav.reviews": "评价", "nav.contact": "联系",
       "ui.gfLabel": "住客之选", "ui.gfSub": "Airbnb 超赞房源",
       "services.label": "服务项目",
@@ -75,6 +77,8 @@
       "ui.viewAirbnb": "View the listing on Airbnb",
       "ui.reviewsTitle": "What Guests Say",
       "ui.reviewsNote": "Verified guest reviews from Airbnb",
+      "ui.reviewsTitleMixed": "In Their Words",
+      "ui.reviewsNoteMixed": "From the homeowner and verified Airbnb guests",
       "nav.about": "About", "nav.services": "Services", "nav.work": "Projects", "nav.reviews": "Reviews", "nav.contact": "Contact",
       "ui.gfLabel": "Guest Favorite", "ui.gfSub": "Top-rated on Airbnb",
       "services.label": "What He Does",
@@ -178,12 +182,15 @@
   function reviewHTML(r) {
     var n = Math.max(0, Math.min(5, r.stars || 5));
     var stars = new Array(n + 1).join("★") + new Array(6 - n).join("☆");
+    var paras = String(lang2(r.text)).split(/\n+/).map(function (s) { return s.trim(); }).filter(Boolean);
+    var body = paras.map(function (p) { return "<p>" + esc(p) + "</p>"; }).join("");
+    var cls = "review" + (r.kind === "client" ? " review--client" : "");
     return '' +
-      '<blockquote class="review">' +
+      '<blockquote class="' + cls + '">' +
         '<div class="review__stars" aria-label="' + n + '/5">' + stars + '</div>' +
-        '<p class="review__text">' + esc(lang2(r.text)) + '</p>' +
+        '<div class="review__text">' + body + '</div>' +
         '<footer class="review__by">' +
-          '<span class="review__name">' + esc(r.name || "") + '</span>' +
+          '<span class="review__name">' + esc(lang2(r.name)) + '</span>' +
           '<span class="review__meta">' + esc(lang2(r.meta)) + '</span>' +
         '</footer>' +
       '</blockquote>';
@@ -216,9 +223,12 @@
     if (!host) return;
     var revs = prop.reviews || [];
     if (!revs.length) { host.innerHTML = ""; return; }
+    var hasClient = revs.some(function (r) { return r.kind === "client"; });
+    var title = t(hasClient ? "ui.reviewsTitleMixed" : "ui.reviewsTitle");
+    var note  = t(hasClient ? "ui.reviewsNoteMixed" : "ui.reviewsNote");
     host.innerHTML =
-      '<h3 class="reviews__title">' + esc(t("ui.reviewsTitle")) + '</h3>' +
-      '<p class="reviews__note">' + esc(t("ui.reviewsNote")) + '</p>' +
+      '<h3 class="reviews__title">' + esc(title) + '</h3>' +
+      '<p class="reviews__note">' + esc(note) + '</p>' +
       '<div class="reviews__grid">' + revs.map(reviewHTML).join("") + '</div>';
   }
 

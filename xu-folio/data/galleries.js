@@ -129,6 +129,15 @@ window.GALLERIES = [
     airbnb: "https://www.airbnb.com/rooms/1199645525624502163",
     reviews: [
       {
+        kind: "client", stars: 5,
+        name: { zh: "房主", en: "The Owner" },
+        meta: { zh: "本套作品业主 · 委托朱师傅翻新", en: "Owner of this project · hired Master Zhu for the remodel" },
+        text: {
+          zh: "这次装修体验很好，必须给师傅一个五星好评！\n这套房子是按民宿标准来做的，对效果和细节要求比较高。师傅在前期沟通时就很专业，不仅能理解我们的需求，还会从实际使用和维护角度给出建议，帮我们优化方案同时控制预算。\n施工过程也很省心，沟通顺畅，现场也保持整洁，细节处理（比如收边、对缝）做得很到位，整体效果超出了预期。\n完工后有一些小问题，师傅也都及时过来处理，没有推诿👍\n整个过程中没有任何隐形加价，这点在装修行业真的很难得。整体性价比很高，如果有朋友要装修，尤其是做民宿或者对品质有要求的，我会愿意推荐朱师傅。",
+          en: "A great renovation experience — Master Zhu has more than earned these five stars!\nWe had this place finished to vacation-rental standard, so we were demanding about both the result and the fine details. He was a professional from the very first conversations: he not only understood what we wanted, but advised us from the angle of real daily use and long-term upkeep, helping us refine the plan while keeping the budget under control.\nThe build itself was completely worry-free — communication was smooth, the site stayed tidy, and the detail work (edge trims, seam alignment) was spot on. The overall result went beyond what we'd expected.\nA few small issues came up after completion, and he came over to take care of every one of them promptly, no excuses. 👍\nAcross the whole project there were zero hidden add-on charges — genuinely rare in this trade. Outstanding value for money. If a friend were renovating — especially for a rental, or anyone who cares about quality — I'd gladly recommend Master Zhu."
+        }
+      },
+      {
         name: "Ashley", stars: 5,
         meta: { zh: "美国华盛顿州奥林匹亚 · 1周前 · 结伴出游", en: "Olympia, WA · 1 week ago · Group trip" },
         text: {
