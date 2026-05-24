@@ -70,6 +70,8 @@ a { color: inherit; }
   align-items: center;
   gap: 18px;
   padding: 13px clamp(16px, 4vw, 38px);
+  max-width: 100%;
+  overflow-x: hidden;
   color: #fff;
   background: transparent;
   transition: background .3s, box-shadow .3s, padding .3s;
@@ -695,7 +697,8 @@ html.js .reveal.is-visible {
 }
 @media (max-width: 440px) {
   .brand-name { display: none; }
-  .topnav__links { gap: 10px; }
-  .topnav__links a { font-size: 0.85rem; }
-  .lang-toggle { padding: 5px 11px; }
+  .topnav { gap: 6px; }
+  .topnav__links { gap: 9px; }
+  .topnav__links a { font-size: 0.82rem; }
+  .lang-toggle { padding: 5px 10px; font-size: 0.78rem; }
 }
