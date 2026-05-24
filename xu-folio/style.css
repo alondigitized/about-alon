@@ -252,6 +252,39 @@ a { color: inherit; }
 }
 .airbnb-link:hover { color: var(--accent); border-color: var(--accent-dk); }
 
+/* ---------- Guest Favorite badge ---------- */
+.gf-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 8px 22px 8px 16px;
+  box-shadow: var(--shadow-sm);
+  color: var(--ink);
+  margin-bottom: 24px;
+}
+.gf-laurel { width: 26px; height: 56px; flex: 0 0 auto; color: var(--ink); }
+.gf-laurel--r { transform: scaleX(-1); }
+.gf-badge__num {
+  font-family: Georgia, serif;
+  font-weight: 700;
+  font-size: 1.7rem;
+  line-height: 1;
+  margin: 0 2px;
+}
+.gf-badge__label {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+  margin-left: 12px;
+  padding-left: 14px;
+  border-left: 1px solid var(--line);
+}
+.gf-badge__label b { font-size: 0.95rem; font-weight: 700; color: var(--ink); }
+.gf-badge__label span { font-size: 0.8rem; color: var(--ink-soft); }
+
 /* ---------- Gallery grid ---------- */
 .gallery {
   max-width: var(--maxw);

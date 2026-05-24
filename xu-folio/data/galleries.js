@@ -116,6 +116,7 @@ window.GALLERIES = [
   },
   {
     id: "property-b",
+    guestFavorite: { rating: "4.92" },
     eyebrow: { zh: "作品二", en: "Project Two" },
     title: {
       zh: "民宿二号 · 暖意复式宅邸",

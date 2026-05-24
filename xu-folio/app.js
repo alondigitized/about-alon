@@ -28,6 +28,7 @@
       "ui.reviewsTitle": "住客评价",
       "ui.reviewsNote": "来自 Airbnb 的真实入住评价",
       "nav.about": "关于", "nav.work": "作品", "nav.reviews": "评价", "nav.contact": "联系",
+      "ui.gfLabel": "住客之选", "ui.gfSub": "Airbnb 超赞房源",
       "contact.label": "联系朱师傅",
       "contact.heading": "下一个焕然一新的家，也许就是你的",
       "contact.body": "想翻新自己的房子或民宿？加朱师傅的微信，聊聊你的想法。",
@@ -58,6 +59,7 @@
       "ui.reviewsTitle": "What Guests Say",
       "ui.reviewsNote": "Verified guest reviews from Airbnb",
       "nav.about": "About", "nav.work": "Projects", "nav.reviews": "Reviews", "nav.contact": "Contact",
+      "ui.gfLabel": "Guest Favorite", "ui.gfSub": "Top-rated on Airbnb",
       "contact.label": "Get in touch",
       "contact.heading": "The next home brought back to life could be yours",
       "contact.body": "Renovating a home or a rental of your own? Add Master Zhu on WeChat and tell him what you have in mind.",
@@ -153,6 +155,28 @@
       '</blockquote>';
   }
 
+  var LAUREL =
+    '<svg class="gf-laurel" viewBox="0 0 44 96" aria-hidden="true">' +
+      '<path d="M33 93 C20 74 16 44 25 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>' +
+      '<g fill="currentColor">' +
+        '<ellipse cx="19" cy="80" rx="8" ry="3.6" transform="rotate(28 19 80)"/>' +
+        '<ellipse cx="15" cy="64" rx="8.5" ry="3.8" transform="rotate(16 15 64)"/>' +
+        '<ellipse cx="14" cy="48" rx="9" ry="4" transform="rotate(2 14 48)"/>' +
+        '<ellipse cx="16" cy="32" rx="8.5" ry="3.8" transform="rotate(-12 16 32)"/>' +
+        '<ellipse cx="21" cy="18" rx="7.5" ry="3.4" transform="rotate(-26 21 18)"/>' +
+      '</g></svg>';
+  var LAUREL_R = LAUREL.replace('class="gf-laurel"', 'class="gf-laurel gf-laurel--r"');
+
+  function gfBadgeHTML(gf) {
+    return '<div class="gf-badge">' +
+      LAUREL +
+      '<span class="gf-badge__num">' + esc(gf.rating) + '</span>' +
+      LAUREL_R +
+      '<span class="gf-badge__label"><b>' + esc(t("ui.gfLabel")) + '</b>' +
+        '<span>' + esc(t("ui.gfSub")) + '</span></span>' +
+    '</div>';
+  }
+
   function renderReviews(prop) {
     var host = document.getElementById("reviews-" + prop.id);
     if (!host) return;
@@ -175,6 +199,8 @@
       if (titleEl) titleEl.textContent = lang2(prop.title);
       if (introEl) introEl.textContent = lang2(prop.intro);
       if (eyebrowEl && prop.eyebrow) eyebrowEl.textContent = lang2(prop.eyebrow);
+      var gfEl = document.querySelector('[data-gf="' + prop.id + '"]');
+      if (gfEl) gfEl.innerHTML = prop.guestFavorite ? gfBadgeHTML(prop.guestFavorite) : "";
       if (linkEl) {
         if (prop.airbnb) { linkEl.href = prop.airbnb; linkEl.style.display = ""; }
         else { linkEl.style.display = "none"; }
