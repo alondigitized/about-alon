@@ -30,8 +30,8 @@ body {
   font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
                "Source Han Sans SC", "Noto Sans CJK SC", system-ui,
                -apple-system, sans-serif;
-  line-height: 1.75;
-  font-size: 17px;
+  line-height: 1.8;
+  font-size: 19px;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -52,8 +52,8 @@ a { color: inherit; }
 
 .eyebrow {
   text-transform: uppercase;
-  letter-spacing: 0.32em;
-  font-size: 0.72rem;
+  letter-spacing: 0.3em;
+  font-size: 0.8rem;
   font-weight: 700;
   color: var(--accent);
   margin: 0 0 14px;
@@ -85,10 +85,10 @@ a { color: inherit; }
   position: relative;
   min-height: 88vh;
   display: flex;
-  align-items: flex-end;
-  background: linear-gradient(135deg, #c9b8a4, #8a7868) center/cover no-repeat;
+  align-items: flex-start;
+  background: linear-gradient(135deg, #6f6354, #3f382f) center/cover no-repeat;
   background-image:
-    linear-gradient(180deg, rgba(34,31,27,.15) 0%, rgba(34,31,27,.05) 35%, rgba(34,31,27,.72) 100%),
+    linear-gradient(180deg, rgba(16,14,11,.85) 0%, rgba(16,14,11,.6) 24%, rgba(16,14,11,.28) 48%, rgba(16,14,11,.04) 72%, rgba(16,14,11,0) 100%),
     url("img/shared/hero.jpg");
   color: #fff;
 }
@@ -97,42 +97,46 @@ a { color: inherit; }
   max-width: var(--maxw);
   width: 100%;
   margin: 0 auto;
-  padding: 0 24px 9vh;
+  padding: clamp(100px, 15vh, 180px) 24px 0;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.5);
 }
 .hero__kicker {
   letter-spacing: 0.5em;
-  font-size: 0.8rem;
-  font-weight: 600;
+  font-size: 0.92rem;
+  font-weight: 700;
   margin: 0 0 18px;
-  opacity: 0.92;
+  opacity: 0.95;
 }
 .hero__title {
-  font-size: clamp(3.2rem, 12vw, 7rem);
+  font-size: clamp(3.4rem, 12vw, 7.2rem);
   line-height: 1;
-  margin: 0 0 18px;
-  text-shadow: 0 2px 30px rgba(0,0,0,.35);
+  margin: 0 0 20px;
+  text-shadow: 0 2px 24px rgba(0,0,0,.5);
 }
 .hero__sub {
-  font-size: clamp(1rem, 2.6vw, 1.35rem);
-  font-weight: 500;
-  margin: 0 0 10px;
-  opacity: 0.96;
+  font-size: clamp(1.2rem, 2.9vw, 1.6rem);
+  font-weight: 600;
+  margin: 0 0 12px;
+  opacity: 1;
 }
 .hero__tagline {
-  font-size: clamp(0.95rem, 2.2vw, 1.15rem);
+  font-size: clamp(1.08rem, 2.4vw, 1.35rem);
   max-width: 30em;
-  margin: 0 0 30px;
-  opacity: 0.9;
+  margin: 0 0 32px;
+  opacity: 0.95;
 }
 .hero__cta {
   display: inline-block;
   text-decoration: none;
   background: var(--accent);
   color: #fff;
-  padding: 13px 30px;
+  padding: 15px 34px;
   border-radius: 999px;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 1.06rem;
   letter-spacing: 0.02em;
+  text-shadow: none;
+  box-shadow: 0 8px 24px rgba(0,0,0,.28);
   transition: background .25s, transform .2s;
 }
 .hero__cta:hover { background: var(--accent-dk); transform: translateY(-2px); }
@@ -145,9 +149,9 @@ a { color: inherit; }
   margin-bottom: 26px;
 }
 .about__body {
-  font-size: 1.08rem;
+  font-size: 1.18rem;
   color: var(--ink-soft);
-  margin: 0 0 20px;
+  margin: 0 0 22px;
 }
 .about__stats {
   list-style: none;
@@ -167,7 +171,7 @@ a { color: inherit; }
   color: var(--accent);
   line-height: 1;
 }
-.stat__label { font-size: 0.9rem; color: var(--ink-soft); margin-top: 6px; }
+.stat__label { font-size: 0.98rem; color: var(--ink-soft); margin-top: 6px; }
 
 /* ---------- Projects ---------- */
 .project { padding: clamp(56px, 9vw, 110px) 0; }
@@ -178,7 +182,7 @@ a { color: inherit; }
   margin-bottom: 18px;
 }
 .project__intro {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: var(--ink-soft);
   margin: 0 0 22px;
 }
@@ -269,14 +273,14 @@ figure.shot figcaption {
 }
 figcaption .room {
   font-family: Georgia, "Songti SC", serif;
-  font-size: 1.12rem;
+  font-size: 1.22rem;
   font-weight: 700;
   color: var(--ink);
 }
 figcaption .cap {
-  font-size: 0.96rem;
+  font-size: 1.05rem;
   color: var(--ink-soft);
-  line-height: 1.7;
+  line-height: 1.72;
 }
 
 /* ---------- Guest reviews ---------- */
@@ -291,7 +295,7 @@ figcaption .cap {
 .reviews__note {
   text-align: center;
   color: var(--ink-soft);
-  font-size: 0.9rem;
+  font-size: 0.98rem;
   letter-spacing: 0.04em;
   margin: 0 0 34px;
 }
@@ -320,8 +324,8 @@ blockquote.review {
   margin: 0;
   flex: 1;
   color: var(--ink);
-  font-size: 0.99rem;
-  line-height: 1.78;
+  font-size: 1.08rem;
+  line-height: 1.8;
 }
 .review__by {
   border-top: 1px solid var(--line);
@@ -331,7 +335,7 @@ blockquote.review {
   gap: 2px;
 }
 .review__name { font-weight: 700; color: var(--ink); }
-.review__meta { font-size: 0.82rem; color: var(--ink-soft); }
+.review__meta { font-size: 0.9rem; color: var(--ink-soft); }
 
 @media (max-width: 680px) {
   .reviews__grid { grid-template-columns: 1fr; }
@@ -350,7 +354,7 @@ blockquote.review {
   max-width: 16em;
   margin: 0 auto 18px;
 }
-.contact__body { color: #c9bfb1; max-width: 28em; margin: 0 auto 40px; }
+.contact__body { color: #c9bfb1; font-size: 1.12rem; max-width: 28em; margin: 0 auto 40px; }
 
 .wechat-card {
   display: inline-flex;
@@ -458,7 +462,7 @@ blockquote.review {
 
 /* ---------- Responsive ---------- */
 @media (max-width: 680px) {
-  body { font-size: 16px; }
+  body { font-size: 17.5px; }
   .gallery { grid-template-columns: 1fr; gap: 22px; padding: 0 18px; }
   .section-inner { padding: 0 18px; }
   .hero { min-height: 82vh; }
