@@ -9,8 +9,10 @@
   --ink:       #2b2723;   /* near-black warm */
   --ink-soft:  #6b6358;   /* muted brown-grey */
   --line:      #e3dcd0;
-  --accent:    #b06a3f;   /* terracotta */
-  --accent-dk: #8f5230;
+  --accent:    #c0282d;   /* traditional seal red (朱红 / 印泥) */
+  --accent-dk: #9c1f23;
+  --gold:      #c2a468;   /* seal frame gold */
+  --seal-cream:#f3e7c8;   /* seal character cream */
   --dark:      #221f1b;   /* contact footer */
   --radius:    14px;
   --maxw:      1120px;
@@ -99,13 +101,15 @@ a { color: inherit; }
   filter: drop-shadow(0 1px 5px rgba(0, 0, 0, 0.35));
   transition: transform .25s;
 }
+.brand-seal__gold { fill: var(--gold); }
 .brand-seal__bg { fill: var(--accent); }
-.brand-seal__frame { stroke: rgba(250, 247, 242, 0.55); stroke-width: 2.5; }
+.brand-seal__frame { stroke: var(--gold); stroke-width: 1.6; }
+.brand-seal__brackets { stroke: var(--gold); stroke-width: 2.2; stroke-linecap: square; }
 .brand-seal__char {
-  fill: #faf7f2;
+  fill: var(--seal-cream);
   font-family: Georgia, "Songti SC", "STSong", serif;
   font-weight: 700;
-  font-size: 56px;
+  font-size: 52px;
   dominant-baseline: central;
 }
 .topnav__brand:hover .brand-seal { transform: rotate(-4deg) scale(1.05); }
@@ -430,7 +434,7 @@ figure.shot:hover .frame img { transform: scale(1.04); }
   text-transform: uppercase;
   backdrop-filter: blur(4px);
 }
-.badge-after  { background: rgba(176, 106, 63, 0.92); }
+.badge-after  { background: rgba(192, 40, 45, 0.92); }
 .badge-detail { background: rgba(43, 39, 35, 0.82); }
 .badge-before { background: rgba(107, 99, 88, 0.9); }
 
