@@ -21,6 +21,40 @@ window.GALLERIES = [
       en: "Open the door and the whole place is one unbroken sweep of light. Master Zhu knocked out every wall that dared get in the way, so kitchen, dining and living now stretch out under the same daylight — relaxed, unhurried, the good life. Grey cabinets, warm wood floors, quietly expensive-looking. Guests usually say just one thing: I'm not leaving."
     },
     airbnb: "https://www.airbnb.com/rooms/1252606386506815453",
+    reviews: [
+      {
+        name: "Vivian", stars: 5,
+        meta: { zh: "美国纽约 · 2025年11月 · 结伴出游", en: "New York, NY · November 2025 · Group trip" },
+        text: {
+          zh: "厨房特别漂亮，房间非常干净，WiFi 给力，每个房间的空调都很棒；小区安静又友善，床偏硬（睡着踏实），沙发也很舒服。总体来说，是我住过最棒的 Airbnb 之一。",
+          en: "Beautiful kitchen, very clean, good WiFi, amazing ACs in all the rooms, quiet and friendly neighborhood, very firm bed, comfortable couch. Overall one of the best Airbnbs I've stayed at."
+        }
+      },
+      {
+        name: "Ann Celeste", stars: 5,
+        meta: { zh: "美国路易斯安那州霍马 · 2025年4月 · 入住数晚", en: "Houma, LA · April 2025 · Stayed a few nights" },
+        text: {
+          zh: "我们太喜欢这里了！空间一尘不染、漂亮极了。住得很舒服，去哪儿都方便！有问题联系房东，回复也很及时。谢谢这么棒的住处和热情款待——我们已经迫不及待想再来了！",
+          en: "We loved staying in this location! The space is pristine and beautiful. We were comfortable and close to everything we needed to get to! Hosts were responsive when we reached out with questions. Thanks for a great place to stay and for hosting us! We can't wait to visit again!"
+        }
+      },
+      {
+        name: "Candice", stars: 5,
+        meta: { zh: "美国德州贝敦 · 2025年8月 · 入住约一周", en: "Baytown, TX · August 2025 · Stayed about a week" },
+        text: {
+          zh: "这次入住太美好了！♥️",
+          en: "We had such a beautiful stay! ♥️"
+        }
+      },
+      {
+        name: "Ignacio", stars: 5,
+        meta: { zh: "2026年2月 · 带娃入住", en: "February 2026 · Stayed with kids" },
+        text: {
+          zh: "太喜欢这儿了，房子很漂亮，闻起来也清清爽爽，我一定会再来。",
+          en: "I loved it here so much, it was beautiful, smelled good, and I would definitely return."
+        }
+      }
+    ],
     images: [
       {
         file: "a-01", phase: null,
@@ -92,6 +126,7 @@ window.GALLERIES = [
       en: "A little two-story house where wood and white warm it through, inside and out. From the deck glowing at dusk to every iron baluster on the stairs, Master Zhu worked the idea of living well into every corner, seen and unseen. If you know, you know."
     },
     airbnb: "https://www.airbnb.com/rooms/1199645525624502163",
+    reviews: [],
     images: [
       {
         file: "b-01", phase: null,

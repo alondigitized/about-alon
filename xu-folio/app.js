@@ -25,6 +25,8 @@
       "about.stat3num": "100%","about.stat3label": "亲手把关",
       "badge.before": "改造前", "badge.after": "完工", "badge.detail": "细节",
       "ui.viewAirbnb": "在 Airbnb 上查看房源",
+      "ui.reviewsTitle": "住客评价",
+      "ui.reviewsNote": "来自 Airbnb 的真实入住评价",
       "contact.label": "联系朱师傅",
       "contact.heading": "下一个焕然一新的家，也许就是你的",
       "contact.body": "想翻新自己的房子或民宿？加朱师傅的微信，聊聊你的想法。",
@@ -52,6 +54,8 @@
       "about.stat3num": "100%","about.stat3label": "hands-on",
       "badge.before": "Before", "badge.after": "After", "badge.detail": "Detail",
       "ui.viewAirbnb": "View the listing on Airbnb",
+      "ui.reviewsTitle": "What Guests Say",
+      "ui.reviewsNote": "Verified guest reviews from Airbnb",
       "contact.label": "Get in touch",
       "contact.heading": "The next home brought back to life could be yours",
       "contact.body": "Renovating a home or a rental of your own? Add Master Zhu on WeChat and tell him what you have in mind.",
@@ -132,6 +136,31 @@
       '</figure>';
   }
 
+  function reviewHTML(r) {
+    var n = Math.max(0, Math.min(5, r.stars || 5));
+    var stars = new Array(n + 1).join("★") + new Array(6 - n).join("☆");
+    return '' +
+      '<blockquote class="review">' +
+        '<div class="review__stars" aria-label="' + n + '/5">' + stars + '</div>' +
+        '<p class="review__text">' + esc(lang2(r.text)) + '</p>' +
+        '<footer class="review__by">' +
+          '<span class="review__name">' + esc(r.name || "") + '</span>' +
+          '<span class="review__meta">' + esc(lang2(r.meta)) + '</span>' +
+        '</footer>' +
+      '</blockquote>';
+  }
+
+  function renderReviews(prop) {
+    var host = document.getElementById("reviews-" + prop.id);
+    if (!host) return;
+    var revs = prop.reviews || [];
+    if (!revs.length) { host.innerHTML = ""; return; }
+    host.innerHTML =
+      '<h3 class="reviews__title">' + esc(t("ui.reviewsTitle")) + '</h3>' +
+      '<p class="reviews__note">' + esc(t("ui.reviewsNote")) + '</p>' +
+      '<div class="reviews__grid">' + revs.map(reviewHTML).join("") + '</div>';
+  }
+
   function renderGalleries(lang) {
     var data = window.GALLERIES || [];
     data.forEach(function (prop) {
@@ -153,6 +182,8 @@
       host.innerHTML = (prop.images || []).map(function (im) {
         return figureHTML(prop, im);
       }).join("");
+
+      renderReviews(prop);
     });
   }
 

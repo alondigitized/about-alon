@@ -279,6 +279,65 @@ figcaption .cap {
   line-height: 1.7;
 }
 
+/* ---------- Guest reviews ---------- */
+.reviews:empty { display: none; }
+.reviews { margin-top: 64px; }
+.reviews__title {
+  font-family: Georgia, "Songti SC", serif;
+  font-size: clamp(1.4rem, 3.6vw, 2rem);
+  text-align: center;
+  margin: 0 0 6px;
+}
+.reviews__note {
+  text-align: center;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  margin: 0 0 34px;
+}
+.reviews__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 22px;
+}
+blockquote.review {
+  margin: 0;
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  padding: 24px 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+.review__stars {
+  color: #d79a52;
+  letter-spacing: 3px;
+  font-size: 0.95rem;
+  line-height: 1;
+}
+.review__text {
+  margin: 0;
+  flex: 1;
+  color: var(--ink);
+  font-size: 0.99rem;
+  line-height: 1.78;
+}
+.review__by {
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.review__name { font-weight: 700; color: var(--ink); }
+.review__meta { font-size: 0.82rem; color: var(--ink-soft); }
+
+@media (max-width: 680px) {
+  .reviews__grid { grid-template-columns: 1fr; }
+  .reviews { margin-top: 44px; }
+}
+
 /* ---------- Contact ---------- */
 .contact {
   background: var(--dark);
