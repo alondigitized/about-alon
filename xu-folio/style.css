@@ -82,11 +82,34 @@ a { color: inherit; }
   padding-top: 9px; padding-bottom: 9px;
 }
 .topnav__brand {
-  font-family: Georgia, "Songti SC", serif;
-  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
   font-size: 1.25rem;
   text-decoration: none;
   color: #fff;
+}
+.brand-seal {
+  width: 1.7em;
+  height: 1.7em;
+  flex: 0 0 auto;
+  display: block;
+  filter: drop-shadow(0 1px 5px rgba(0, 0, 0, 0.35));
+  transition: transform .25s;
+}
+.brand-seal__bg { fill: var(--accent); }
+.brand-seal__frame { stroke: rgba(250, 247, 242, 0.55); stroke-width: 2.5; }
+.brand-seal__char {
+  fill: #faf7f2;
+  font-family: Georgia, "Songti SC", "STSong", serif;
+  font-weight: 700;
+  font-size: 56px;
+  dominant-baseline: central;
+}
+.topnav__brand:hover .brand-seal { transform: rotate(-4deg) scale(1.05); }
+.brand-name {
+  font-family: Georgia, "Songti SC", "Times New Roman", serif;
+  font-weight: 700;
   letter-spacing: 0.02em;
   text-shadow: 0 1px 8px rgba(0, 0, 0, 0.45);
 }
@@ -671,7 +694,7 @@ html.js .reveal.is-visible {
   #lightbox .lb-next { right: 6px; }
 }
 @media (max-width: 440px) {
-  .topnav__brand { display: none; }
+  .brand-name { display: none; }
   .topnav__links { gap: 10px; }
   .topnav__links a { font-size: 0.85rem; }
   .lang-toggle { padding: 5px 11px; }

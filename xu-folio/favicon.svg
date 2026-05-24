@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect x="2" y="2" width="96" height="96" rx="18" fill="#b06a3f"/>
+  <rect x="11" y="11" width="78" height="78" rx="12" fill="none" stroke="#faf7f2" stroke-opacity="0.55" stroke-width="2.5"/>
+  <text x="50" y="50" text-anchor="middle" dominant-baseline="central"
+        font-family="Georgia, 'Songti SC', 'STSong', serif" font-size="56" font-weight="700" fill="#faf7f2">朱</text>
+</svg>
