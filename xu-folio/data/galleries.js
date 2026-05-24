@@ -23,6 +23,15 @@ window.GALLERIES = [
     airbnb: "https://www.airbnb.com/rooms/1252606386506815453",
     reviews: [
       {
+        kind: "client", stars: 5,
+        name: "Michelle",
+        meta: { zh: "本套作品业主 · 委托朱师傅翻新", en: "Owner of this project · hired Master Zhu for the remodel" },
+        text: {
+          zh: "原本房子面积比较小，但这次在朱师傅的改造下，空间利用率明显提升，整体看起来更开阔显大气，住起来也更实用。\n设计很有审美，做出来的效果非常适合做民宿，拍照很出片，整体质感比预期更好，对后期出租和吸引客户也很有帮助。非常感谢🙏\n施工过程沟通顺畅，完工后有小问题也都及时处理，这点在装修行业里很加分。\n整体来说，这种小户型如果想提升颜值和实用性，找对师傅真的很关键，我这次是找对人了。再次感激！",
+          en: "The place started out fairly small, but after Master Zhu's remodel the use of space improved dramatically — it now looks far more open and impressive, and it's more practical to live in too.\nThe design has real taste. The result turned out beautifully suited to a vacation rental: wonderfully photogenic, with overall quality beyond what I'd expected — a real help for renting it out and drawing guests later on. Thank you so much 🙏\nCommunication during the build was smooth, and any small issues after completion were handled promptly — a real plus in this trade.\nAll in all, for a smaller home like this, if you want to lift both its looks and its usefulness, finding the right craftsman is everything — and this time I found the right person. Thanks again!"
+        }
+      },
+      {
         name: "Vivian", stars: 5,
         meta: { zh: "美国纽约 · 2025年11月 · 结伴出游", en: "New York, NY · November 2025 · Group trip" },
         text: {
@@ -130,7 +139,7 @@ window.GALLERIES = [
     reviews: [
       {
         kind: "client", stars: 5,
-        name: { zh: "房主", en: "The Owner" },
+        name: "Alan",
         meta: { zh: "本套作品业主 · 委托朱师傅翻新", en: "Owner of this project · hired Master Zhu for the remodel" },
         text: {
           zh: "这次装修体验很好，必须给师傅一个五星好评！\n这套房子是按民宿标准来做的，对效果和细节要求比较高。师傅在前期沟通时就很专业，不仅能理解我们的需求，还会从实际使用和维护角度给出建议，帮我们优化方案同时控制预算。\n施工过程也很省心，沟通顺畅，现场也保持整洁，细节处理（比如收边、对缝）做得很到位，整体效果超出了预期。\n完工后有一些小问题，师傅也都及时过来处理，没有推诿👍\n整个过程中没有任何隐形加价，这点在装修行业真的很难得。整体性价比很高，如果有朋友要装修，尤其是做民宿或者对品质有要求的，我会愿意推荐朱师傅。",
