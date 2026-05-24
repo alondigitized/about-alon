@@ -13,8 +13,8 @@ window.GALLERIES = [
     id: "property-a",
     eyebrow: { zh: "作品二", en: "Project Two" },
     title: {
-      zh: "民宿一号 · 明亮开阔的现代小宅",
-      en: "Rental No.1 · A Bright, Open Modern Home"
+      zh: "明亮开阔的现代小宅",
+      en: "A Bright, Open Modern Home"
     },
     intro: {
       zh: "推开门，是一整片连通的光。朱师傅大手一挥，把碍事的隔墙都给敲了，厨房、餐厅、客厅在同一片日光里铺开——主打一个松弛感。灰调橱柜配原木地板，老钱风拿捏得死死的；住进来的人通常只说四个字：不想走了。",
@@ -119,8 +119,8 @@ window.GALLERIES = [
     guestFavorite: { rating: "4.92" },
     eyebrow: { zh: "作品一", en: "Project One" },
     title: {
-      zh: "民宿二号 · 暖意复式宅邸",
-      en: "Rental No.2 · A Warm Two-Story Retreat"
+      zh: "暖意复式宅邸",
+      en: "A Warm Two-Story Retreat"
     },
     intro: {
       zh: "两层的小洋楼，木色和白色搭在一起，从里暖到外。从黄昏亮灯的露台，到楼梯上一根根铁艺栏杆，朱师傅把“住得舒服”这件事做进了每一个看得见和看不见的角落——这种细节，懂的人自然懂。",
@@ -194,14 +194,6 @@ window.GALLERIES = [
       }
     ],
     images: [
-      {
-        file: "b-01", phase: null,
-        room: { zh: "暮色中的小院", en: "The House at Dusk" },
-        caption: {
-          zh: "天一擦黑，露台的灯一盏盏亮起来。木栏杆顺着房子的轮廓铺开，廊下暖光漫到草坪上——这画面往朋友圈一发，点赞收到手软。岁月静好，大概就是这个样子。",
-          en: "As dusk settles, the deck lights blink on one by one. The timber railing traces the line of the house, warm light spilling onto the lawn. Post this picture and watch the likes roll in. So this is the quiet good life everyone keeps going on about."
-        }
-      },
       {
         file: "b-02", phase: null,
         room: { zh: "客厅", en: "The Living Room" },
@@ -288,6 +280,14 @@ window.GALLERIES = [
         caption: {
           zh: "亚麻肌理的墙砖温柔不反光，玻璃马赛克腰线横贯，鹅卵石地面踩上去像顺带做了个足底按摩。玻璃推门干净利落，干湿分得明明白白——朱师傅那句话怎么说的：防水做到位，住十年不返工。",
           en: "Linen-textured wall tile, soft and glare-free, a glass-mosaic band running across it, and a pebbled floor that throws in a little foot massage for free. The sliding glass door is crisp and clean, wet and dry kept firmly apart. As Master Zhu likes to say: get the waterproofing right and you won't touch it for ten years."
+        }
+      },
+      {
+        file: "b-01", phase: null,
+        room: { zh: "暮色中的小院", en: "The House at Dusk" },
+        caption: {
+          zh: "天一擦黑，露台的灯一盏盏亮起来。木栏杆顺着房子的轮廓铺开，廊下暖光漫到草坪上——这画面往朋友圈一发，点赞收到手软。岁月静好，大概就是这个样子。",
+          en: "As dusk settles, the deck lights blink on one by one. The timber railing traces the line of the house, warm light spilling onto the lawn. Post this picture and watch the likes roll in. So this is the quiet good life everyone keeps going on about."
         }
       }
     ]
