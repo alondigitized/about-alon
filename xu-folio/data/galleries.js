@@ -126,7 +126,72 @@ window.GALLERIES = [
       en: "A little two-story house where wood and white warm it through, inside and out. From the deck glowing at dusk to every iron baluster on the stairs, Master Zhu worked the idea of living well into every corner, seen and unseen. If you know, you know."
     },
     airbnb: "https://www.airbnb.com/rooms/1199645525624502163",
-    reviews: [],
+    reviews: [
+      {
+        name: "Ashley", stars: 5,
+        meta: { zh: "美国华盛顿州奥林匹亚 · 1周前 · 结伴出游", en: "Olympia, WA · 1 week ago · Group trip" },
+        text: {
+          zh: "和家人一起入住，住得非常舒服。空间很干净，房间也特别宽敞，我们都很喜欢。很推荐多人出行的大家庭。",
+          en: "Stayed with my family here and we felt very comfortable. The space was very clean and we loved how spacious the rooms were. Would recommend for a large group."
+        }
+      },
+      {
+        name: "Sofia", stars: 5,
+        meta: { zh: "美国华盛顿州肯纳威克 · 2026年4月 · 带娃入住", en: "Kennewick, WA · April 2026 · Stayed with kids" },
+        text: {
+          zh: "特别安静，又干净。很喜欢那一处道奇队主题的设计小心思。离商店也够近。一定会推荐给别人，也会再来。",
+          en: "Loved how quiet it was and clean. Loved the Dodgers touch of design. It was close enough to the stores. I would definitely recommend to others and stay again."
+        }
+      },
+      {
+        name: "嘉文", stars: 5,
+        meta: { zh: "Airbnb 六年老用户 · 2026年3月 · 入住约一周", en: "6 years on Airbnb · March 2026 · Stayed about a week" },
+        text: {
+          zh: "体验很棒。我们四个人入住，每人都有自己的房间。后院特别大，隔壁就是公园，邻居们也都很友好。",
+          en: "Great experience. There were four of us staying, and everyone had their own room. The backyard is huge, and there's a park next door. The neighbors are all very nice."
+        }
+      },
+      {
+        name: "Richa", stars: 5,
+        meta: { zh: "Airbnb 七年老用户 · 2026年3月", en: "7 years on Airbnb · March 2026" },
+        text: {
+          zh: "这地方真漂亮，作为民宿住着特别舒服。露台很棒，是聚会的好地方。",
+          en: "You have a beautiful place out there, super comfortable for a bnb. The patio is cool and a great party place."
+        }
+      },
+      {
+        name: "Jiasheng", stars: 5,
+        meta: { zh: "美国加州桑尼维尔 · 2025年12月 · 携宠入住", en: "Sunnyvale, CA · December 2025 · Stayed with a pet" },
+        text: {
+          zh: "位置很好，空间非常宽敞，房东也很友善！",
+          en: "Great location, very spacious and nice hosts!"
+        }
+      },
+      {
+        name: "Miguel", stars: 5,
+        meta: { zh: "墨西哥墨西哥城 · 2026年4月 · 带娃入住", en: "Mexico City, Mexico · April 2026 · Stayed with kids" },
+        text: {
+          zh: "住得非常满意。房子非常干净、非常温馨。好极了。",
+          en: "Excellent stay. Very clean and very cozy place. Excellent."
+        }
+      },
+      {
+        name: "Gadiel", stars: 5,
+        meta: { zh: "Airbnb 两年用户 · 2026年4月 · 结伴出游", en: "2 years on Airbnb · April 2026 · Group trip" },
+        text: {
+          zh: "房东非常友好。房子很干净，入住指引也很清楚。非常适合我们一家，住下来一点问题都没有。",
+          en: "Very friendly host. The house was clean and the instructions were very clear. It was a perfect fit for my family and I had no issues staying at this house."
+        }
+      },
+      {
+        name: "Itzel", stars: 5,
+        meta: { zh: "美国亚利桑那州凤凰城 · 2周前 · 带娃入住", en: "Phoenix, AZ · 2 weeks ago · Stayed with kids" },
+        text: {
+          zh: "漂亮的房子，社区也很好。",
+          en: "Beautiful home in a great neighborhood."
+        }
+      }
+    ],
     images: [
       {
         file: "b-01", phase: null,
