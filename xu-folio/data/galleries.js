@@ -17,8 +17,8 @@ window.GALLERIES = [
       en: "A Bright, Open Modern Home"
     },
     intro: {
-      zh: "推开门，是一整片连通的光。朱师傅大手一挥，把碍事的隔墙都给敲了，厨房、餐厅、客厅在同一片日光里铺开——主打一个松弛感。灰调橱柜配原木地板，老钱风拿捏得死死的；住进来的人通常只说四个字：不想走了。",
-      en: "Open the door and the whole place is one unbroken sweep of light. Master Zhu knocked out every wall that dared get in the way, so kitchen, dining and living now stretch out under the same daylight — relaxed, unhurried, the good life. Grey cabinets, warm wood floors, quietly expensive-looking. Guests usually say just one thing: I'm not leaving."
+      zh: "推开门，是一整片连通的光。朱师傅把碍事的隔墙敲掉，厨房、餐厅、客厅在同一片日光里铺开，宽敞又通透。灰调橱柜配原木地板，低调又耐看。住客的原话是“不想走了”——这种开放式格局，搬回自己家也一样住得舒坦。",
+      en: "Open the door and the whole place is one unbroken sweep of light. Master Zhu took out the walls that got in the way, so kitchen, dining and living now share the same daylight — open and airy. Grey cabinets, warm wood floors, understated and easy to live with. A guest put it best: 'I'm not leaving.' The same open layout feels just as good in a home of your own."
     },
     airbnb: "https://www.airbnb.com/rooms/1252606386506815453",
     reviews: [
@@ -84,7 +84,7 @@ window.GALLERIES = [
         file: "a-04", phase: "detail",
         room: { zh: "厨房", en: "The Kitchen" },
         caption: {
-          zh: "L 形动线，是朱师傅站在灶台前来回比划磨出来的。电陶炉、抽拉龙头、嵌入式洗碗机一个不少；柜门每道缝都对得齐齐整整，抽屉一推一拉顺滑得很——四十年练出来的手感，处女座来了都得点头：这活儿，挑不出毛病。",
+          zh: "L 形动线，是朱师傅站在灶台前来回比划磨出来的。电陶炉、抽拉龙头、嵌入式洗碗机一个不少；柜门每道缝都对得齐齐整整，抽屉一推一拉顺滑得很——四十年练出来的手感，再挑剔的人也挑不出毛病。",
           en: "The L-shaped layout was paced out by Master Zhu, back and forth in front of the range, until it was right. Electric cooktop, pull-down faucet, built-in dishwasher — nothing missing. Every cabinet seam runs dead straight and every drawer glides shut, with the sureness of forty years' practice. Even a card-carrying perfectionist would just nod: nothing to pick at here."
         }
       },
@@ -123,8 +123,8 @@ window.GALLERIES = [
       en: "A Warm Two-Story Retreat"
     },
     intro: {
-      zh: "两层的小洋楼，木色和白色搭在一起，从里暖到外。从黄昏亮灯的露台，到楼梯上一根根铁艺栏杆，朱师傅把“住得舒服”这件事做进了每一个看得见和看不见的角落——这种细节，懂的人自然懂。",
-      en: "A little two-story house where wood and white warm it through, inside and out. From the deck glowing at dusk to every iron baluster on the stairs, Master Zhu worked the idea of living well into every corner, seen and unseen. If you know, you know."
+      zh: "两层的小洋楼，木色和白色搭在一起，从里暖到外。从黄昏亮灯的露台，到楼梯上一根根铁艺栏杆，朱师傅把“住得舒服”做进了每一个看得见和看不见的角落。这是出租房，住客给了 4.92 分；要是你自己的家，他只会更上心。",
+      en: "A little two-story house where wood and white warm it through, inside and out. From the deck glowing at dusk to every iron baluster on the stairs, Master Zhu worked the feeling of home into every corner, seen and unseen. This one's a rental — guests rate it 4.92. He'd put even more care into a home you actually live in."
     },
     airbnb: "https://www.airbnb.com/rooms/1199645525624502163",
     reviews: [
@@ -198,7 +198,7 @@ window.GALLERIES = [
         file: "b-02", phase: null,
         room: { zh: "客厅", en: "The Living Room" },
         caption: {
-          zh: "层高大方，光也大方。浅橡木地板一路铺到落地推拉门前，米色转角沙发软到陷进去就不想起来，门一推开就是满眼绿——周末瘫一整天的快乐，懂的都懂。",
+          zh: "层高大方，光也大方。浅橡木地板一路铺到落地推拉门前，米色转角沙发软到陷进去就不想起来，门一推开就是满眼绿——周末窝在这儿瘫上一整天，神仙日子。",
           en: "Tall ceilings, and light to match. Pale oak floors run right up to the sliding glass doors, and the beige sectional is the sink-in kind you don't get up from. Slide the door open and it's all green out there. The joy of melting into the couch all weekend — you know the one."
         }
       },
@@ -230,8 +230,8 @@ window.GALLERIES = [
         file: "b-06", phase: null,
         room: { zh: "餐厨空间", en: "Kitchen & Dining" },
         caption: {
-          zh: "专业级六头燃气灶配大号不锈钢油烟机，这是给真·下厨之人备的，绝非摆设。原木下柜白色吊柜上下呼应，飘窗边那组金腿绒面椅一摆——烟火气里也透着一股低调的讲究。",
-          en: "A pro-style six-burner gas range under a big stainless hood — for someone who actually cooks, not just for show. Wood base cabinets answer the white uppers above, and the gold-legged velvet chairs by the bay window lend all that honest cooking a note of understated class."
+          zh: "六头燃气灶配大号不锈钢油烟机，专为中餐爆炒准备——大火快炒，油烟一吸而尽，墙面不挂油、屋里不留味。这才是给天天开火的人备的厨房，不是样子货。原木下柜配白色吊柜，烟火气里也透着讲究。",
+          en: "A six-burner gas range under a big stainless hood — made for real Chinese cooking. Crank the heat for a proper stir-fry and the smoke's pulled away before it can cling to the walls: no greasy film, no lingering smell. A kitchen for someone who fires up the wok every day, not a showpiece. Wood base cabinets, white uppers — honest cooking with a sense of style."
         }
       },
       {

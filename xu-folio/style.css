@@ -226,6 +226,62 @@ a { color: inherit; }
 }
 .stat__label { font-size: 0.98rem; color: var(--ink-soft); margin-top: 6px; }
 
+/* ---------- Services ---------- */
+.services { padding: clamp(64px, 11vw, 130px) 0; background: var(--bg-alt); }
+.services__heading {
+  font-size: clamp(1.7rem, 4.6vw, 2.7rem);
+  margin-bottom: 18px;
+}
+.services__intro {
+  font-size: 1.18rem;
+  color: var(--ink-soft);
+  max-width: 60ch;
+  margin: 0 0 44px;
+}
+.services__grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+.svc {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px 26px;
+  box-shadow: var(--shadow-sm);
+  transition: transform .25s, box-shadow .25s;
+}
+.svc:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.svc__title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+.svc__desc {
+  font-size: 0.98rem;
+  line-height: 1.75;
+  color: var(--ink-soft);
+  margin: 0;
+}
+.services__area {
+  margin: 40px 0 0;
+  padding-top: 30px;
+  border-top: 1px solid var(--line);
+  font-size: 1.02rem;
+  color: var(--ink);
+}
+.services__area-label {
+  display: inline-block;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+  margin-right: 8px;
+}
+
 /* ---------- Projects ---------- */
 .project { padding: clamp(56px, 9vw, 110px) 0; }
 .project--alt { background: var(--bg-alt); }
