@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.className += " js";</script>
   <title data-i18n="meta.title">朱师傅 · 匠心装修作品集</title>
   <meta name="description" data-i18n-attr="content" data-i18n="meta.desc"
         content="朱师傅四十余年装修生涯中的作品掠影——这里只精选了其中两套度假民宿。每一寸光线、每一道收口，都是岁月磨出来的手艺。">
@@ -13,13 +14,23 @@
   <meta property="og:description" data-i18n-attr="content" data-i18n="meta.desc" content="朱师傅四十余年装修生涯中的作品掠影——这里只精选了其中两套度假民宿。">
   <meta property="og:image" content="img/shared/hero.jpg">
 
-  <link rel="stylesheet" href="style.css?v=8">
+  <link rel="stylesheet" href="style.css?v=9">
 </head>
 <body>
-  <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Switch language">EN</button>
+  <!-- ============ STICKY NAV ============ -->
+  <nav class="topnav" id="topnav">
+    <a class="topnav__brand" href="#top" data-i18n="hero.title">朱师傅</a>
+    <div class="topnav__links">
+      <a href="#about" data-i18n="nav.about">关于</a>
+      <a href="#project-a" data-i18n="nav.work">作品</a>
+      <a href="#reviews-property-a" data-i18n="nav.reviews">评价</a>
+      <a href="#contact" data-i18n="nav.contact">联系</a>
+    </div>
+    <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Switch language">EN</button>
+  </nav>
 
   <!-- ============ HERO ============ -->
-  <header class="hero">
+  <header class="hero" id="top">
     <div class="hero__overlay"></div>
     <div class="hero__inner">
       <p class="hero__kicker" data-i18n="hero.kicker">匠 心 营 造</p>
@@ -32,7 +43,7 @@
 
   <!-- ============ ABOUT ============ -->
   <section class="about" id="about">
-    <div class="section-inner about__inner">
+    <div class="section-inner about__inner reveal">
       <p class="eyebrow" data-i18n="about.label">关于朱师傅</p>
       <h2 class="about__heading" data-i18n="about.heading">一双手，一颗较真的心</h2>
       <p class="about__body" data-i18n="about.body1">朱师傅做装修四十多年。墙要平到能当镜子照，砖缝要齐到处女座看了都安心，水电藏得干干净净——别人嘴里那句“差不多就行了”，到他这儿一律不存在，只有“正正好”。</p>
@@ -47,7 +58,7 @@
 
   <!-- ============ PROJECT A ============ -->
   <section class="project" id="project-a">
-    <div class="section-inner project__head">
+    <div class="section-inner project__head reveal">
       <p class="eyebrow" data-gallery-eyebrow="property-a">作品一</p>
       <h2 class="project__title" data-gallery-title="property-a"></h2>
       <p class="project__intro" data-gallery-intro="property-a"></p>
@@ -61,7 +72,7 @@
 
   <!-- ============ PROJECT B ============ -->
   <section class="project project--alt" id="project-b">
-    <div class="section-inner project__head">
+    <div class="section-inner project__head reveal">
       <p class="eyebrow" data-gallery-eyebrow="property-b">作品二</p>
       <h2 class="project__title" data-gallery-title="property-b"></h2>
       <p class="project__intro" data-gallery-intro="property-b"></p>
@@ -79,7 +90,7 @@
       <p class="eyebrow eyebrow--light" data-i18n="contact.label">联系朱师傅</p>
       <h2 class="contact__heading" data-i18n="contact.heading">下一个焕然一新的家，也许就是你的</h2>
       <p class="contact__body" data-i18n="contact.body">想翻新自己的房子或民宿？加朱师傅的微信，聊聊你的想法。</p>
-      <div class="wechat-card">
+      <div class="wechat-card reveal">
         <div class="wechat-card__qr" id="wechat-qr">
           <img src="img/shared/wechat-qr.png" alt="WeChat QR" loading="lazy"
                onerror="this.closest('.wechat-card__qr').classList.add('placeholder')">
@@ -97,7 +108,7 @@
 
   <!-- ============ LIGHTBOX (built by JS) ============ -->
 
-  <script src="data/galleries.js?v=8"></script>
-  <script src="app.js?v=8"></script>
+  <script src="data/galleries.js?v=9"></script>
+  <script src="app.js?v=9"></script>
 </body>
 </html>

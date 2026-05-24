@@ -27,6 +27,7 @@
       "ui.viewAirbnb": "在 Airbnb 上查看房源",
       "ui.reviewsTitle": "住客评价",
       "ui.reviewsNote": "来自 Airbnb 的真实入住评价",
+      "nav.about": "关于", "nav.work": "作品", "nav.reviews": "评价", "nav.contact": "联系",
       "contact.label": "联系朱师傅",
       "contact.heading": "下一个焕然一新的家，也许就是你的",
       "contact.body": "想翻新自己的房子或民宿？加朱师傅的微信，聊聊你的想法。",
@@ -56,6 +57,7 @@
       "ui.viewAirbnb": "View the listing on Airbnb",
       "ui.reviewsTitle": "What Guests Say",
       "ui.reviewsNote": "Verified guest reviews from Airbnb",
+      "nav.about": "About", "nav.work": "Projects", "nav.reviews": "Reviews", "nav.contact": "Contact",
       "contact.label": "Get in touch",
       "contact.heading": "The next home brought back to life could be yours",
       "contact.body": "Renovating a home or a rental of your own? Add Master Zhu on WeChat and tell him what you have in mind.",
@@ -71,6 +73,7 @@
   var HTML_LANG = { zh: "zh-CN", en: "en" };
   var STORE_KEY = "xufolio.lang";
   var current = "zh";
+  var galleriesRevealed = false;
 
   /* ---------- helpers ---------- */
   function esc(s) {
@@ -185,6 +188,35 @@
 
       renderReviews(prop);
     });
+
+    if (!galleriesRevealed) {
+      document.querySelectorAll(".gallery .shot, .reviews .review").forEach(function (el) {
+        el.classList.add("reveal");
+      });
+      galleriesRevealed = true;
+    }
+    observeReveals();
+  }
+
+  /* ---------- scroll reveal ---------- */
+  var revealObserver = null;
+  function ensureObserver() {
+    if (revealObserver || !("IntersectionObserver" in window)) return revealObserver;
+    revealObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) {
+          en.target.classList.add("is-visible");
+          revealObserver.unobserve(en.target);
+        }
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+    return revealObserver;
+  }
+  function observeReveals() {
+    var ob = ensureObserver();
+    var els = document.querySelectorAll(".reveal:not(.is-visible)");
+    if (!ob) { els.forEach(function (el) { el.classList.add("is-visible"); }); return; }
+    els.forEach(function (el) { ob.observe(el); });
   }
 
   /* ---------- lightbox ---------- */
@@ -194,19 +226,37 @@
     box.hidden = true;
     box.innerHTML =
       '<button class="lb-close" type="button" aria-label="Close">&times;</button>' +
+      '<button class="lb-nav lb-prev" type="button" aria-label="Previous">&#8249;</button>' +
       '<img class="lb-img" alt="">' +
+      '<button class="lb-nav lb-next" type="button" aria-label="Next">&#8250;</button>' +
       '<div class="lb-cap"></div>';
     document.body.appendChild(box);
 
     var img = box.querySelector(".lb-img");
     var cap = box.querySelector(".lb-cap");
+    var shots = [];
+    var idx = -1;
 
-    function open(shot) {
+    function show(i) {
+      if (!shots.length) return;
+      idx = (i + shots.length) % shots.length;
+      var shot = shots[idx];
       img.src = shot.getAttribute("data-full");
       img.alt = shot.getAttribute("data-room") || "";
       cap.innerHTML =
         '<span class="lb-room">' + esc(shot.getAttribute("data-room") || "") + "</span>" +
         esc(shot.getAttribute("data-cap") || "");
+    }
+    function openShot(shot) {
+      var gallery = shot.closest(".gallery");
+      shots = gallery
+        ? Array.prototype.slice.call(gallery.querySelectorAll(".shot")).filter(function (s) {
+            var f = s.querySelector(".frame");
+            return !(f && f.classList.contains("placeholder"));
+          })
+        : [shot];
+      var i = shots.indexOf(shot);
+      show(i < 0 ? 0 : i);
       box.hidden = false;
       document.body.style.overflow = "hidden";
     }
@@ -215,18 +265,24 @@
       img.src = "";
       document.body.style.overflow = "";
     }
+    function nav(dir) { show(idx + dir); }
 
     document.addEventListener("click", function (e) {
+      if (e.target.closest(".lb-prev")) { nav(-1); return; }
+      if (e.target.closest(".lb-next")) { nav(1); return; }
       var frame = e.target.closest(".frame");
       if (frame && !frame.classList.contains("placeholder")) {
         var shot = frame.closest(".shot");
-        if (shot) open(shot);
+        if (shot) openShot(shot);
         return;
       }
       if (e.target === box || e.target.closest(".lb-close")) close();
     });
     document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape" && !box.hidden) close();
+      if (box.hidden) return;
+      if (e.key === "Escape") close();
+      else if (e.key === "ArrowLeft") nav(-1);
+      else if (e.key === "ArrowRight") nav(1);
     });
   }
 
@@ -243,6 +299,17 @@
         applyLang(current === "zh" ? "en" : "zh");
       });
     }
+
+    var nav = document.getElementById("topnav");
+    if (nav) {
+      var onScroll = function () {
+        nav.classList.toggle("scrolled", window.scrollY > 40);
+      };
+      onScroll();
+      window.addEventListener("scroll", onScroll, { passive: true });
+    }
+
+    observeReveals();
   }
 
   if (document.readyState === "loading") {
