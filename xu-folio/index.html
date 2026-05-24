@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="meta.title">朱师傅 · 匠心装修作品集</title>
+  <meta name="description" data-i18n-attr="content" data-i18n="meta.desc"
+        content="朱师傅亲手翻新的两套度假民宿。每一寸光线、每一道收口，都是二十余年手艺的沉淀。">
+
+  <!-- Open Graph (WeChat / social share cards) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" data-i18n-attr="content" data-i18n="meta.title" content="朱师傅 · 匠心装修作品集">
+  <meta property="og:description" data-i18n-attr="content" data-i18n="meta.desc" content="朱师傅亲手翻新的两套度假民宿。">
+  <meta property="og:image" content="img/shared/hero.jpg">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Switch language">EN</button>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="hero__overlay"></div>
+    <div class="hero__inner">
+      <p class="hero__kicker" data-i18n="hero.kicker">匠 心 营 造</p>
+      <h1 class="hero__title" data-i18n="hero.title">朱师傅</h1>
+      <p class="hero__sub" data-i18n="hero.sub">二十余年装修手艺 · 两套民宿的全屋焕新</p>
+      <p class="hero__tagline" data-i18n="hero.tagline">让每一个空间，都住得进光，也住得进故事。</p>
+      <a class="hero__cta" href="#project-a" data-i18n="hero.cta">看看他的作品 ↓</a>
+    </div>
+  </header>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="about" id="about">
+    <div class="section-inner about__inner">
+      <p class="eyebrow" data-i18n="about.label">关于朱师傅</p>
+      <h2 class="about__heading" data-i18n="about.heading">一双手，一颗较真的心</h2>
+      <p class="about__body" data-i18n="about.body1">朱师傅做装修二十多年。墙要平到能照见人影，砖缝要齐到挑不出毛病，水电要藏得干净利落——这些在别人眼里的“差不多”，在他这儿都得“正正好”。</p>
+      <p class="about__body" data-i18n="about.body2">下面这两套民宿，从拆改到收尾，每一道工序都经他亲手把关。他不爱说漂亮话，作品会替他开口。</p>
+      <ul class="about__stats">
+        <li><span class="stat__num" data-i18n="about.stat1num">20+</span><span class="stat__label" data-i18n="about.stat1label">年手艺</span></li>
+        <li><span class="stat__num" data-i18n="about.stat2num">2</span><span class="stat__label" data-i18n="about.stat2label">套全屋焕新</span></li>
+        <li><span class="stat__num" data-i18n="about.stat3num">100%</span><span class="stat__label" data-i18n="about.stat3label">亲手把关</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ PROJECT A ============ -->
+  <section class="project" id="project-a">
+    <div class="section-inner project__head">
+      <p class="eyebrow" data-gallery-eyebrow="property-a">作品一</p>
+      <h2 class="project__title" data-gallery-title="property-a"></h2>
+      <p class="project__intro" data-gallery-intro="property-a"></p>
+      <a class="airbnb-link" data-gallery-link="property-a" target="_blank" rel="noopener noreferrer">
+        <span data-i18n="ui.viewAirbnb">在 Airbnb 上查看房源</span> ↗
+      </a>
+    </div>
+    <div class="gallery" id="gallery-property-a"></div>
+  </section>
+
+  <!-- ============ PROJECT B ============ -->
+  <section class="project project--alt" id="project-b">
+    <div class="section-inner project__head">
+      <p class="eyebrow" data-gallery-eyebrow="property-b">作品二</p>
+      <h2 class="project__title" data-gallery-title="property-b"></h2>
+      <p class="project__intro" data-gallery-intro="property-b"></p>
+      <a class="airbnb-link" data-gallery-link="property-b" target="_blank" rel="noopener noreferrer">
+        <span data-i18n="ui.viewAirbnb">在 Airbnb 上查看房源</span> ↗
+      </a>
+    </div>
+    <div class="gallery" id="gallery-property-b"></div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <footer class="contact" id="contact">
+    <div class="section-inner">
+      <p class="eyebrow eyebrow--light" data-i18n="contact.label">联系朱师傅</p>
+      <h2 class="contact__heading" data-i18n="contact.heading">下一个焕然一新的家，也许就是你的</h2>
+      <p class="contact__body" data-i18n="contact.body">想翻新自己的房子或民宿？加朱师傅的微信，聊聊你的想法。</p>
+      <div class="wechat-card">
+        <div class="wechat-card__qr" id="wechat-qr">
+          <img src="img/shared/wechat-qr.png" alt="WeChat QR" loading="lazy"
+               onerror="this.closest('.wechat-card__qr').classList.add('placeholder')">
+          <span class="wechat-card__qr-hint" data-i18n="contact.qrHint">微信二维码</span>
+        </div>
+        <div class="wechat-card__info">
+          <p class="wechat-card__label" data-i18n="contact.wechatLabel">微信号</p>
+          <p class="wechat-card__id" data-i18n="contact.wechatId">your-wechat-id</p>
+          <p class="wechat-card__note" data-i18n="contact.note">（请在此填写真实微信号，并上传二维码图片）</p>
+        </div>
+      </div>
+      <p class="contact__footer" data-i18n="contact.footer">© 朱师傅 · 匠心装修</p>
+    </div>
+  </footer>
+
+  <!-- ============ LIGHTBOX (built by JS) ============ -->
+
+  <script src="data/galleries.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
