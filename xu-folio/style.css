@@ -21,12 +21,13 @@
 /* Latin gets an elegant serif; CJK glyphs fall through to system CJK fonts. */
 *, *::before, *::after { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+html { scroll-behavior: smooth; scroll-padding-top: 72px; overflow-x: hidden; }
 
 body {
   margin: 0;
   background: var(--bg);
   color: var(--ink);
+  overflow-x: hidden;
   font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
                "Source Han Sans SC", "Noto Sans CJK SC", system-ui,
                -apple-system, sans-serif;
@@ -312,6 +313,8 @@ a { color: inherit; }
 .gf-badge {
   display: inline-flex;
   align-items: center;
+  flex-wrap: wrap;
+  max-width: 100%;
   gap: 6px;
   background: #fff;
   border: 1px solid var(--line);
@@ -649,15 +652,17 @@ html.js .reveal.is-visible {
 @media (max-width: 680px) {
   body { font-size: 17.5px; }
   .gallery { grid-template-columns: 1fr; gap: 22px; padding: 0 18px; }
+  .services__grid { grid-template-columns: 1fr; }
   .section-inner { padding: 0 18px; }
   .hero { min-height: 82vh; }
+  .hero__kicker { letter-spacing: 0.38em; }
   .about__stats { gap: 28px; }
   .stat__num { font-size: 2rem; }
   .wechat-card { gap: 18px; padding: 20px; }
 
   .topnav { gap: 8px; padding: 9px 14px; }
   .topnav__brand { font-size: 1.05rem; }
-  .topnav__links { gap: 14px; }
+  .topnav__links { gap: 12px; }
   .topnav__links a { font-size: 0.9rem; }
   .lang-toggle { padding: 6px 12px; font-size: 0.8rem; }
 
@@ -665,6 +670,9 @@ html.js .reveal.is-visible {
   #lightbox .lb-prev { left: 6px; }
   #lightbox .lb-next { right: 6px; }
 }
-@media (max-width: 400px) {
+@media (max-width: 440px) {
   .topnav__brand { display: none; }
+  .topnav__links { gap: 10px; }
+  .topnav__links a { font-size: 0.85rem; }
+  .lang-toggle { padding: 5px 11px; }
 }
