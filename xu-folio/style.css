@@ -23,13 +23,15 @@
 /* Latin gets an elegant serif; CJK glyphs fall through to system CJK fonts. */
 *, *::before, *::after { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; scroll-padding-top: 72px; overflow-x: hidden; }
+html { scroll-behavior: smooth; scroll-padding-top: 72px; overflow-x: hidden; overflow-x: clip; }
 
 body {
   margin: 0;
   background: var(--bg);
   color: var(--ink);
   overflow-x: hidden;
+  overflow-x: clip;
+  max-width: 100%;
   font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
                "Source Han Sans SC", "Noto Sans CJK SC", system-ui,
                -apple-system, sans-serif;
@@ -74,6 +76,7 @@ a { color: inherit; }
   padding: 13px clamp(16px, 4vw, 38px);
   max-width: 100%;
   overflow-x: hidden;
+  overflow-x: clip;
   color: #fff;
   background: transparent;
   transition: background .3s, box-shadow .3s, padding .3s;

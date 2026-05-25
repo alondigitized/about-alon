@@ -380,6 +380,32 @@
     }
 
     observeReveals();
+
+    if (/[?&]debug/.test(location.search)) auditOverflow();
+  }
+
+  /* ---------- opt-in overflow diagnostic (?debug) ---------- */
+  function auditOverflow() {
+    setTimeout(function () {
+      var vw = document.documentElement.clientWidth;
+      var bad = [];
+      document.querySelectorAll("body *").forEach(function (el) {
+        var r = el.getBoundingClientRect();
+        if (r.width === 0 && r.height === 0) return;
+        if (r.right > vw + 1 || r.left < -1) {
+          el.style.outline = "2px solid red";
+          var cls = el.getAttribute("class");
+          bad.push(
+            el.tagName.toLowerCase() +
+            (el.id ? "#" + el.id : "") +
+            (cls ? "." + String(cls).split(" ")[0] : "") +
+            " [" + Math.round(r.left) + "→" + Math.round(r.right) + "]"
+          );
+        }
+      });
+      alert("viewport=" + vw + "px\noverflowing (" + bad.length + "):\n" +
+            (bad.slice(0, 10).join("\n") || "none found"));
+    }, 700);
   }
 
   if (document.readyState === "loading") {
