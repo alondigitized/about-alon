@@ -23,3 +23,9 @@ Thumbs.db
 # IDE
 .vscode/
 .idea/
+
+# Obsidian - keep config, ignore volatile state
+.obsidian/workspace.json
+.obsidian/workspace-*.json
+.obsidian/cache
+.obsidian/plugins/*/data.json

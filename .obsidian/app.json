@@ -1,0 +1,32 @@
+{
+  "monoFontFamily": "JetBrains Mono, SF Mono, Menlo, monospace",
+  "defaultViewMode": "source",
+  "livePreview": true,
+  "showLineNumber": true,
+  "strictLineBreaks": false,
+  "showFrontmatter": true,
+  "foldHeading": true,
+  "foldIndent": true,
+  "newFileLocation": "current",
+  "newLinkFormat": "shortest",
+  "useMarkdownLinks": false,
+  "showUnsupportedFiles": false,
+  "alwaysUpdateLinks": true,
+  "promptDelete": true,
+  "trashOption": "local",
+  "userIgnoreFilters": [
+    "about-alon/AGENTS.md",
+    "about-alon/MEMORY.md",
+    "about-alon/SOUL.md",
+    "about-alon/USER.md",
+    "about-alon/IDENTITY.md",
+    "about-alon/memory/",
+    "about-alon/stories/",
+    "about-alon/.git/",
+    "about-alon/.openclaw/",
+    ".git/",
+    ".openclaw/",
+    ".pi/",
+    "node_modules/"
+  ]
+}
