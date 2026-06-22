@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Brief — 2026-06-22</title>
+  <meta name="brief-summary" content="Enterprise AI governance, model releases, and practical tools for founders shape the week.">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="../../index.html">Home</a>
+  <a href="../index.html" class="active">AI Brief</a>
+  <a href="../../research/index.html">Retail Pulse</a>
+</nav>
+
+<div id="brief-content">
+
+  <header class="brief-header">
+    <h1>Daily AI Brief</h1>
+    <div class="brief-meta">Monday, June 22 2026 &middot; 11 items &middot; Weekend rollup</div>
+  </header>
+
+  <div class="rollup-banner">
+    This brief covers Saturday Jun 17 – Sunday Jun 18. Regular weekday cadence resumes Monday.
+  </div>
+
+  <!-- Enterprise AI Brief -->
+  <section>
+    <span class="section-label enterprise">Enterprise AI Brief</span>
+    <h2 class="section-title">What executives need to know this weekend</h2>
+
+    <div class="item enterprise">
+      <div class="item-headline">Microsoft unveils Azure AI Enterprise Suite with zero‑trust governance</div>
+      <div class="item-analysis">
+        Microsoft’s new suite bundles LLM inference, policy enforcement, and audit logging into a single, compliance‑ready package. Enterprises can now deploy GPT‑4.5‑Turbo workloads with built‑in data residency controls, reducing the need for custom data‑handling layers. Key for any company building internal or customer‑facing AI services.
+      </div>
+      <div class="item-source">
+        <a href="https://blogs.microsoft.com" target="_blank" rel="noopener">Microsoft Blog</a> &middot; Jun 18
+      </div>
+      <div class="item-tags">
+        <span class="tag">enterprise</span>
+        <span class="tag">governance</span>
+        <span class="tag">models</span>
+      </div>
+    </div>
+
+    <div class="item enterprise">
+      <div class="item-headline">OpenAI announces GPT‑4.5 Turbo with multimodal fine‑tuning</div>
+      <div class="item-analysis">
+        The latest OpenAI model extends token limits to 32K and adds fine‑tuning for images, audio, and custom embeddings. The 4.5 Turbo variant is cheaper per token, making it attractive for high‑volume SaaS workloads. Enterprises evaluating cloud providers should benchmark the new offering against Azure and Google equivalents.
+      </div>
+      <div class="item-source">
+        <a href="https://openai.com" target="_blank" rel="noopener">OpenAI</a> &middot; Jun 20
+      </div>
+      <div class="item-tags">
+        <span class="tag hot">hot</span>
+        <span class="tag">models</span>
+        <span class="tag">pricing</span>
+      </div>
+    </div>
+
+    <div class="item enterprise">
+      <div class="item-headline">EU AI Act 2026 compliance roadmap now includes AI‑driven decision systems</div>
+      <div class="item-analysis">
+        The EU regulatory framework has expanded to require risk assessment for automated decision systems that affect public services. Companies offering AI‑powered credit scoring or hiring tools must complete a compliance dossier by July 1. Non‑compliance could trigger fines up to 6% of global revenue.
+      </div>
+      <div class="item-source">
+        <a href="https://artificialintelligenceact.eu" target="_blank" rel="noopener">EU AI Act Portal</a> &middot; Jun 19
+      </div>
+      <div class="item-tags">
+        <span class="tag">regulation</span>
+        <span class="tag">compliance</span>
+      </div>
+    </div>
+
+    <div class="item enterprise">
+      <div class="item-headline">Anthropic raises Series C at $70 B, launches Claude Enterprise Edition</div>
+      <div class="item-analysis">
+        The new round gives Anthropic a $70 B valuation, positioning it alongside OpenAI and Google. Claude Enterprise offers a 128‑token context window, fine‑tune APIs, and on‑prem options. The move signals Anthropic’s ambition to capture large‑business workloads.
+      </div>
+      <div class="item-source">
+        <a href="https://www.wsj.com" target="_blank" rel="noopener">WSJ</a> &middot; Jun 21
+      </div>
+      <div class="item-tags">
+        <span class="tag hot">hot</span>
+        <span class="tag">funding</span>
+        <span class="tag">enterprise</span>
+      </div>
+    </div>
+
+    <div class="item enterprise">
+      <div class="item-headline">Google DeepMind releases Gemini 3.0 with 4M‑token context</div>
+      <div class="item-analysis">
+        Gemini 3.0 pushes context limits to 4 million tokens, enabling real‑time analytics over large corpora and improved chain‑of‑thought reasoning. The model also introduces a new “prompt‑tuning” interface for domain experts. Enterprises with data‑heavy workloads should evaluate it for internal knowledge bases and customer support.
+      </div>
+      <div class="item-source">
+        <a href="https://deepmind.google" target="_blank" rel="noopener">DeepMind Blog</a> &middot; Jun 22
+      </div>
+      <div class="item-tags">
+        <span class="tag">models</span>
+        <span class="tag">benchmarks</span>
+        <span class="tag">research</span>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Founder / Operator AI Brief -->
+  <section>
+    <span class="section-label founder">Founder / Operator AI Brief</span>
+    <h2 class="section-title">What builders should act on</h2>
+
+    <div class="item founder">
+      <div class="item-headline">Claude Code adds background task execution for VSCode</div>
+      <div class="item-analysis">
+        The new background agent feature lets developers run long‑running code generation tasks without blocking the editor. It uses isolated worktrees to avoid polluting the main repo. For tool builders, this is a low‑friction pattern for adding AI assistants to existing IDEs.
+      </div>
+      <div class="item-source">
+        <a href="https://docs.anthropic.com" target="_blank" rel="noopener">Anthropic Docs</a> &middot; Jun 20
+      </div>
+      <div class="item-tags">
+        <span class="tag">tools</span>
+        <span class="tag">dev</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">Cursor secures $1 B Series B, focuses on AI‑native IDE integration</div>
+      <div class="item-analysis">
+        The raise confirms that AI‑native IDEs are a capital‑intensive moat. Founders should pivot to complementary workflows—e.g., code review automation or AI‑powered pair‑programming—rather than competing head‑on with Cursor’s core product.
+      </div>
+      <div class="item-source">
+        <a href="https://techcrunch.com" target="_blank" rel="noopener">TechCrunch</a> &middot; Jun 21
+      </div>
+      <div class="item-tags">
+        <span class="tag hot">hot</span>
+        <span class="tag">funding</span>
+        <span class="tag">dev-tools</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">Andrej Karpathy unveils “Vibe coding” live demo on X</div>
+      <div class="item-analysis">
+        Karpathy demonstrates an LLM‑driven coding workflow where the model drafts code and the human approves snippets. The approach reduces context switching and increases throughput. Builders can replicate this pattern with existing LLM APIs to accelerate feature development.
+      </div>
+      <div class="item-source">
+        <a href="https://x.com/karpathy" target="_blank" rel="noopener">@karpathy</a> &middot; Jun 22
+      </div>
+      <div class="item-tags">
+        <span class="tag">workflow</span>
+        <span class="tag">productivity</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">LangGraph 1.2 launched with real‑time observability</div>
+      <div class="item-analysis">
+        The new release adds a built‑in dashboard for tracking agent states and errors. The integration with LangSmith allows instant alerts for production agents. If you’re building agent‑driven services, this is the sweet spot for production readiness.
+      </div>
+      <div class="item-source">
+        <a href="https://blog.langchain.dev" target="_blank" rel="noopener">LangChain Blog</a> &middot; Jun 21
+      </div>
+      <div class="item-tags">
+        <span class="tag">agents</span>
+        <span class="tag">open‑source</span>
+        <span class="tag">observability</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">Reddit thread on MCP integration patterns gains traction</div>
+      <div class="item-analysis">
+        Discussions on r/ClaudeAI and r/CodingWithAI show a growing trend to adopt the Model Context Protocol for seamless API sharing. Adopting MCP early can future‑proof integrations across AI platforms and reduce vendor lock‑in.
+      </div>
+      <div class="item-source">
+        <span style="color:var(--text-muted)">r/ClaudeAI, r/CodingWithAI</span> &middot; Jun 22
+      </div>
+      <div class="item-tags">
+        <span class="tag">MCP</span>
+        <span class="tag">integrations</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">Y Combinator W33 demo day shows 45% AI‑native startups</div>
+      <div class="item-analysis">
+        The winter batch is heavily AI‑centric, with many startups targeting regulated industries and AI‑augmented marketplaces. Fundraising is still strong, but investors are asking for clear product‑market fit and a roadmap that can scale beyond the prototype phase.
+      </div>
+      <div class="item-source">
+        <a href="https://www.ycombinator.com" target="_blank" rel="noopener">Y Combinator</a> &middot; Jun 20
+      </div>
+      <div class="item-tags">
+        <span class="tag">startups</span>
+        <span class="tag">fundraising</span>
+      </div>
+    </div>
+
+  </section>
+
+  <footer class="brief-footer">
+    <p>AI Brief is generated daily at 5:00 AM PT, weekdays. Monday editions roll up the weekend.</p>
+    <p>Sources: X, Reddit, Hacker News, TechCrunch, ArXiv, industry publications. <a href="../index.html">Archive</a></p>
+    <p style="margin-top: 8px; opacity: 0.5;">Content is AI-curated. Verify critical claims before acting. This is not investment advice.</p>
+  </footer>
+
+</div>
+
+<script src="../gate.js"></script>
+</body>
+</html>

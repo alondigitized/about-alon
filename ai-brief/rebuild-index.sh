@@ -51,9 +51,10 @@ for brief in "${sorted[@]}"; do
           || date -d "$date_str" "+%A" 2>/dev/null \
           || echo "Unknown")
 
-  # Detect weekend rollup from brief content
+  # Detect actual weekend rollup state, not the generic footer copy.
   day_label="$day_name"
-  if grep -qi "rollup\|weekend" "$brief" 2>/dev/null; then
+  if grep -q 'class="rollup-banner"' "$brief" 2>/dev/null \
+    || grep -q 'brief-meta">.*Weekend rollup' "$brief" 2>/dev/null; then
     day_label="$day_name (weekend rollup)"
   fi
 
