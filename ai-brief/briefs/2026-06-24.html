@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Brief — 2026-06-24</title>
+  <link rel="stylesheet" href="../style.css">
+  <meta name="brief-summary" content="Secure agent deployment is becoming the real battleground for enterprises, while builders get better runtimes, orchestration, and browser automation.">
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="../../index.html">Home</a>
+  <a href="../index.html" class="active">AI Brief</a>
+  <a href="../../research/index.html">Retail Pulse</a>
+</nav>
+
+<div id="brief-content">
+
+  <header class="brief-header">
+    <h1>Daily AI Brief</h1>
+    <div class="brief-meta">Wednesday, June 24 2026 &middot; 11 items</div>
+  </header>
+
+  <section>
+    <span class="section-label enterprise">Enterprise AI Brief</span>
+    <h2 class="section-title">What executives need to know</h2>
+
+    <div class="item enterprise">
+      <div class="item-headline">OpenAI’s Ona deal is really about secure, long-running enterprise agents</div>
+      <div class="item-analysis">OpenAI is buying Ona to add customer-controlled cloud execution to Codex. That matters because the limiting factor for enterprise agent adoption is no longer raw model quality; it is whether the agent can run persistently inside your security and compliance boundary. Expect every major platform vendor to converge on this architecture.</div>
+      <div class="item-source">
+        <a href="https://openai.com/index/openai-to-acquire-ona/" target="_blank" rel="noopener">OpenAI</a> &middot; June 11
+      </div>
+      <div class="item-tags">
+        <span class="tag hot">hot</span>
+        <span class="tag">agents</span>
+        <span class="tag">security</span>
+      </div>
+    </div>
+
+    <div class="item enterprise">
+      <div class="item-headline">Microsoft is moving up the stack: owned context, owned models, owned runtime</div>
+      <div class="item-analysis">Build 2026 made Microsoft’s strategy explicit. Work IQ and Web IQ give agents enterprise context, MAI models reduce dependence on OpenAI, and hosted sandboxes plus Windows containers give Microsoft a governed runtime. For CIOs, this is a full-stack lock-in play, not a feature launch.</div>
+      <div class="item-source">
+        <a href="https://news.microsoft.com/source/asia/2026/06/03/microsoft-build-2026-be-yourself-at-work/" target="_blank" rel="noopener">Microsoft</a> &middot; June 3
+      </div>
+      <div class="item-tags">
+        <span class="tag">enterprise</span>
+        <span class="tag">platform</span>
+        <span class="tag">models</span>
+      </div>
+    </div>
+
+    <div class="item enterprise">
+      <div class="item-headline">Google’s agentic-enterprise push is now a real platform bet, not just model branding</div>
+      <div class="item-analysis">Google Cloud’s Gemini Enterprise Agent Platform bundles models, security, DevOps, and governance into a single control plane for agents. The important signal is not another Gemini SKU. It is Google turning enterprise AI into a managed operating system for autonomous workflows.</div>
+      <div class="item-source">
+        <a href="https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-enterprise-agent-platform/" target="_blank" rel="noopener">Google Cloud</a> &middot; April 22
+      </div>
+      <div class="item-tags">
+        <span class="tag">google</span>
+        <span class="tag">agents</span>
+        <span class="tag">governance</span>
+      </div>
+    </div>
+
+    <div class="item enterprise">
+      <div class="item-headline">Anthropic’s model shutdown showed that frontier-model access is now a policy surface</div>
+      <div class="item-analysis">After a U.S. export-control order, Anthropic disabled its newest top-tier models for all users rather than try to enforce nationality-based access selectively. That is a major shift. Enterprises should plan for model availability, geography, and user eligibility to become procurement and continuity risks, not just legal footnotes.</div>
+      <div class="item-source">
+        <a href="https://www.investing.com/news/stock-market-news/anthropic-disables-toptier-ai-models-after-us-order-limiting-foreign-access-4741135" target="_blank" rel="noopener">Reuters</a> &middot; June 14
+      </div>
+      <div class="item-tags">
+        <span class="tag hot">hot</span>
+        <span class="tag">policy</span>
+        <span class="tag">risk</span>
+      </div>
+    </div>
+
+    <div class="item enterprise">
+      <div class="item-headline">The G7 is already trying to route around U.S. frontier-model restrictions</div>
+      <div class="item-analysis">G7 leaders discussed a “trusted partners” scheme to let allied countries access advanced U.S. models after the Anthropic restrictions. The implication is straightforward: frontier AI is becoming trade policy. Multinationals should expect more fragmentation in who can use which models, where, and under what controls.</div>
+      <div class="item-source">
+        <a href="https://www.investing.com/news/world-news/g7-leaders-vow-closer-ties-on-ai-as-they-hash-out-trusted-partners-scheme-4747758" target="_blank" rel="noopener">Reuters</a> &middot; June 17
+      </div>
+      <div class="item-tags">
+        <span class="tag">geopolitics</span>
+        <span class="tag">regulation</span>
+        <span class="tag">access</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <span class="section-label founder">Founder / Operator AI Brief</span>
+    <h2 class="section-title">What builders should act on</h2>
+
+    <div class="item founder">
+      <div class="item-headline">Google Antigravity + Managed Agents is one of the clearest “prompt to production” stacks on the market</div>
+      <div class="item-analysis">Google now offers Antigravity 2.0, a CLI, an SDK, and managed isolated agent sessions through the Gemini API. That is useful because it collapses a lot of orchestration plumbing into one vendor path. If you want speed over stack purity, this is worth testing now.</div>
+      <div class="item-source">
+        <a href="https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-developer-highlights/" target="_blank" rel="noopener">Google DeepMind</a> &middot; May 19
+      </div>
+      <div class="item-tags">
+        <span class="tag hot">hot</span>
+        <span class="tag">builders</span>
+        <span class="tag">agents</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">GitHub Copilot is leaning hard into parallel agent sessions and worktree-based execution</div>
+      <div class="item-analysis">Microsoft’s new Copilot app preview centers on running multiple agent sessions in parallel with git worktrees keeping changes isolated. That is the right pattern. Builders shipping coding agents should copy the structure: separation, resumability, and human review instead of one giant autonomous thread.</div>
+      <div class="item-source">
+        <a href="https://news.microsoft.com/source/asia/2026/06/03/microsoft-build-2026-be-yourself-at-work/" target="_blank" rel="noopener">Microsoft</a> &middot; June 3
+      </div>
+      <div class="item-tags">
+        <span class="tag">devtools</span>
+        <span class="tag">copilot</span>
+        <span class="tag">workflow</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">OpenRouter is turning routing and guardrails into default infrastructure</div>
+      <div class="item-analysis">OpenRouter’s latest releases bundle model fusion, speech/transcription APIs, workspace controls, and configurable guardrails like zero-retention, provider allowlists, and PII redaction. For small teams, that is a fast way to get multi-model ops without building an internal gateway first.</div>
+      <div class="item-source">
+        <a href="https://openrouter.ai/blog/announcements/may-release-spotlight/" target="_blank" rel="noopener">OpenRouter</a> &middot; June 1
+      </div>
+      <div class="item-tags">
+        <span class="tag">infra</span>
+        <span class="tag">guardrails</span>
+        <span class="tag">multi-model</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">Claude Cowork’s GA release is a useful clue about where desktop agents are heading</div>
+      <div class="item-analysis">Anthropic added Cowork analytics, OpenTelemetry support, and role-based controls as it moved the product to general availability. The meta-signal: desktop agents are maturing from solo power-user toys into managed team software. If you are building in this category, observability and admin controls are no longer optional.</div>
+      <div class="item-source">
+        <a href="https://docs.anthropic.com/ko/release-notes/claude-apps" target="_blank" rel="noopener">Anthropic Docs</a> &middot; April 9
+      </div>
+      <div class="item-tags">
+        <span class="tag">desktop</span>
+        <span class="tag">ops</span>
+        <span class="tag">teams</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">Browser automation keeps shifting from brittle scripts to self-healing agent systems</div>
+      <div class="item-analysis">A high-signal Launch HN this week, Intuned frames browser automation as code plus an agent that can debug and repair failing runs. That pattern is worth watching. The durable wedge is not “AI clicks buttons,” it is lower maintenance on ugly, no-API workflows.</div>
+      <div class="item-source">
+        <a href="https://news.ycombinator.com/item?id=48445171" target="_blank" rel="noopener">Hacker News</a> &middot; June 19
+      </div>
+      <div class="item-tags">
+        <span class="tag">browser</span>
+        <span class="tag">automation</span>
+        <span class="tag">signal</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">Open-source terminal agents still have heat, and Product Hunt is reflecting it</div>
+      <div class="item-analysis">Product Hunt’s June 15 week leaderboard put VEXI, an open-source terminal coding agent, near the top. The market signal is that builders still want local, inspectable, command-line-native agent tools even as the big vendors move toward managed clouds. There is still room for fast, opinionated tooling with taste.</div>
+      <div class="item-source">
+        <a href="https://www.producthunt.com/leaderboard/weekly/2026/25" target="_blank" rel="noopener">Product Hunt</a> &middot; Week of June 15
+      </div>
+      <div class="item-tags">
+        <span class="tag">open-source</span>
+        <span class="tag">terminal</span>
+        <span class="tag">product-hunt</span>
+      </div>
+    </div>
+  </section>
+
+  <footer class="brief-footer">
+    <p>AI Brief is generated daily at 5:00 AM PT, weekdays. Monday editions roll up the weekend.</p>
+    <p>Sources: X, Reddit, Hacker News, TechCrunch, ArXiv, industry publications. <a href="../index.html">Archive</a></p>
+    <p style="margin-top: 8px; opacity: 0.5;">Content is AI-curated. Verify critical claims before acting. This is not investment advice.</p>
+  </footer>
+
+</div>
+
+<script src="../gate.js"></script>
+</body>
+</html>
