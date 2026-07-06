@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Brief — 2026-07-06</title>
+  <link rel="stylesheet" href="../style.css">
+  <meta name="brief-summary" content="Frontier AI is becoming a governed operating layer—through policy gates, chips, spend controls, and enterprise control planes—while builders get cheaper agentic models, faster local inference, and better multi-agent tooling.">
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="../../index.html">Home</a>
+  <a href="../index.html" class="active">AI Brief</a>
+  <a href="../../research/index.html">Retail Pulse</a>
+</nav>
+
+<div id="brief-content">
+
+  <header class="brief-header">
+    <h1>Daily AI Brief</h1>
+    <div class="brief-meta">Monday, July 6 2026 &middot; 11 items &middot; Weekend rollup</div>
+  </header>
+
+  <div class="rollup-banner">
+    This brief covers Friday Jul 3 &ndash; Sunday Jul 5.
+  </div>
+
+  <section>
+    <span class="section-label enterprise">Enterprise AI Brief</span>
+    <h2 class="section-title">What executives need to know this weekend</h2>
+
+    <div class="item enterprise">
+      <div class="item-headline">Washington is now part of the frontier-model release process</div>
+      <div class="item-analysis">Anthropic restored Fable 5 after U.S. export controls were lifted, while OpenAI said GPT-5.6 is launching first in a limited preview after advance government review. The strategic takeaway is uncomfortable but clear: frontier model access is no longer governed only by product readiness and competition. Policy gating is now part of release management, which means enterprise roadmaps need redundancy by vendor, geography, and model tier.</div>
+      <div class="item-source">
+        <a href="https://www.anthropic.com/news/redeploying-fable-5" target="_blank" rel="noopener">Anthropic</a> &middot; Jun 30 / Jul 1
+        &middot; <a href="https://openai.com/zh-Hant/index/previewing-gpt-5-6-sol/" target="_blank" rel="noopener">OpenAI</a> &middot; Jun 26
+      </div>
+      <div class="item-tags">
+        <span class="tag hot">hot</span>
+        <span class="tag">policy</span>
+        <span class="tag">access</span>
+        <span class="tag">risk</span>
+      </div>
+    </div>
+
+    <div class="item enterprise">
+      <div class="item-headline">OpenAI’s Broadcom chip move is a control-and-margin play, not just a hardware announcement</div>
+      <div class="item-analysis">Jalapeño matters because it shows frontier labs are moving to own more of the inference stack. Better performance per watt is useful, but the deeper implication is bargaining power: if leading labs design silicon around their own workloads, infrastructure economics and service reliability start to become competitive moats. Large enterprises should expect model pricing and availability to be shaped increasingly by compute strategy, not just benchmark gains.</div>
+      <div class="item-source">
+        <a href="https://openai.com/index/openai-broadcom-jalapeno-inference-chip/" target="_blank" rel="noopener">OpenAI</a> &middot; Jun 24
+      </div>
+      <div class="item-tags">
+        <span class="tag">infrastructure</span>
+        <span class="tag">chips</span>
+        <span class="tag">economics</span>
+      </div>
+    </div>
+
+    <div class="item enterprise">
+      <div class="item-headline">HP’s Frontier partnership shows the enterprise AI control plane is becoming the real product</div>
+      <div class="item-analysis">The interesting part of HP’s OpenAI partnership is not the pilot wins; it is the operating model underneath them. Frontier is being positioned as the connective layer for context, access, deployment, and evaluation across agents and workflows. That is where enterprise lock-in will come from. If you are choosing vendors, spend less time debating chatbot quality and more time evaluating governance, observability, and deployment controls.</div>
+      <div class="item-source">
+        <a href="https://openai.com/index/hp-frontier-partnership/" target="_blank" rel="noopener">OpenAI</a> &middot; Jun 28
+      </div>
+      <div class="item-tags">
+        <span class="tag">agents</span>
+        <span class="tag">control-plane</span>
+        <span class="tag">enterprise</span>
+      </div>
+    </div>
+
+    <div class="item enterprise">
+      <div class="item-headline">AI FinOps is arriving: spend controls and usage analytics are becoming mandatory</div>
+      <div class="item-analysis">OpenAI’s new enterprise analytics and usage-limit controls are exactly the sort of unsexy feature that unlocks broader deployment. Once AI spend can be budgeted at workspace, group, and user levels, it stops looking like experimental leakage and starts looking like managed operating expense. Expect CFOs and platform teams to demand this from every serious AI vendor over the next year.</div>
+      <div class="item-source">
+        <a href="https://openai.com/index/chatgpt-enterprise-spend-controls/" target="_blank" rel="noopener">OpenAI</a> &middot; Jun 18
+      </div>
+      <div class="item-tags">
+        <span class="tag">finops</span>
+        <span class="tag">governance</span>
+        <span class="tag">adoption</span>
+      </div>
+    </div>
+
+    <div class="item enterprise">
+      <div class="item-headline">Agents are spreading from engineers to operators, legal, finance, and recruiting faster than expected</div>
+      <div class="item-analysis">OpenAI’s latest usage data matters because it confirms where organizational value is actually compounding: non-developer users are growing faster than developers, and heavy users are already orchestrating parallel agent labor at scale. This is the management signal. The winning companies will not treat AI as an engineering productivity layer alone; they will redesign knowledge-work workflows across functions.</div>
+      <div class="item-source">
+        <a href="https://openai.com/index/how-agents-are-transforming-work/" target="_blank" rel="noopener">OpenAI</a> &middot; Jul 1
+      </div>
+      <div class="item-tags">
+        <span class="tag">workflows</span>
+        <span class="tag">org-design</span>
+        <span class="tag">agents</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <span class="section-label founder">Founder / Operator AI Brief</span>
+    <h2 class="section-title">What builders should act on</h2>
+
+    <div class="item founder">
+      <div class="item-headline">Claude Sonnet 5 looks like the new default benchmark for agentic coding economics</div>
+      <div class="item-analysis">Sonnet 5 is the kind of release operators should pay attention to: close to Opus 4.8 performance on agentic work, but with materially better pricing and broad availability. That changes the default stack choice for a lot of startups. If you are paying flagship-model rates for everyday coding, research, or workflow agents, you should re-run your evals now.</div>
+      <div class="item-source">
+        <a href="https://www.anthropic.com/news/claude-sonnet-5" target="_blank" rel="noopener">Anthropic</a> &middot; Jun 30
+      </div>
+      <div class="item-tags">
+        <span class="tag hot">hot</span>
+        <span class="tag">models</span>
+        <span class="tag">pricing</span>
+        <span class="tag">coding</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">Kimi K2.7 Code is real price pressure on the frontier coding stack</div>
+      <div class="item-analysis">Moonshot’s K2.7 Code is not just another open release. It is a credible signal that strong long-horizon coding and agentic performance is getting cheaper, more open, and easier to slot into existing workflows. The practical move is simple: if your team is still defaulting to premium closed models for every coding task, benchmark K2.7 Code on the workflows that matter and see where the savings are real.</div>
+      <div class="item-source">
+        <a href="https://www.kimi.com/resources/kimi-k2-7-code" target="_blank" rel="noopener">Kimi</a> &middot; Jun 25
+      </div>
+      <div class="item-tags">
+        <span class="tag">open-source</span>
+        <span class="tag">cost</span>
+        <span class="tag">agentic-coding</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">Ollama just made local coding agents materially more usable on Apple Silicon</div>
+      <div class="item-analysis">A nearly 90% speed boost for Gemma 4 on a coding-agent benchmark is not cosmetic. It changes the threshold where local models stop feeling like a hobby and start feeling like a practical option for serious iteration. If you care about privacy, offline workflows, or avoiding API burn for every loop, re-test local agent setups instead of assuming the gap is still too large.</div>
+      <div class="item-source">
+        <a href="https://ollama.com/blog/faster-gemma-4-mlx-mtp" target="_blank" rel="noopener">Ollama</a> &middot; Jun 29
+      </div>
+      <div class="item-tags">
+        <span class="tag">local</span>
+        <span class="tag">performance</span>
+        <span class="tag">apple-silicon</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">Open voice stacks are finally getting fast enough to be product decisions, not just demos</div>
+      <div class="item-analysis">Hugging Face and Cerebras pairing Gemma 4 with open ASR and TTS is a useful signal: the open stack for real-time voice is becoming good enough for actual product work. For founders, that means voice agents are no longer automatically a frontier-API-only category. The opportunity is in workflow design, domain specificity, and latency discipline—not just model access.</div>
+      <div class="item-source">
+        <a href="https://huggingface.co/blog/cerebras-gemma4-voice-ai" target="_blank" rel="noopener">Hugging Face</a> &middot; Jul 1
+      </div>
+      <div class="item-tags">
+        <span class="tag">voice</span>
+        <span class="tag">open-stack</span>
+        <span class="tag">latency</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">ADK Go 2.0 brings the workflow primitives serious agents actually need</div>
+      <div class="item-analysis">Graphs, built-in human approval, pause/resume, persistent state, and concurrent execution are not bells and whistles. They are the baseline for agents doing real work. Google’s ADK Go 2.0 is worth studying even if you do not use Go, because it reflects where the architecture is going: away from giant prompts and toward explicit workflow systems.</div>
+      <div class="item-source">
+        <a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog</a> &middot; Jun 30
+      </div>
+      <div class="item-tags">
+        <span class="tag">multi-agent</span>
+        <span class="tag">workflows</span>
+        <span class="tag">infrastructure</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">Stop vibe-checking your agents: eval flywheels are becoming table stakes</div>
+      <div class="item-analysis">Google’s new quality-flywheel skill is a strong signal that agent development is maturing from prompt fiddling into measurable engineering. The important idea is not the specific tooling. It is the discipline: trace data, grading, before/after comparisons, regression detection, and production feedback loops. If you ship agents without this layer, you are mostly guessing.</div>
+      <div class="item-source">
+        <a href="https://developers.googleblog.com/driving-the-agent-quality-flywheel-from-your-coding-agent/" target="_blank" rel="noopener">Google Developers Blog</a> &middot; Jun 30
+      </div>
+      <div class="item-tags">
+        <span class="tag">evals</span>
+        <span class="tag">quality</span>
+        <span class="tag">ops</span>
+      </div>
+    </div>
+  </section>
+
+  <footer class="brief-footer">
+    <p>AI Brief is generated daily at 5:00 AM PT, weekdays. Monday editions roll up the weekend.</p>
+    <p>Sources: X, Reddit, Hacker News, TechCrunch, ArXiv, industry publications. <a href="../index.html">Archive</a></p>
+    <p style="margin-top: 8px; opacity: 0.5;">Content is AI-curated. Verify critical claims before acting. This is not investment advice.</p>
+  </footer>
+
+</div>
+
+<script src="../gate.js"></script>
+</body>
+</html>
