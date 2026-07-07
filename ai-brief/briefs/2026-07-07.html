@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Brief — 2026-07-07</title>
+  <link rel="stylesheet" href="../style.css">
+  <meta name="brief-summary" content="AI is hardening into operating infrastructure: enterprises now need governance, control planes, and domain-specific workflows, while builders get cheaper coding models, faster local inference, and better agent primitives.">
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="../../index.html">Home</a>
+  <a href="../index.html" class="active">AI Brief</a>
+  <a href="../../research/index.html">Retail Pulse</a>
+</nav>
+
+<div id="brief-content">
+
+  <header class="brief-header">
+    <h1>Daily AI Brief</h1>
+    <div class="brief-meta">Tuesday, July 7 2026 &middot; 11 items</div>
+  </header>
+
+  <section>
+    <span class="section-label enterprise">Enterprise AI Brief</span>
+    <h2 class="section-title">What executives need to know</h2>
+
+    <div class="item enterprise">
+      <div class="item-headline">Global AI adoption is no longer the story — deepening usage is</div>
+      <div class="item-analysis">OpenAI’s latest Signals release matters less as a vanity growth chart and more as proof that AI is becoming routine infrastructure. Users are sending more messages over time, trying more capabilities, and non-English usage now accounts for more than half of active users. For large companies, the takeaway is straightforward: AI literacy is no longer a niche workforce issue or an English-market issue. It is becoming baseline operating capability.</div>
+      <div class="item-source">
+        <a href="https://openai.com/index/how-chatgpt-adoption-has-expanded/" target="_blank" rel="noopener">OpenAI Signals</a> &middot; Jun 30
+      </div>
+      <div class="item-tags">
+        <span class="tag">adoption</span>
+        <span class="tag">global</span>
+        <span class="tag">workforce</span>
+      </div>
+    </div>
+
+    <div class="item enterprise">
+      <div class="item-headline">Agents are escaping engineering and becoming a cross-functional labor layer</div>
+      <div class="item-analysis">OpenAI’s new research on Codex usage shows the important shift: the fastest growth is no longer among developers alone. Legal, finance, recruiting, and other non-technical functions are moving from chatbot use to delegated multi-step work, with heavy users already running parallel agent labor for hours a day. This is the management signal. The companies that win will redesign work across functions, not just give engineers better copilots.</div>
+      <div class="item-source">
+        <a href="https://openai.com/bg-BG/index/how-agents-are-transforming-work/" target="_blank" rel="noopener">OpenAI</a> &middot; Jun 25
+      </div>
+      <div class="item-tags">
+        <span class="tag hot">hot</span>
+        <span class="tag">agents</span>
+        <span class="tag">org-design</span>
+        <span class="tag">productivity</span>
+      </div>
+    </div>
+
+    <div class="item enterprise">
+      <div class="item-headline">Anthropic’s Fable 5 redeploy shows frontier releases now run through policy gates</div>
+      <div class="item-analysis">The substance here is not just that Fable 5 returned. It is that model deployment, withdrawal, and redeployment are now entangled with export controls, government review, and safety posture. That changes enterprise planning. If your roadmap depends on a single frontier vendor or model family, you now have geopolitical and regulatory concentration risk in addition to technical risk.</div>
+      <div class="item-source">
+        <a href="https://www.anthropic.com/news/redeploying-fable-5" target="_blank" rel="noopener">Anthropic</a> &middot; Jul 1
+      </div>
+      <div class="item-tags">
+        <span class="tag hot">hot</span>
+        <span class="tag">policy</span>
+        <span class="tag">risk</span>
+        <span class="tag">frontier-models</span>
+      </div>
+    </div>
+
+    <div class="item enterprise">
+      <div class="item-headline">Domain-specific AI workbenches are starting to beat generic chat</div>
+      <div class="item-analysis">Claude Science is a useful strategic tell. Anthropic is packaging models, tools, scientific databases, and auditable workflows into a vertical product instead of asking users to assemble everything themselves. Expect this pattern to spread: legal, finance, biotech, and operations teams will increasingly buy AI systems shaped around their workflows, evidence standards, and toolchains — not just a general assistant with a blank box.</div>
+      <div class="item-source">
+        <a href="https://www.anthropic.com/news/claude-science-ai-workbench" target="_blank" rel="noopener">Anthropic</a> &middot; Jun 30
+      </div>
+      <div class="item-tags">
+        <span class="tag">vertical-ai</span>
+        <span class="tag">research</span>
+        <span class="tag">workflow</span>
+      </div>
+    </div>
+
+    <div class="item enterprise">
+      <div class="item-headline">The control plane is becoming the real enterprise battleground</div>
+      <div class="item-analysis">Google is pushing Gemini Enterprise Agent Platform while AWS is explicitly framing “AgentOps” as the discipline for operating agents in production. Same conclusion from two hyperscalers: the durable value is shifting from chat interfaces to governance, orchestration, runtime controls, observability, and cost management. Enterprises should evaluate who owns that layer before they get trapped by a flashy demo sitting on brittle plumbing.</div>
+      <div class="item-source">
+        <a href="https://cloud.google.com/blog/products/ai-machine-learning/introducing-gemini-enterprise-agent-platform?e=0" target="_blank" rel="noopener">Google Cloud</a> &middot; Apr 22
+        &middot; <a href="https://aws.amazon.com/blogs/machine-learning/agentops-operationalize-agentic-ai-at-scale-with-amazon-bedrock-agentcore/" target="_blank" rel="noopener">AWS</a> &middot; Jun 1
+      </div>
+      <div class="item-tags">
+        <span class="tag">control-plane</span>
+        <span class="tag">governance</span>
+        <span class="tag">operations</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <span class="section-label founder">Founder / Operator AI Brief</span>
+    <h2 class="section-title">What builders should act on</h2>
+
+    <div class="item founder">
+      <div class="item-headline">Claude Sonnet 5 looks like the new default model to benchmark for agentic coding</div>
+      <div class="item-analysis">Sonnet 5 narrows the gap with Opus-class performance while landing at a materially friendlier price point. That makes it the obvious default candidate for coding agents, browser workflows, and multi-step operator tasks. The practical move is not blind migration. It is re-running your evals now, because the economics changed enough to justify it.</div>
+      <div class="item-source">
+        <a href="https://www.anthropic.com/news/claude-sonnet-5" target="_blank" rel="noopener">Anthropic</a> &middot; Jun 30
+      </div>
+      <div class="item-tags">
+        <span class="tag hot">hot</span>
+        <span class="tag">models</span>
+        <span class="tag">coding</span>
+        <span class="tag">pricing</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">Kimi K2.7 Code is real price pressure on premium coding stacks</div>
+      <div class="item-analysis">Moonshot’s K2.7 Code is open-source, tuned for long-horizon coding, and priced aggressively on API. Even if you do not switch, it changes the negotiating baseline for what strong agentic coding should cost. For founders building internal tools or shipping AI features, this is a reminder to benchmark open or lower-cost alternatives before accepting frontier-model margins as a permanent fact.</div>
+      <div class="item-source">
+        <a href="https://www.kimi.com/resources/kimi-k2-7-code" target="_blank" rel="noopener">Kimi</a> &middot; Jun 29
+      </div>
+      <div class="item-tags">
+        <span class="tag">open-source</span>
+        <span class="tag">cost</span>
+        <span class="tag">agentic-coding</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">Local agent loops on Apple Silicon just got much more practical</div>
+      <div class="item-analysis">Ollama says Gemma 4 now runs nearly 90% faster on average across a coding-agent benchmark with MLX multi-token prediction. That is not a cosmetic bump. It lowers the threshold for using local models in real workflows where latency and iteration speed matter. If privacy, offline usage, or API burn matters to your team, re-test your local stack instead of assuming hosted is the only serious option.</div>
+      <div class="item-source">
+        <a href="https://ollama.com/blog/faster-gemma-4-mlx-mtp" target="_blank" rel="noopener">Ollama</a> &middot; Jun 29
+      </div>
+      <div class="item-tags">
+        <span class="tag">local</span>
+        <span class="tag">apple-silicon</span>
+        <span class="tag">performance</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">Open voice stacks are getting good enough to become product decisions</div>
+      <div class="item-analysis">Hugging Face and Cerebras pushing Gemma 4 into real-time voice is another sign that voice agents are moving out of demo territory. The opportunity is not just “add voice.” It is building domain-specific experiences where latency, interruption handling, and workflow fit are designed well. The open stack is getting strong enough that product taste now matters more than raw model access.</div>
+      <div class="item-source">
+        <a href="https://huggingface.co/blog/cerebras-gemma4-voice-ai" target="_blank" rel="noopener">Hugging Face</a> &middot; Jul 1
+      </div>
+      <div class="item-tags">
+        <span class="tag">voice</span>
+        <span class="tag">open-stack</span>
+        <span class="tag">latency</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">Serious agent builders now need two things by default: graph workflows and eval flywheels</div>
+      <div class="item-analysis">Google’s ADK Go 2.0 and its Agent Quality Flywheel post point to the same architectural shift. Production agents need explicit orchestration primitives — branching, fan-out, human approval, retries, persistence — and they also need measurement loops that catch regressions before users do. If your stack still depends on giant prompts plus vibes, you are behind.</div>
+      <div class="item-source">
+        <a href="https://developers.googleblog.com/announcing-adk-go-20/" target="_blank" rel="noopener">Google Developers Blog</a> &middot; Jun 30
+        &middot; <a href="https://developers.googleblog.com/driving-the-agent-quality-flywheel-from-your-coding-agent/" target="_blank" rel="noopener">Google Developers Blog</a> &middot; Jun 30
+      </div>
+      <div class="item-tags">
+        <span class="tag">multi-agent</span>
+        <span class="tag">evals</span>
+        <span class="tag">workflow</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">New infra signal: browser execution and social behavior are becoming standalone categories</div>
+      <div class="item-analysis">Two recent Product Hunt launches are worth noticing for what they imply, not just what they sell. Tabstack packages browser automation and live-web interaction into an API built for agents; Humalike packages turn-taking, norms, and social memory into behavioral infrastructure. Translation: founders are starting to unbundle the messy human and web layers that make agents useful in production. Expect more startups to win by selling narrow missing primitives instead of full-stack “AI coworkers.”</div>
+      <div class="item-source">
+        <a href="https://www.producthunt.com/products/tabstack?launch=tabstack-browser-automation" target="_blank" rel="noopener">Product Hunt / Tabstack</a> &middot; Jul 1
+        &middot; <a href="https://www.producthunt.com/products/humalike-2" target="_blank" rel="noopener">Product Hunt / Humalike</a> &middot; Jul 1
+      </div>
+      <div class="item-tags">
+        <span class="tag">launches</span>
+        <span class="tag">browser-automation</span>
+        <span class="tag">social-ai</span>
+      </div>
+    </div>
+  </section>
+
+  <footer class="brief-footer">
+    <p>AI Brief is generated daily at 5:00 AM PT, weekdays. Monday editions roll up the weekend.</p>
+    <p>Sources: X, Reddit, Hacker News, TechCrunch, ArXiv, industry publications. <a href="../index.html">Archive</a></p>
+    <p style="margin-top: 8px; opacity: 0.5;">Content is AI-curated. Verify critical claims before acting. This is not investment advice.</p>
+  </footer>
+
+</div>
+
+<script src="../gate.js"></script>
+</body>
+</html>
