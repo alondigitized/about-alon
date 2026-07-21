@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Brief — 2026-07-21</title>
+  <meta name="brief-summary" content="Frontier models and AI governance are tightening fast, while the operator edge is shifting to open-weight tools, faster inference, and more reliable agents.">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="../../index.html">Home</a>
+  <a href="../index.html" class="active">AI Brief</a>
+  <a href="../../research/index.html">Retail Pulse</a>
+</nav>
+
+<div id="brief-content">
+
+  <header class="brief-header">
+    <h1>Daily AI Brief</h1>
+    <div class="brief-meta">Tuesday, July 21 2026 &middot; 11 items</div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- ENTERPRISE AI BRIEF                        -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section>
+    <span class="section-label enterprise">Enterprise AI Brief</span>
+    <h2 class="section-title">What executives need to know</h2>
+
+    <div class="item enterprise">
+      <div class="item-headline">OpenAI moves GPT-5.6 from preview to general availability</div>
+      <div class="item-analysis">
+        GPT-5.6 is now the cleanest signal that the frontier is shifting from demo quality to deployable depth: stronger coding, tool use, long-context, and science performance with a clearer pricing ladder across Sol, Terra, and Luna. For enterprise buyers, this raises the pressure to re-run model portfolio decisions now rather than treating last quarter&rsquo;s benchmark stack as current truth.
+      </div>
+      <div class="item-source">
+        <a href="https://openai.com/index/gpt-5-6/" target="_blank" rel="noopener">OpenAI</a> &middot; Jul 9
+      </div>
+      <div class="item-tags">
+        <span class="tag hot">hot</span>
+        <span class="tag">models</span>
+        <span class="tag">enterprise stack</span>
+      </div>
+    </div>
+
+    <div class="item enterprise">
+      <div class="item-headline">Meta opens Muse Spark 1.1 through a public model API</div>
+      <div class="item-analysis">
+        Meta is no longer just publishing research bravado; it is packaging agentic reasoning for developers. Muse Spark 1.1&rsquo;s emphasis on tool use, coding, multimodal understanding, and deciding when to script versus click makes Meta more relevant in enterprise agent evaluations, especially for teams that want leverage outside the OpenAI/Anthropic duopoly.
+      </div>
+      <div class="item-source">
+        <a href="https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/" target="_blank" rel="noopener">Meta AI</a> &middot; Jul 9
+      </div>
+      <div class="item-tags">
+        <span class="tag hot">hot</span>
+        <span class="tag">agents</span>
+        <span class="tag">platforms</span>
+      </div>
+    </div>
+
+    <div class="item enterprise">
+      <div class="item-headline">Anthropic pushes team collaboration upstream with Claude Tag in Slack</div>
+      <div class="item-analysis">
+        Claude Tag matters because it moves AI from a personal assistant UX into a shared operating layer inside the company&rsquo;s communication system. That is strategically important: once agents live in Slack threads with access to tools, data, and codebases, adoption shifts from individual experimentation to workflow redesign.
+      </div>
+      <div class="item-source">
+        <a href="https://www.anthropic.com/news/introducing-claude-tag?hl=en-US" target="_blank" rel="noopener">Anthropic</a> &middot; Jun 23
+      </div>
+      <div class="item-tags">
+        <span class="tag">collaboration</span>
+        <span class="tag">workflow</span>
+        <span class="tag">enterprise AI</span>
+      </div>
+    </div>
+
+    <div class="item enterprise">
+      <div class="item-headline">OpenAI and Broadcom make the compute stack strategy explicit</div>
+      <div class="item-analysis">
+        Jalapeño is not just a chip announcement; it is a signal that frontier labs want tighter vertical control over inference economics. If OpenAI can shape its own accelerator roadmap, enterprise customers should expect more aggressive performance-per-dollar moves, but also deeper dependency on the model provider&rsquo;s full stack.
+      </div>
+      <div class="item-source">
+        <a href="https://openai.com/index/openai-broadcom-jalapeno-inference-chip/" target="_blank" rel="noopener">OpenAI</a> &middot; Jun 24
+      </div>
+      <div class="item-tags">
+        <span class="tag">infrastructure</span>
+        <span class="tag">chips</span>
+        <span class="tag">economics</span>
+      </div>
+    </div>
+
+    <div class="item enterprise">
+      <div class="item-headline">The frontier labs are converging on a common governance playbook</div>
+      <div class="item-analysis">
+        The substantive shift is not another vague safety statement. Google DeepMind, OpenAI, and Anthropic are now publicly converging around third-party testing, national standards, and a more formal frontier governance regime. That increases the odds that regulation lands as a shared operating framework rather than a scattered patchwork, which is material for procurement, compliance, and launch timing.
+      </div>
+      <div class="item-source">
+        <a href="https://www.axios.com/2026/07/16/ai-regulations-openai-anthropic-google" target="_blank" rel="noopener">Axios</a> &middot; Jul 16
+        &middot; <a href="https://openai.com/index/advancing-ai-safety-through-state-and-federal-action/" target="_blank" rel="noopener">OpenAI</a> &middot; Jul 15
+      </div>
+      <div class="item-tags">
+        <span class="tag">policy</span>
+        <span class="tag">governance</span>
+        <span class="tag">risk</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- FOUNDER / OPERATOR AI BRIEF                -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section>
+    <span class="section-label founder">Founder / Operator AI Brief</span>
+    <h2 class="section-title">What builders should act on</h2>
+
+    <div class="item founder">
+      <div class="item-headline">Hugging Face&rsquo;s AI-driven intrusion is a wake-up call for every agent builder</div>
+      <div class="item-analysis">
+        This is the most important operator lesson of the week: autonomous attackers are no longer a thought experiment. The practical takeaway is brutal and clear &mdash; treat dataset pipelines and tool surfaces as attack surfaces, rotate tokens now if you touched Hugging Face recently, and keep at least one capable self-hosted model ready for incident response when hosted guardrails block forensic work.
+      </div>
+      <div class="item-source">
+        <a href="https://huggingface.co/blog/security-incident-july-2026" target="_blank" rel="noopener">Hugging Face</a> &middot; Jul 16
+      </div>
+      <div class="item-tags">
+        <span class="tag hot">hot</span>
+        <span class="tag">security</span>
+        <span class="tag">agents</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">Thinking Machines launches Inkling as an open-weights creative workhorse</div>
+      <div class="item-analysis">
+        Inkling is interesting less because it beats every benchmark and more because it signals where the open-weight market is going: capable, polished, task-shaped models that can produce finished artifacts, not just chat output. Builders should read this as more evidence that differentiated workflow products will matter more than wrapping a closed API with thin UI.
+      </div>
+      <div class="item-source">
+        <a href="https://thinkingmachines.ai/news/introducing-inkling/" target="_blank" rel="noopener">Thinking Machines Lab</a> &middot; Jul 15
+      </div>
+      <div class="item-tags">
+        <span class="tag">open-weight</span>
+        <span class="tag">content</span>
+        <span class="tag">builders</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">vLLM just got easier: transformers backend now hits native-speed territory</div>
+      <div class="item-analysis">
+        This is quietly high leverage. If you serve open models, a single flag now gets many Hugging Face models running at native-speed vLLM performance without bespoke porting work. That lowers the engineering tax on experimentation and makes self-hosting more attractive for teams that want cost control or privacy without eating a long infra project.
+      </div>
+      <div class="item-source">
+        <a href="https://huggingface.co/blog/native-speed-vllm-transformers-backend" target="_blank" rel="noopener">Hugging Face</a> &middot; Jul 8
+      </div>
+      <div class="item-tags">
+        <span class="tag">infra</span>
+        <span class="tag">open-source</span>
+        <span class="tag">serving</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">LeRobot v0.6.0 makes physical-AI loops more usable</div>
+      <div class="item-analysis">
+        Robotics is still early, but the stack is getting less toy-like. LeRobot now bundles better policy training, reward models, deployment CLI improvements, and new benchmarks in a way that shortens the path from experiments to repeatable iteration. If you care about warehouse, retail, or embodied automation, this is one of the more practical open ecosystems to watch.
+      </div>
+      <div class="item-source">
+        <a href="https://huggingface.co/blog/lerobot-release-v060" target="_blank" rel="noopener">Hugging Face</a> &middot; Jul 7
+      </div>
+      <div class="item-tags">
+        <span class="tag">robotics</span>
+        <span class="tag">open-source</span>
+        <span class="tag">physical AI</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">NVIDIA&rsquo;s Cosmos 3 Edge brings real-time world models closer to deployment</div>
+      <div class="item-analysis">
+        A 4B open world model that runs on edge hardware is exactly the kind of release founders should pay attention to. It pushes physical AI toward on-device reasoning instead of cloud-only demos, which matters for latency, privacy, and economics in industrial and retail environments.
+      </div>
+      <div class="item-source">
+        <a href="https://huggingface.co/blog/nvidia/cosmos3edge" target="_blank" rel="noopener">Hugging Face / NVIDIA</a> &middot; Jul 20
+      </div>
+      <div class="item-tags">
+        <span class="tag">edge AI</span>
+        <span class="tag">vision</span>
+        <span class="tag">robotics</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">Reddit signal: builders are hardening agents with small local MCP toolboxes</div>
+      <div class="item-analysis">
+        The smartest grassroots pattern right now is not bigger prompts &mdash; it&rsquo;s narrower determinism. A high-signal ClaudeAI thread on toolbox-mcp shows builders handing exact jobs like PDF extraction, timezone conversion, hashing, and file transforms to local tools instead of letting the model improvise. Steal that pattern. It improves reliability immediately.
+      </div>
+      <div class="item-source">
+        <a href="https://www.reddit.com/r/ClaudeAI/comments/1ukrdbv/i_built_an_mcp_server_that_gives_claude_35_local/" target="_blank" rel="noopener">r/ClaudeAI</a> &middot; Jul 1
+      </div>
+      <div class="item-tags">
+        <span class="tag">MCP</span>
+        <span class="tag">workflow</span>
+        <span class="tag">reddit signal</span>
+      </div>
+    </div>
+  </section>
+
+  <footer class="brief-footer">
+    <p>AI Brief is generated daily at 5:00 AM PT, weekdays. Monday editions roll up the weekend.</p>
+    <p>Sources: X, Reddit, Hacker News, TechCrunch, ArXiv, industry publications. <a href="../index.html">Archive</a></p>
+    <p style="margin-top: 8px; opacity: 0.5;">Content is AI-curated. Verify critical claims before acting. This is not investment advice.</p>
+  </footer>
+
+</div>
+
+<script src="../gate.js"></script>
+</body>
+</html>
