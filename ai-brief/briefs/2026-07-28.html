@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="brief-summary" content="AI moved another step from novelty to operating system: governance around open weights sharpened, enterprises got more concrete agent playbooks, and builders got fresh leverage from cheaper workhorse models and better harnesses.">
+  <title>AI Brief — 2026-07-28</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="../../index.html">Home</a>
+  <a href="../index.html" class="active">AI Brief</a>
+  <a href="../../research/index.html">Retail Pulse</a>
+</nav>
+
+<div id="brief-content">
+
+  <header class="brief-header">
+    <h1>Daily AI Brief</h1>
+    <div class="brief-meta">Tuesday, July 28 2026 &middot; 10 items</div>
+  </header>
+
+  <section>
+    <span class="section-label enterprise">Enterprise AI Brief</span>
+    <h2 class="section-title">What executives need to know</h2>
+
+    <div class="item enterprise">
+      <div class="item-headline">Anthropic just reframed the open-weight fight from ideology to capability governance</div>
+      <div class="item-analysis">Dario Amodei’s July 27 statement matters because it clarifies the real policy battleground. Anthropic says it does not support a blanket ban on open-weight models, but does support tighter chip controls, anti-distillation enforcement, and mandatory testing for sufficiently capable models. For large companies, the takeaway is simple: the next policy regime is more likely to regulate dangerous capabilities and supply chains than openness itself. Procurement, legal, and security teams should plan around model-risk thresholds, not just vendor labels.</div>
+      <div class="item-source">
+        <a href="https://www.anthropic.com/news/position-open-weights-models" target="_blank" rel="noopener">Anthropic</a> &middot; Jul 27
+      </div>
+      <div class="item-tags">
+        <span class="tag hot">hot</span>
+        <span class="tag">policy</span>
+        <span class="tag">open weights</span>
+        <span class="tag">governance</span>
+      </div>
+    </div>
+
+    <div class="item enterprise">
+      <div class="item-headline">OpenAI’s new work data says AI is redrawing roles before org charts catch up</div>
+      <div class="item-analysis">OpenAI says 43.5% of occupation-specific AI use falls outside the user’s formal role, based on more than 800,000 U.S. ChatGPT work messages. That is a more important management signal than another productivity anecdote. AI is collapsing handoffs across functions — legal, marketing, finance, engineering — before companies formally redesign jobs. The operational implication: leaders should rethink decision rights, QA, and training now, because role boundaries are already softening in practice.</div>
+      <div class="item-source">
+        <a href="https://openai.com/index/how-ai-is-expanding-what-people-do-at-work/" target="_blank" rel="noopener">OpenAI</a> &middot; Jul 27
+      </div>
+      <div class="item-tags">
+        <span class="tag hot">hot</span>
+        <span class="tag">future of work</span>
+        <span class="tag">org design</span>
+      </div>
+    </div>
+
+    <div class="item enterprise">
+      <div class="item-headline">OpenAI Presence is a sign that enterprise agents are becoming managed operations, not DIY experiments</div>
+      <div class="item-analysis">Presence is not just another assistant wrapper. OpenAI is packaging governed agent deployments around policies, approved actions, simulations, graders, escalations, and a Codex-powered improvement loop for high-volume voice and chat workflows. That is the clearest signal yet that serious enterprise agent adoption will be won at the operating-system layer: controls, monitoring, and workflow iteration. CIOs should evaluate agent platforms the way they evaluate core systems, not as one-off pilots.</div>
+      <div class="item-source">
+        <a href="https://openai.com/index/introducing-openai-presence/" target="_blank" rel="noopener">OpenAI</a> &middot; Jul 22
+      </div>
+      <div class="item-tags">
+        <span class="tag">agents</span>
+        <span class="tag">operations</span>
+        <span class="tag">customer service</span>
+      </div>
+    </div>
+
+    <div class="item enterprise">
+      <div class="item-headline">OpenAI is trying to become national research infrastructure, not just a software vendor</div>
+      <div class="item-analysis">OpenAI’s Genesis Mission commitments — including millions in Codex and API access for U.S. national-lab and university researchers — show where the frontier labs are heading next. The strategic move is deeper than PR: AI vendors want to sit inside scientific workflows, cyber defense, and high-consequence research infrastructure. For enterprises in regulated or R&amp;D-heavy sectors, this is a cue that domain-specific AI partnerships will increasingly look like long-term infrastructure relationships, not simple software subscriptions.</div>
+      <div class="item-source">
+        <a href="https://openai.com/index/advancing-the-next-era-of-national-science/" target="_blank" rel="noopener">OpenAI</a> &middot; Jul 22
+      </div>
+      <div class="item-tags">
+        <span class="tag">science</span>
+        <span class="tag">government</span>
+        <span class="tag">infrastructure</span>
+      </div>
+    </div>
+
+    <div class="item enterprise">
+      <div class="item-headline">Google’s 3.6 Flash / 3.5 Flash-Lite GA push makes multi-model production stacks more practical</div>
+      <div class="item-analysis">Google’s latest stable Flash releases sharpen the market around a now-obvious architecture: one strong, fast default model plus a cheaper subagent tier for volume work. That matters for enterprise buyers because it lowers the cost of agentic production stacks without forcing everything onto a top-shelf model. Teams building internal copilots or customer operations should benchmark routing strategies now; the economics are increasingly favorable to tiered model orchestration.</div>
+      <div class="item-source">
+        <a href="https://ai.google.dev/gemini-api/docs/changelog" target="_blank" rel="noopener">Google AI for Developers</a> &middot; Jul 21
+      </div>
+      <div class="item-tags">
+        <span class="tag">models</span>
+        <span class="tag">cost</span>
+        <span class="tag">production</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <span class="section-label founder">Founder / Operator AI Brief</span>
+    <h2 class="section-title">What builders should act on</h2>
+
+    <div class="item founder">
+      <div class="item-headline">Gemini 3.6 Flash looks like one of the best current defaults for fast agent loops</div>
+      <div class="item-analysis">Google explicitly positions 3.6 Flash for code generation, agentic execution, and rapid iteration, with 1M-token context and lower cost than 3.5 Flash. The practical move is not to crown it “best” in the abstract; it is to test it as the workhorse in agent loops where latency and unit cost matter more than prestige. Builders who still route everything to their favorite frontier model are probably overspending.</div>
+      <div class="item-source">
+        <a href="https://ai.google.dev/gemini-api/docs/models/gemini-3.6-flash" target="_blank" rel="noopener">Google AI for Developers</a> &middot; updated Jul 21
+      </div>
+      <div class="item-tags">
+        <span class="tag hot">hot</span>
+        <span class="tag">models</span>
+        <span class="tag">agents</span>
+        <span class="tag">cost-performance</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">Meta’s new Model API preview makes Spark 1.1 worth a real builder eval</div>
+      <div class="item-analysis">Meta is finally giving developers direct access to Muse Spark 1.1, and the pitch is clear: long context, strong tool use, coding, multimodal reasoning, and parallel subagent orchestration in one stack. Whether Spark becomes a default is still an open question, but the API preview is enough to justify evaluation if you build coding agents, workflow agents, or multimodal products. The market is widening beyond the usual two or three defaults.</div>
+      <div class="item-source">
+        <a href="https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/" target="_blank" rel="noopener">Meta AI</a> &middot; Jul 9
+      </div>
+      <div class="item-tags">
+        <span class="tag">API</span>
+        <span class="tag">multimodal</span>
+        <span class="tag">agentic coding</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">A $500 RL fine-tune beating frontier models on catalog review is the strongest current case for narrow-model ownership</div>
+      <div class="item-analysis">FermiSense claims a GRPO fine-tune of a 9B open model beat every frontier configuration it tested on catalog review while running dramatically cheaper. Even if you discount the house benchmark effect, the direction is what matters: for repetitive, high-volume workflows, owning a narrow model can beat renting general intelligence. If your product has a highly repeated judgment task, you should at least test a specialized fine-tune instead of assuming frontier APIs stay the answer forever.</div>
+      <div class="item-source">
+        <a href="https://fermisense.com/when-machines-take-the-wheel/" target="_blank" rel="noopener">FermiSense</a> &middot; Jul 27
+        &middot; <a href="https://news.ycombinator.com/news" target="_blank" rel="noopener">HN</a> &middot; Jul 28
+      </div>
+      <div class="item-tags">
+        <span class="tag hot">hot</span>
+        <span class="tag">fine-tuning</span>
+        <span class="tag">unit economics</span>
+        <span class="tag">e-commerce</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">NVIDIA’s NOOA writeup is a good reminder that harness design is now a product advantage</div>
+      <div class="item-analysis">The highest-leverage insight in NVIDIA’s agent harness post is not the framework itself. It is the argument that context rendering, memory structure, action execution, and completion logic can swing benchmark performance and token cost by double digits even with the same model. Builders obsess over model choice because it is legible; operators win by tightening the harness. If your agent is flaky, the answer may be architecture before model swapping.</div>
+      <div class="item-source">
+        <a href="https://developer.nvidia.com/blog/six-agent-harness-capabilities-for-higher-model-performance/" target="_blank" rel="noopener">NVIDIA Technical Blog</a> &middot; Jul 27
+      </div>
+      <div class="item-tags">
+        <span class="tag">architecture</span>
+        <span class="tag">memory</span>
+        <span class="tag">evaluation</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">Kimi K3’s full-weight release keeps pressure on every closed-model default</div>
+      <div class="item-analysis">The important part of Kimi K3 is not the headline parameter count. It is that a 2.8T open 3T-class model with native vision, 1M context, and long-horizon coding ambitions is now part of the real routing conversation, with full weights targeted for July 27. That raises the floor for what serious teams should benchmark in open stacks. If you build anything model-heavy, closed-only evaluations are increasingly a lazy strategy mistake.</div>
+      <div class="item-source">
+        <a href="https://www.kimi.com/code/docs/en/kimi-code/whats-new.html" target="_blank" rel="noopener">Kimi Code Docs</a> &middot; Jul 17
+        &middot; <a href="https://huggingface.co/blog/ResterChed/kimi-k3-model-overview-mxfp4-quantization-open-wei" target="_blank" rel="noopener">Hugging Face community overview</a> &middot; Jul 17
+      </div>
+      <div class="item-tags">
+        <span class="tag">open models</span>
+        <span class="tag">routing</span>
+        <span class="tag">benchmarking</span>
+      </div>
+    </div>
+  </section>
+
+  <footer class="brief-footer">
+    <p>AI Brief is generated daily at 5:00 AM PT, weekdays. Monday editions roll up the weekend.</p>
+    <p>Sources: X, Reddit, Hacker News, TechCrunch, ArXiv, industry publications. <a href="../index.html">Archive</a></p>
+    <p style="margin-top: 8px; opacity: 0.5;">Content is AI-curated. Verify critical claims before acting. This is not investment advice.</p>
+  </footer>
+
+</div>
+
+<script src="../gate.js"></script>
+</body>
+</html>
