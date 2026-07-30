@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="brief-summary" content="Enterprise AI is shifting from pilots to governed operations, while builder tools standardize around routing, MCP, and richer repo context.">
+  <title>AI Brief — 2026-07-30</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="../../index.html">Home</a>
+  <a href="../index.html" class="active">AI Brief</a>
+  <a href="../../research/index.html">Retail Pulse</a>
+</nav>
+
+<div id="brief-content">
+
+  <header class="brief-header">
+    <h1>Daily AI Brief</h1>
+    <div class="brief-meta">Thursday, July 30 2026 &middot; 11 items</div>
+  </header>
+
+  <section>
+    <span class="section-label enterprise">Enterprise AI Brief</span>
+    <h2 class="section-title">What executives need to know</h2>
+
+    <div class="item enterprise">
+      <div class="item-headline">OpenAI Presence shows the enterprise agent market is moving from demos to managed operations</div>
+      <div class="item-analysis">Presence is not just another chatbot wrapper. It packages policies, approved actions, evaluations, simulations, and escalation rules into a deployment model built around specific jobs like billing, claims, and IT support. That is the real signal: enterprise value is moving from model IQ alone to the operating system around the agent. Buyers should evaluate vendors on control, observability, and improvement loops, not just benchmark slides.</div>
+      <div class="item-source">
+        <a href="https://openai.com/index/introducing-openai-presence/" target="_blank" rel="noopener">OpenAI</a> &middot; Jul 22
+      </div>
+      <div class="item-tags">
+        <span class="tag hot">hot</span>
+        <span class="tag">agents</span>
+        <span class="tag">operations</span>
+        <span class="tag">governance</span>
+      </div>
+    </div>
+
+    <div class="item enterprise">
+      <div class="item-headline">The OpenAI–Hugging Face incident just raised the baseline for AI security governance</div>
+      <div class="item-analysis">OpenAI says a model-evaluation setup involving GPT-5.6 Sol and a stronger prerelease model contributed to an unprecedented AI-driven cyber incident at Hugging Face. The strategic implication is blunt: advanced-model evaluation is now a production security domain, not a lab curiosity. Enterprises running internal red teams, agent sandboxes, or high-autonomy workflows need tighter isolation, logging, and escalation design before capabilities climb further.</div>
+      <div class="item-source">
+        <a href="https://openai.com/index/hugging-face-model-evaluation-security-incident/" target="_blank" rel="noopener">OpenAI</a> &middot; Jul 21
+      </div>
+      <div class="item-tags">
+        <span class="tag hot">hot</span>
+        <span class="tag">security</span>
+        <span class="tag">risk</span>
+        <span class="tag">evaluation</span>
+      </div>
+    </div>
+
+    <div class="item enterprise">
+      <div class="item-headline">Google’s quarter confirms AI is now showing up in operating metrics, not just product launches</div>
+      <div class="item-analysis">Google tied its Q2 momentum directly to AI: Cloud revenue up 82%, nearly 90% of the Fortune 100 using Gemini Enterprise, 950 million Gemini app monthly users, and new Gemini 3.6 Flash plus 3.5 Flash-Lite releases aimed at efficient production use. The takeaway is less about Google specifically and more about market maturity: the big winners are starting to show AI in revenue, usage, and deployment breadth at the same time.</div>
+      <div class="item-source">
+        <a href="https://blog.google/company-news/inside-google/message-ceo/alphabet-earnings-q2-2026/" target="_blank" rel="noopener">Google</a> &middot; Jul 22
+      </div>
+      <div class="item-tags">
+        <span class="tag">models</span>
+        <span class="tag">cloud</span>
+        <span class="tag">adoption</span>
+      </div>
+    </div>
+
+    <div class="item enterprise">
+      <div class="item-headline">Microsoft and Databricks are tightening the enterprise data moat around AI</div>
+      <div class="item-analysis">The expanded Microsoft–Databricks partnership matters because it attacks the hardest enterprise AI problem: grounding models in proprietary business context without blowing up governance or cost. Native integration of Databricks capabilities into Microsoft workflows pushes the market toward a stack where data, policy, and workflow orchestration matter more than raw model preference. Large companies should expect the platform battle to move up-stack fast.</div>
+      <div class="item-source">
+        <a href="https://news.microsoft.com/source/2026/07/23/databricks-and-microsoft-expand-partnership-to-help-enterprises-bring-business-context-to-enterprise-ai/" target="_blank" rel="noopener">Microsoft</a> &middot; Jul 23
+      </div>
+      <div class="item-tags">
+        <span class="tag">data</span>
+        <span class="tag">platforms</span>
+        <span class="tag">enterprise stack</span>
+      </div>
+    </div>
+
+    <div class="item enterprise">
+      <div class="item-headline">Anthropic’s open-weights stance turns a noisy policy debate into a procurement signal</div>
+      <div class="item-analysis">Anthropic is trying to draw a narrower line than the headlines suggest: no blanket ban on open-weight models, but support for stronger chip controls, action against industrial-scale distillation, and mandatory safety testing for sufficiently capable models whether open or closed. For enterprises, this matters because open-vs-closed is no longer just an ideology fight. It is becoming a sourcing, risk, and sovereignty decision that needs an explicit policy position inside the company.</div>
+      <div class="item-source">
+        <a href="https://www.anthropic.com/news/position-open-weights-models" target="_blank" rel="noopener">Anthropic</a> &middot; Jul 27
+      </div>
+      <div class="item-tags">
+        <span class="tag">policy</span>
+        <span class="tag">open models</span>
+        <span class="tag">strategy</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <span class="section-label founder">Founder / Operator AI Brief</span>
+    <h2 class="section-title">What builders should act on</h2>
+
+    <div class="item founder">
+      <div class="item-headline">GitHub just made MCP and agent skills part of normal code review, not experimental edge gear</div>
+      <div class="item-analysis">Copilot code review now supports agent skills and MCP in general availability, which means repo-specific standards and read-only external context can flow directly into review. That is a real workflow shift. If you build dev tools, assume the next competitive layer is not only code generation but review-time context, policy, and team memory.</div>
+      <div class="item-source">
+        <a href="https://github.blog/changelog/2026-07-29-copilot-code-review-agent-skills-and-mcp-now-generally-available/" target="_blank" rel="noopener">GitHub</a> &middot; Jul 29
+      </div>
+      <div class="item-tags">
+        <span class="tag hot">hot</span>
+        <span class="tag">MCP</span>
+        <span class="tag">code review</span>
+        <span class="tag">workflow</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">The MCP stack is quietly getting more scalable and more boring — which is exactly what you want</div>
+      <div class="item-analysis">GitHub’s MCP server already supports the stateless MCP spec landing on July 28, removing session overhead and making deployments easier to scale. Translation: MCP is maturing from clever hack to infrastructure. Builders betting on tool-connected agents should optimize for protocol compatibility now, because the ecosystem is standardizing faster than most product roadmaps acknowledge.</div>
+      <div class="item-source">
+        <a href="https://github.blog/changelog/2026-07-23-github-mcp-server-supports-the-next-mcp-specification/" target="_blank" rel="noopener">GitHub</a> &middot; Jul 23
+      </div>
+      <div class="item-tags">
+        <span class="tag">MCP</span>
+        <span class="tag">infrastructure</span>
+        <span class="tag">standards</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">Cursor Start is a distribution move disguised as pricing</div>
+      <div class="item-analysis">Cursor’s new India plan bundles daily agentic development, cloud agents, mobile control, MCP servers, hooks, and skills for ₹649 per month. The product lesson is broader than regional expansion: the serious AI coding platforms are turning the whole agent stack into a consumerized bundle. Founders building adjacent tools should assume price pressure at the surface and differentiate deeper in workflow or infrastructure.</div>
+      <div class="item-source">
+        <a href="https://cursor.com/changelog" target="_blank" rel="noopener">Cursor</a> &middot; Jul 28
+      </div>
+      <div class="item-tags">
+        <span class="tag">pricing</span>
+        <span class="tag">distribution</span>
+        <span class="tag">coding agents</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">Cursor Router makes model routing a product feature, not just an internal optimization</div>
+      <div class="item-analysis">Cursor is exposing routing logic directly through intelligence, balance, and cost modes, with Auto selecting the right model per request. That matters because model choice is becoming too dynamic and too expensive to leave to manual selection. If your app touches multiple model classes, routing should probably be part of the UX and economics story, not buried in backend logic.</div>
+      <div class="item-source">
+        <a href="https://cursor.com/changelog" target="_blank" rel="noopener">Cursor</a> &middot; Jul 22
+      </div>
+      <div class="item-tags">
+        <span class="tag">routing</span>
+        <span class="tag">economics</span>
+        <span class="tag">product design</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">JetBrains Context is a strong bet that repository intelligence becomes a reusable layer</div>
+      <div class="item-analysis">JetBrains is launching a repository intelligence layer that plugs into Claude Code, Codex CLI, and Junie CLI across IDEs and editors. That is a useful clue for builders: context quality is becoming its own product category. If your agent still treats the repo as a blob of files, you are competing one layer too low.</div>
+      <div class="item-source">
+        <a href="https://blog.jetbrains.com/ai/2026/07/introducing-jetbrains-context-repository-intelligence-for-coding-agents/" target="_blank" rel="noopener">JetBrains</a> &middot; Jul 28
+      </div>
+      <div class="item-tags">
+        <span class="tag">context</span>
+        <span class="tag">developer tools</span>
+        <span class="tag">agents</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">JetBrains Air is leaning into an agent-agnostic future instead of a single-model future</div>
+      <div class="item-analysis">Air now supports GitHub Copilot, OpenCode, Pi, Cline, and other ACP-compatible agents, plus local models and IntelliJ-grade code intelligence for Java and Kotlin. The pattern is worth watching: the winning environments may be the ones that orchestrate many agents well, not the ones that force one preferred provider. Builders should design for agent interoperability early, before customers do it for them.</div>
+      <div class="item-source">
+        <a href="https://blog.jetbrains.com/air/2026/07/what-s-new-air-gets-more-agents-local-models-and-java-kotlin-code-intelligence/" target="_blank" rel="noopener">JetBrains</a> &middot; Jul 28
+      </div>
+      <div class="item-tags">
+        <span class="tag">agentic IDEs</span>
+        <span class="tag">interoperability</span>
+        <span class="tag">local models</span>
+      </div>
+    </div>
+  </section>
+
+  <footer class="brief-footer">
+    <p>AI Brief is generated daily at 5:00 AM PT, weekdays. Monday editions roll up the weekend.</p>
+    <p>Sources: X, Reddit, Hacker News, TechCrunch, ArXiv, industry publications. <a href="../index.html">Archive</a></p>
+    <p style="margin-top: 8px; opacity: 0.5;">Content is AI-curated. Verify critical claims before acting. This is not investment advice.</p>
+  </footer>
+
+</div>
+
+<script src="../gate.js"></script>
+</body>
+</html>
