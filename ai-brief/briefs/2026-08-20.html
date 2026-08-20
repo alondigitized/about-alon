@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Brief — 2026-08-20</title>
+  <meta name="brief-summary" content="Privacy, safety, and AI-native distribution are becoming core strategy, while builders get materially cheaper and faster agent stacks.">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="../../index.html">Home</a>
+  <a href="../index.html" class="active">AI Brief</a>
+  <a href="../../research/index.html">Retail Pulse</a>
+</nav>
+
+<div id="brief-content">
+
+  <header class="brief-header">
+    <h1>Daily AI Brief</h1>
+    <div class="brief-meta">Thursday, August 20 2026 &middot; 11 items</div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- ENTERPRISE AI BRIEF                        -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section>
+    <span class="section-label enterprise">Enterprise AI Brief</span>
+    <h2 class="section-title">What executives need to know</h2>
+
+    <div class="item enterprise">
+      <div class="item-headline">OpenAI moves frontier privacy from promise to product with Zero Data Retention</div>
+      <div class="item-analysis">
+        This is more important than another benchmark win. OpenAI’s new Zero Data Retention posture for frontier models, plus its preview of Private Safety Processing, is aimed directly at the biggest enterprise blocker: using stronger models without handing over sensitive data for cross-session safety review. If this works in practice, procurement friction drops for regulated and IP-heavy workloads.
+      </div>
+      <div class="item-source">
+        <a href="https://openai.com/index/offering-zero-data-retention-for-frontier-models/" target="_blank" rel="noopener">OpenAI</a> &middot; Aug 19
+      </div>
+      <div class="item-tags">
+        <span class="tag hot">hot</span>
+        <span class="tag">privacy</span>
+        <span class="tag">enterprise</span>
+      </div>
+    </div>
+
+    <div class="item enterprise">
+      <div class="item-headline">OpenAI publicly slows frontier training as cyber risk moves from theory to operations</div>
+      <div class="item-analysis">
+        OpenAI said it temporarily slowed the pace of scaling, including a two-week pause in reinforcement-learning training, after concluding an upcoming model may meet its critical cybersecurity threshold. The message for enterprise leaders is blunt: vendor safety posture is now an operational question, not a branding question. Ask providers about monitoring, containment, and incident response—not just model quality.
+      </div>
+      <div class="item-source">
+        <a href="https://openai.com/index/pacing-model-development-cyber-capabilities/" target="_blank" rel="noopener">OpenAI</a> &middot; Aug 18
+      </div>
+      <div class="item-tags">
+        <span class="tag hot">hot</span>
+        <span class="tag">security</span>
+        <span class="tag">governance</span>
+      </div>
+    </div>
+
+    <div class="item enterprise">
+      <div class="item-headline">ChatGPT Ads expands across 31 European markets</div>
+      <div class="item-analysis">
+        AI chat is becoming a distribution and demand-capture channel, not just a productivity layer. OpenAI’s European expansion means marketers now need a serious test-and-learn plan for AI-native discovery, measurement, and creative, especially in categories where users are comparing options inside conversational interfaces before ever hitting Google or a retailer.
+      </div>
+      <div class="item-source">
+        <a href="https://openai.com/index/chatgpt-ads-expands-across-europe/" target="_blank" rel="noopener">OpenAI</a> &middot; Aug 18
+      </div>
+      <div class="item-tags">
+        <span class="tag">marketing</span>
+        <span class="tag">commerce</span>
+        <span class="tag">platforms</span>
+      </div>
+    </div>
+
+    <div class="item enterprise">
+      <div class="item-headline">Google turns governed autonomy into a platform feature set</div>
+      <div class="item-analysis">
+        Gemini Managed Agents now default to 3.6 Flash and add environment hooks, budget controls, scheduled triggers, and free-tier access. The important shift is architectural: Google is productizing the controls enterprises actually need to run agents in production—policy gates, cost ceilings, and repeatable automation—rather than asking teams to bolt them on later.
+      </div>
+      <div class="item-source">
+        <a href="https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api-3-6-flash-hooks/" target="_blank" rel="noopener">Google DeepMind</a> &middot; Jul 28
+      </div>
+      <div class="item-tags">
+        <span class="tag">agents</span>
+        <span class="tag">governance</span>
+        <span class="tag">platform</span>
+      </div>
+    </div>
+
+    <div class="item enterprise">
+      <div class="item-headline">Meta makes a credible platform bid with Muse Spark 1.1 and the Model API</div>
+      <div class="item-analysis">
+        Meta’s new multimodal reasoning model and public-preview Model API are a direct attempt to become a serious platform for long-context, computer-use, and multi-agent workloads. Even if you do not plan to standardize on Meta, this is useful competitive pressure: more real alternatives means better pricing leverage and less dependence on a single frontier vendor.
+      </div>
+      <div class="item-source">
+        <a href="https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/" target="_blank" rel="noopener">Meta AI</a> &middot; Jul 9
+      </div>
+      <div class="item-tags">
+        <span class="tag">models</span>
+        <span class="tag">competition</span>
+        <span class="tag">platform</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- FOUNDER / OPERATOR AI BRIEF                -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section>
+    <span class="section-label founder">Founder / Operator AI Brief</span>
+    <h2 class="section-title">What builders should act on</h2>
+
+    <div class="item founder">
+      <div class="item-headline">OpenAI’s GPT-5.6 guide is really a margin guide for agent builders</div>
+      <div class="item-analysis">
+        The practical takeaway is to stop brute-forcing every step with your most expensive model. OpenAI is pushing three levers that matter immediately: smaller model routing, retained reasoning plus compaction, and moving deterministic orchestration into code via programmatic tool calling. If your agent unit economics still look ugly, this is where to start.
+      </div>
+      <div class="item-source">
+        <a href="https://openai.com/index/builders-guide-to-gpt-5-6/" target="_blank" rel="noopener">OpenAI</a> &middot; Aug 13
+      </div>
+      <div class="item-tags">
+        <span class="tag hot">hot</span>
+        <span class="tag">agents</span>
+        <span class="tag">economics</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">Ultrafast GPT-5.6 Sol raises the UX bar for real-time AI products</div>
+      <div class="item-analysis">
+        OpenAI says its new Ultrafast tier can run GPT-5.6 Sol up to 14× faster, with output speeds up to 750 tokens per second via Cerebras. That changes product design: more workflows can feel interactive instead of batchy, which matters for live copilots, research surfaces, and decision-support tools where latency kills trust.
+      </div>
+      <div class="item-source">
+        <a href="https://openai.com/index/previewing-ultrafast/" target="_blank" rel="noopener">OpenAI</a> &middot; Aug 13
+      </div>
+      <div class="item-tags">
+        <span class="tag">speed</span>
+        <span class="tag">api</span>
+        <span class="tag">product</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">Google’s Managed Agents stack is now good enough for real recurring ops bots</div>
+      <div class="item-analysis">
+        Free-tier access, scheduled triggers, hooks, and budget caps make Gemini Managed Agents much more usable for practical internal workflows—QA loops, report generation, audits, cleanup jobs, and other sandboxed automations. The pattern to copy is simple: autonomous enough to save time, bounded enough to trust.
+      </div>
+      <div class="item-source">
+        <a href="https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api-3-6-flash-hooks/" target="_blank" rel="noopener">Google DeepMind</a> &middot; Jul 28
+      </div>
+      <div class="item-tags">
+        <span class="tag">workflow</span>
+        <span class="tag">automation</span>
+        <span class="tag">tools</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">Gemini 3.6 Flash and 3.5 Flash-Lite are a prompt to revisit your routing stack</div>
+      <div class="item-analysis">
+        Google is positioning 3.6 Flash as the workhorse model and 3.5 Flash-Lite as the high-throughput subagent option. The deeper point: model routing is no longer optional craft, it is the business model. If you are still sending extraction, filtering, or repetitive tool work to your top-tier model, you are probably overpaying.
+      </div>
+      <div class="item-source">
+        <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/" target="_blank" rel="noopener">Google</a> &middot; Jul 21
+      </div>
+      <div class="item-tags">
+        <span class="tag">routing</span>
+        <span class="tag">cost</span>
+        <span class="tag">models</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">Mistral’s Shieldstral is the kind of open safety layer startups actually need</div>
+      <div class="item-analysis">
+        Shieldstral is a 3B open-weights multimodal safety classifier that takes plain-language policy questions at inference time and runs on a single 16GB GPU. That is attractive for startups that need customizable moderation or refusal checks without outsourcing the whole safety control plane to a larger provider.
+      </div>
+      <div class="item-source">
+        <a href="https://mistral.ai/news/shieldstral/" target="_blank" rel="noopener">Mistral AI</a> &middot; Aug 4
+      </div>
+      <div class="item-tags">
+        <span class="tag">open-source</span>
+        <span class="tag">safety</span>
+        <span class="tag">infra</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">The open-source agent training stack is getting less toy-like</div>
+      <div class="item-analysis">
+        A high-signal Hugging Face walkthrough shows how to train a real coding agent in remote sandboxes using TRL and OpenEnv, with the harness owning its own loop. That matters because the gap between frontier closed-source agents and open-source agent training infrastructure is narrowing. If your moat is just “we glued tools to a model,” assume the market catches up faster than you want.
+      </div>
+      <div class="item-source">
+        <a href="https://huggingface.co/blog/sergiopaniego/trl-openenv-harness-training" target="_blank" rel="noopener">Hugging Face</a> &middot; Aug 5
+      </div>
+      <div class="item-tags">
+        <span class="tag">open-source</span>
+        <span class="tag">training</span>
+        <span class="tag">agents</span>
+      </div>
+    </div>
+  </section>
+
+  <footer class="brief-footer">
+    <p>AI Brief is generated daily at 5:00 AM PT, weekdays. Monday editions roll up the weekend.</p>
+    <p>Sources: X, Reddit, Hacker News, TechCrunch, ArXiv, industry publications. <a href="../index.html">Archive</a></p>
+    <p style="margin-top: 8px; opacity: 0.5;">Content is AI-curated. Verify critical claims before acting. This is not investment advice.</p>
+  </footer>
+
+</div>
+
+<script src="../gate.js"></script>
+</body>
+</html>
