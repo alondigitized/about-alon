@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="brief-summary" content="Model governance, security, and legal risk moved closer to the center, while builders got sharper signals on portability, inference economics, AI video, and agent-first startup execution.">
+  <title>AI Brief — 2026-08-31</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="../../index.html">Home</a>
+  <a href="../index.html" class="active">AI Brief</a>
+  <a href="../../research/index.html">Retail Pulse</a>
+</nav>
+
+<div id="brief-content">
+
+  <header class="brief-header">
+    <h1>Daily AI Brief</h1>
+    <div class="brief-meta">Monday, August 31 2026 &middot; 11 items &middot; Weekend rollup</div>
+  </header>
+
+  <div class="rollup-banner">
+    This brief covers Saturday Aug 29 &ndash; Sunday Aug 30. Regular weekday cadence resumes Tuesday.
+  </div>
+
+  <section>
+    <span class="section-label enterprise">Enterprise AI Brief</span>
+    <h2 class="section-title">What executives need to know this weekend</h2>
+
+    <div class="item enterprise">
+      <div class="item-headline">OpenAI’s Cursor cutoff shows model access is now a governance lever, not just a commercial partnership</div>
+      <div class="item-analysis">OpenAI said on August 28 that it plans to wind down model access for Cursor after SpaceX acquired the company, with a proposed shutoff date of November 12. The enterprise read is simple: frontier labs are no longer treating downstream distribution as neutral. If your workflows depend on third-party AI layers, assume model availability can change for strategic or policy reasons and architect for portability now.</div>
+      <div class="item-source">
+        <a href="https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/" target="_blank" rel="noopener">OpenAI</a> &middot; Aug 28
+      </div>
+      <div class="item-tags">
+        <span class="tag hot">hot</span>
+        <span class="tag">platform risk</span>
+        <span class="tag">vendor strategy</span>
+        <span class="tag">governance</span>
+      </div>
+    </div>
+
+    <div class="item enterprise">
+      <div class="item-headline">Anthropic’s latest result makes automated AI oversight feel less theoretical</div>
+      <div class="item-analysis">Anthropic says Claude autonomously found fixes that improved benchmark performance across 10 alignment-failure categories, with the best methods also generalizing to held-out tests and larger models. That matters because labs are starting to use AI to audit and tune AI at research speed. Enterprises should expect automated evaluation, red-teaming, and policy enforcement loops to become a real differentiator between vendors and an internal requirement for serious agent deployments.</div>
+      <div class="item-source">
+        <a href="https://www.anthropic.com/research/automated-researchers-mitigate-alignment-failures" target="_blank" rel="noopener">Anthropic</a> &middot; Aug 28
+      </div>
+      <div class="item-tags">
+        <span class="tag">safety</span>
+        <span class="tag">evaluation</span>
+        <span class="tag">agents</span>
+      </div>
+    </div>
+
+    <div class="item enterprise">
+      <div class="item-headline">The music lawsuit against Anthropic is a reminder that training-data legal exposure is still unresolved</div>
+      <div class="item-analysis">Axios reports that Sony Music and Warner Music sued Anthropic late Friday, alleging large-scale copyright infringement tied to model development. The enterprise implication is not just legal drama. If core model providers remain exposed on training data, risk can flow downstream into procurement, brand safety, and product design. Any company building consumer-facing AI should still assume copyright posture is a live diligence item, not a settled issue.</div>
+      <div class="item-source">
+        <a href="https://www.axios.com/2026/08/29/anthropic-sony-warner-music-copyright" target="_blank" rel="noopener">Axios</a> &middot; Aug 29
+      </div>
+      <div class="item-tags">
+        <span class="tag hot">hot</span>
+        <span class="tag">copyright</span>
+        <span class="tag">legal</span>
+        <span class="tag">risk</span>
+      </div>
+    </div>
+
+    <div class="item enterprise">
+      <div class="item-headline">The cyber window is shrinking faster than most corporate security roadmaps</div>
+      <div class="item-analysis">OpenAI, Anthropic, Microsoft, AWS, and more than 100 other organizations warned this week that companies have only months to prepare for AI-enabled cyberattacks. That message matters because it came from vendors with incentives to avoid alarmism. If Alan’s peers are still treating agent security as a next-year topic, they are behind. Isolation, credential scoping, approvals, and monitoring need to move from pilot hygiene into standard operating controls.</div>
+      <div class="item-source">
+        <a href="https://www.axios.com/2026/08/27/openai-anthropic-issue-dire-cyber-threat-warning" target="_blank" rel="noopener">Axios</a> &middot; Aug 27
+      </div>
+      <div class="item-tags">
+        <span class="tag">cybersecurity</span>
+        <span class="tag">agents</span>
+        <span class="tag">risk management</span>
+      </div>
+    </div>
+
+    <div class="item enterprise">
+      <div class="item-headline">Google is trying to turn cleaner evaluation provenance into a procurement advantage</div>
+      <div class="item-analysis">Google DeepMind’s new double-blind evaluation pilot uses cryptographic isolation so external benchmark questions cannot leak back into model development. That is more than a research flourish. As benchmark contamination skepticism rises, enterprises will increasingly care about whether vendor claims came from trusted evaluation environments. Expect independent testing and auditability to become part of model selection, especially in regulated or high-stakes use cases.</div>
+      <div class="item-source">
+        <a href="https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/" target="_blank" rel="noopener">Google DeepMind</a> &middot; Aug 27
+      </div>
+      <div class="item-tags">
+        <span class="tag">benchmarks</span>
+        <span class="tag">trust</span>
+        <span class="tag">procurement</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <span class="section-label founder">Founder / Operator AI Brief</span>
+    <h2 class="section-title">What builders should act on</h2>
+
+    <div class="item founder">
+      <div class="item-headline">If your product depends on one model supplier, you do not have a moat — you have a dependency</div>
+      <div class="item-analysis">OpenAI’s Cursor decision and the weekend Reddit reaction around it both pointed in the same direction: developers increasingly value interfaces that can swap models, not tools tied to a single lab’s goodwill. For founders, the lesson is brutal but useful. Design for provider portability, preserve user context outside the model layer, and avoid business models that can be kneecapped by one vendor policy change.</div>
+      <div class="item-source">
+        <a href="https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/" target="_blank" rel="noopener">OpenAI</a> &middot; Aug 28
+        &middot; <span style="color:var(--text-muted)">r/cursor, r/ClaudeCode</span>
+      </div>
+      <div class="item-tags">
+        <span class="tag hot">hot</span>
+        <span class="tag">distribution</span>
+        <span class="tag">portability</span>
+        <span class="tag">dev tools</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">Inference economics are still moving fast enough to break old pricing assumptions</div>
+      <div class="item-analysis">OpenAI says Jalapeño delivered 1.5 to 1.9 times more AI work per watt at peak throughput and materially lower latency across multiple model families. The founder takeaway is not to worship custom chips. It is to revisit product pricing, latency budgets, and margin assumptions more often. Teams that lock in today’s cost structure like it is stable are going to misprice both premium and freemium AI products.</div>
+      <div class="item-source">
+        <a href="https://openai.com/index/jalapeno-first-results/" target="_blank" rel="noopener">OpenAI</a> &middot; Aug 25
+      </div>
+      <div class="item-tags">
+        <span class="tag">inference</span>
+        <span class="tag">economics</span>
+        <span class="tag">latency</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">Google’s latest Omni update makes AI video feel more like software tooling and less like toy generation</div>
+      <div class="item-analysis">Gemini Omni 1.1 Flash adds scene extension, start-and-end-frame interpolation, 360p draft passes, and 4K upscaling. That combination matters because it makes creative iteration cheaper and more controllable, which is what real product teams need. If you are building in marketing, commerce, education, or creator tooling, AI video is moving from novelty asset generation into workflow infrastructure.</div>
+      <div class="item-source">
+        <a href="https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/" target="_blank" rel="noopener">Google</a> &middot; Aug 27
+      </div>
+      <div class="item-tags">
+        <span class="tag">video AI</span>
+        <span class="tag">creative tools</span>
+        <span class="tag">workflows</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">OpenAI’s Thailand accelerator is a useful clue about where founder leverage is moving</div>
+      <div class="item-analysis">The new OpenAI x MHESI program is narrowly focused on turning prototypes into deployable products in healthcare, wellness, and education. That is the important part. Frontier labs are increasingly pushing founders toward domain-specific implementation, evaluation, privacy, and cost discipline instead of pure demo magic. If you are building, the bar is shifting from clever prototype to trusted workflow with evidence.</div>
+      <div class="item-source">
+        <a href="https://openai.com/index/supporting-next-generation-ai-startups-thailand/" target="_blank" rel="noopener">OpenAI</a> &middot; Aug 28
+      </div>
+      <div class="item-tags">
+        <span class="tag">startups</span>
+        <span class="tag">vertical AI</span>
+        <span class="tag">implementation</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">Anthropic is packaging science as a vertical product, not just donating credits</div>
+      <div class="item-analysis">Anthropic expanded Claude Science with 10,000 seats for scientists and a team plan designed around auditable artifacts and flexible compute access. Builders should pay attention to the packaging move. The frontier labs are learning that generic chat is not enough; the real opportunity is a workflow-shaped product with domain constraints, artifacts, and buying logic tailored to one profession.</div>
+      <div class="item-source">
+        <a href="https://www.anthropic.com/news/expanding-support-for-scientists" target="_blank" rel="noopener">Anthropic</a> &middot; Aug 27
+      </div>
+      <div class="item-tags">
+        <span class="tag">vertical software</span>
+        <span class="tag">science</span>
+        <span class="tag">product strategy</span>
+      </div>
+    </div>
+
+    <div class="item founder">
+      <div class="item-headline">The newest coding-agent launches are converging on orchestration, verification, and controlled execution</div>
+      <div class="item-analysis">Product Hunt’s freshest coding-agent cohort skews toward private local execution, graph visibility, repo-linked sandboxes, approvals, and parallel task handling rather than autocomplete. That is useful signal even if Product Hunt is noisy. The market is telling you the next layer of value sits in runtime control and trust, not just nicer prompts. Builders should ship around supervision, memory, and environment management.</div>
+      <div class="item-source">
+        <a href="https://www.producthunt.com/categories/ai-coding-agents?order=recent_launches" target="_blank" rel="noopener">Product Hunt</a> &middot; updated Aug 30
+      </div>
+      <div class="item-tags">
+        <span class="tag">coding agents</span>
+        <span class="tag">orchestration</span>
+        <span class="tag">verification</span>
+      </div>
+    </div>
+  </section>
+
+  <footer class="brief-footer">
+    <p>AI Brief is generated daily at 5:00 AM PT, weekdays. Monday editions roll up the weekend.</p>
+    <p>Sources: X, Reddit, Hacker News, TechCrunch, ArXiv, industry publications. <a href="../index.html">Archive</a></p>
+    <p style="margin-top: 8px; opacity: 0.5;">Content is AI-curated. Verify critical claims before acting. This is not investment advice.</p>
+  </footer>
+
+</div>
+
+<script src="../gate.js"></script>
+</body>
+</html>
